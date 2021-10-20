@@ -1,0 +1,113 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_BakedStory/EXP_BakedStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Baked_Story"
+story = {
+1: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<speaker> yo el medico</speaker>
+<dialog>Que buenala tarde domingo, unas cuantas horas de descansando, que hacía tiempo no lograba.</dialog>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker>el medico</speaker>
+<dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada.
+tendria que buscar un trabajo que implique menos sacrificio y estrés, ya no estoy seguro de estar conforme con una vida médico de Urgencias.</dialog>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<speaker>el medico yo</speaker>
+<dialog>Ring rings
+Suena el celular</dialog>"
+},
+5: {
+"links": {
+},
+"text": "<end>"
+}
+}
+},
+2: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 6,
+1: 5,
+2: 4
+},
+"text": "<speaker>Desconocido</speaker>
+<dialog>dorctor xxx, es el hospital. paso un accidente.
+necesito que venga ya.</dialog>
+<choiceJSON>{ \"preguntar por el accidente\" : 0, \"preguntar quien habla\" : 1, \"ir inmediatamente\" : 2 } </choiceJSON>"
+},
+3: {
+"links": {
+0: 8
+},
+"text": "bueno pero quien habla *¹
+<speaker> Jorge </speaker>
+<dialog> Soy Jorge , El director. Necesito que vengas ya </dialog> "
+},
+4: {
+"links": {
+0: 8
+},
+"text": "<speaker> Nosotros </speaker>
+<dialog>Esta bien, voy en camino</dialog>"
+},
+5: {
+"links": {
+0: 3
+},
+"text": "<speaker> Nosotros </speaker>
+<dialog>Buenas, quien habla?</dialog>"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "<speaker>Nosotros</speaker>
+<dialog>¿Un accidente? ¿Qué pasó?</dialog>"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "<speaker> Desconocido </speaker>
+<dialog> Hubo una explosión, y hay muchos heridos </dialog>"
+},
+8: {
+"links": {
+},
+"text": "<end>"
+}
+}
+}
+}
+names = {
+"Comienzo": 1,
+"SegundoTexto": 2
+}
