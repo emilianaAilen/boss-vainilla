@@ -6,72 +6,9 @@
 script = ExtResource( 1 )
 TYPE = "EXP_Story_editor"
 names = {
-"Comienzo": 1,
 "SegundoTexto": 2
 }
 story = {
-1: {
-"available_nid": [  ],
-"groups": [  ],
-"human_readable_description": "Como comienza",
-"name": "Comienzo",
-"nodes": {
-1: {
-"graph_offset": Vector2( -1300, -1140 ),
-"links": {
-0: 2
-},
-"rect_size": Vector2( 441, 150 ),
-"slot_amount": 1,
-"text": "<start>",
-"type": "line"
-},
-2: {
-"graph_offset": Vector2( -1300, -960 ),
-"links": {
-0: 3
-},
-"rect_size": Vector2( 441, 150 ),
-"slot_amount": 1,
-"text": "<speaker> yo el medico</speaker>
-<dialog>Que buenala tarde domingo, unas cuantas horas de descansando, que hacía tiempo no lograba.</dialog>",
-"type": "line"
-},
-3: {
-"graph_offset": Vector2( -1300, -800 ),
-"links": {
-0: 4
-},
-"rect_size": Vector2( 441, 158 ),
-"slot_amount": 1,
-"text": "<speaker>el medico</speaker>
-<dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada.
-tendria que buscar un trabajo que implique menos sacrificio y estrés, ya no estoy seguro de estar conforme con una vida médico de Urgencias.</dialog>",
-"type": "line"
-},
-4: {
-"graph_offset": Vector2( -1300, -620 ),
-"links": {
-0: 5
-},
-"rect_size": Vector2( 324, 137 ),
-"slot_amount": 1,
-"text": "<speaker>el medico yo</speaker>
-<dialog>Ring rings
-Suena el celular</dialog>",
-"type": "line"
-},
-5: {
-"graph_offset": Vector2( -1300, -460 ),
-"links": {
-},
-"rect_size": Vector2( 324, 137 ),
-"slot_amount": 1,
-"text": "<end>",
-"type": "line"
-}
-}
-},
 2: {
 "available_nid": [  ],
 "groups": [  ],
@@ -79,9 +16,9 @@ Suena el celular</dialog>",
 "name": "SegundoTexto",
 "nodes": {
 1: {
-"graph_offset": Vector2( -460, 220 ),
+"graph_offset": Vector2( -1800, 160 ),
 "links": {
-0: 2
+0: 9
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
@@ -89,7 +26,7 @@ Suena el celular</dialog>",
 "type": "line"
 },
 2: {
-"graph_offset": Vector2( 40, 220 ),
+"graph_offset": Vector2( 40, 160 ),
 "links": {
 0: 6,
 1: 5,
@@ -167,9 +104,44 @@ necesito que venga ya.</dialog>
 "slot_amount": 1,
 "text": "<end>",
 "type": "line"
+},
+9: {
+"graph_offset": Vector2( -1340, 160 ),
+"links": {
+0: 10
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker> yo el medico</speaker>
+<dialog>Que buenala tarde domingo, unas cuantas horas de descansando, que hacía tiempo no lograba.</dialog>",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( -880, 160 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>el medico</speaker>
+<dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada.
+tendria que buscar un trabajo que implique menos sacrificio y estrés, ya no estoy seguro de estar conforme con una vida médico de Urgencias.</dialog>",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( -420, 160 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>el medico yo</speaker>
+<dialog>Ring rings
+Suena el celular</dialog>",
+"type": "line"
 }
 }
 }
 }
-available_dids = [  ]
+available_dids = [ 1 ]
 groups = [  ]
