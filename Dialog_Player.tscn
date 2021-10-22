@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/Option.tscn" type="PackedScene" id=5]
 [ext_resource path="res://fonts/Merienda-Regular.ttf" type="DynamicFontData" id=6]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=1]
 size = 18
 extra_spacing_top = 5
 font_data = ExtResource( 6 )
@@ -119,7 +119,7 @@ margin_right = 688.0
 margin_bottom = 160.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 1 )
 custom_constants/line_spacing = 0
 text = "This is where the body of the dialog text goes.
 Press F6 to play! ^_^"

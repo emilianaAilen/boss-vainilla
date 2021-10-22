@@ -46,7 +46,7 @@ Necesito que vengas cuanto antes.
 0: 3
 },
 "text": "<speaker>Nosotros </speaker>
-<dialog>Bueno pero quién habla?</dialog>"
+<dialog>Bueno, pero quién habla?</dialog>"
 },
 6: {
 "links": {
@@ -126,5 +126,5 @@ Suena el celular</dialog>"
 }
 }
 names = {
-"SegundoTexto": 2
+"initial_dialog": 2
 }

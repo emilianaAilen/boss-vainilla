@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var start_button = $HUD/StartButton
+onready var start_button = $Start/StartButton
 export (PackedScene) var dialog_scene:PackedScene
 
 var dialog_instance

@@ -19,13 +19,12 @@ var _final_nid = 0
 var _Story_Reader
 var _texture_library : Dictionary = {}
 
-# Virtual Methods
 
 func _ready(): #func start():
 	var Story_Reader_Class = load("res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd")
 	_Story_Reader = Story_Reader_Class.new()
 	
-	var story = load("res://stories/Comienza_historia_Baked.tres")
+	var story = load("res://stories/Initial_Story_Baked.tres")
 	_Story_Reader.read(story)
 	
 	_Dialog_Box.visible = false
@@ -35,7 +34,7 @@ func _ready(): #func start():
 	
 	_clear_options()
 	
-	play_dialog("SegundoTexto")
+	play_dialog("initial_dialog")
 
 
 func _input(event):
@@ -43,7 +42,6 @@ func _input(event):
 		if event.scancode == KEY_SPACE and event.pressed == true:
 			_on_Dialog_Player_pressed_spacebar()
 
-# Callback Methods
 
 func _on_Body_AnimationPlayer_animation_finished(anim_name):
 	if _Option_List.get_child_count() == 0:
@@ -71,7 +69,6 @@ func _on_Option_clicked(slot):
 	if _is_playing():
 		_play_node()
 
-# Public Methods
 
 func play_dialog(record_name : String):
 	_did = _Story_Reader.get_did_via_record_name(record_name)
@@ -81,7 +78,6 @@ func play_dialog(record_name : String):
 	_play_node()
 	_Dialog_Box.visible = true
 
-# Private Methods
 
 func _clear_options():
 	var children = _Option_List.get_children()

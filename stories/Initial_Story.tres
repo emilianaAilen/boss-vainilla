@@ -6,14 +6,14 @@
 script = ExtResource( 1 )
 TYPE = "EXP_Story_editor"
 names = {
-"SegundoTexto": 2
+"initial_dialog": 2
 }
 story = {
 2: {
 "available_nid": [  ],
 "groups": [  ],
 "human_readable_description": "no sabia como ponerlos",
-"name": "SegundoTexto",
+"name": "initial_dialog",
 "nodes": {
 1: {
 "graph_offset": Vector2( -2320, 200 ),
@@ -72,7 +72,7 @@ Necesito que vengas cuanto antes.
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker>Nosotros </speaker>
-<dialog>Bueno pero quién habla?</dialog>",
+<dialog>Bueno, pero quién habla?</dialog>",
 "type": "line"
 },
 6: {
