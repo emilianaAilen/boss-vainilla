@@ -52,6 +52,8 @@ func _on_Body_AnimationPlayer_animation_finished(anim_name):
 
 
 func _on_Dialog_Player_pressed_spacebar():
+	if $AudioStreamPlayer2D.playing :
+			$AudioStreamPlayer2D.stop()
 	if _is_waiting():
 		_SpaceBar_Icon.visible = false
 		_Character_Texture.visible = false
@@ -146,6 +148,8 @@ func _play_node():
 	var text = _Story_Reader.get_text(_did, _nid)
 	text = _inject_variables(text)
 	var speaker = _get_tagged_text("speaker", text)
+	if speaker == "Celular?":
+		$AudioStreamPlayer2D.play()
 	var dialog = _get_tagged_text("dialog", text)
 	if "<choiceJSON>" in text:
 		var options = _get_tagged_text("choiceJSON", text)

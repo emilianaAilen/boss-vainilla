@@ -38,28 +38,28 @@ Necesito que vengas cuanto antes.
 "links": {
 0: 8
 },
-"text": "<speaker> Nosotros </speaker>
+"text": "<speaker>Dr. x</speaker>
 <dialog>Está bien, voy en camino</dialog>"
 },
 5: {
 "links": {
 0: 3
 },
-"text": "<speaker>Nosotros </speaker>
+"text": "<speaker>Dr. x</speaker>
 <dialog>Bueno, pero quién habla?</dialog>"
 },
 6: {
 "links": {
 0: 7
 },
-"text": "<speaker>Nosotros</speaker>
+"text": "<speaker>Dr. x</speaker>
 <dialog>¿Un accidente? ¿Qué pasó?</dialog>"
 },
 7: {
 "links": {
 0: 8
 },
-"text": "<speaker>Desconocido </speaker>
+"text": "<speaker>Desconocido</speaker>
 <dialog>Hubo una explosión
 Hay muchos heridos </dialog>"
 },
@@ -72,7 +72,7 @@ Hay muchos heridos </dialog>"
 "links": {
 0: 10
 },
-"text": "<speaker> yo el medico</speaker>
+"text": "<speaker>Dr. x</speaker>
 <dialog>Que buena siesta.
 Desde hace un buen tiempo no descansaba durante tantas horas...</dialog>"
 },
@@ -80,7 +80,7 @@ Desde hace un buen tiempo no descansaba durante tantas horas...</dialog>"
 "links": {
 0: 14
 },
-"text": "<speaker>el medico</speaker>
+"text": "<speaker>Dr. x</speaker>
 <dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada...
 Tendría que buscar un trabajo que implique menos sacrificio y estrés... 
 </dialog>
@@ -99,27 +99,27 @@ Suena el celular</dialog>"
 0: 13
 },
 "text": "<speaker>Desconocido</speaker>
-<dialog>Dr.  xxx?</dialog>"
+<dialog>Dr.  x?</dialog>"
 },
 13: {
 "links": {
 0: 2
 },
-"text": "<speaker>Nosotros</speaker>
+"text": "<speaker>Dr. x</speaker>
 <dialog>Sí, quién habla?</dialog>"
 },
 14: {
 "links": {
 0: 11
 },
-"text": "<speaker>el medico</speaker>
+"text": "<speaker>Dr. x</speaker>
 <dialog>Ya no estoy seguro de estar conforme con este estilo de vida...</dialog>"
 },
 15: {
 "links": {
 0: 9
 },
-"text": "<speaker> yo el medico</speaker>
+"text": "<speaker>Dr. x</speaker>
 <dialog>...</dialog>"
 }
 }
