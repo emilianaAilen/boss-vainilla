@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Merienda-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Dialog_Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Start.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+extra_spacing_char = 21
+font_data = ExtResource( 2 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+dialog_scene = ExtResource( 3 )
+
+[node name="Start" type="CanvasLayer" parent="."]
+script = ExtResource( 4 )
+
+[node name="StartButton" type="Button" parent="Start"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -113.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 1 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Start/StartButton" to="." method="_on_StartButton_pressed"]

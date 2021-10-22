@@ -16,9 +16,9 @@ story = {
 "name": "SegundoTexto",
 "nodes": {
 1: {
-"graph_offset": Vector2( -1800, 160 ),
+"graph_offset": Vector2( -2320, 200 ),
 "links": {
-0: 9
+0: 15
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
@@ -26,7 +26,7 @@ story = {
 "type": "line"
 },
 2: {
-"graph_offset": Vector2( 40, 160 ),
+"graph_offset": Vector2( 20, 160 ),
 "links": {
 0: 6,
 1: 5,
@@ -35,32 +35,33 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 3,
 "text": "<speaker>Desconocido</speaker>
-<dialog>dorctor xxx, es el hospital. paso un accidente.
-necesito que venga ya.</dialog>
-<choiceJSON>{ \"preguntar por el accidente\" : 0, \"preguntar quien habla\" : 1, \"ir inmediatamente\" : 2 } </choiceJSON>",
+<dialog>Estoy en el hospital. Hubo un accidente...
+Tenés que venir urgente.</dialog>
+<choiceJSON>{ \"Preguntar por lo ocurrido\" : 0, \"Preguntar quien habla\" : 1, \"Ir inmediatamente\" : 2 } </choiceJSON>",
 "type": "line"
 },
 3: {
-"graph_offset": Vector2( 980, 220 ),
+"graph_offset": Vector2( 900, 220 ),
 "links": {
-0: 8
+0: 4
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
-"text": "bueno pero quien habla *¹
-<speaker> Jorge </speaker>
-<dialog> Soy Jorge , El director. Necesito que vengas ya </dialog> ",
+"text": "<speaker> Jorge </speaker>
+<dialog> Soy Jorge , El director. 
+Necesito que vengas cuanto antes. 
+</dialog> ",
 "type": "line"
 },
 4: {
-"graph_offset": Vector2( 520, 400 ),
+"graph_offset": Vector2( 520, 460 ),
 "links": {
 0: 8
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker> Nosotros </speaker>
-<dialog>Esta bien, voy en camino</dialog>",
+<dialog>Está bien, voy en camino</dialog>",
 "type": "line"
 },
 5: {
@@ -70,8 +71,8 @@ necesito que venga ya.</dialog>
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
-"text": "<speaker> Nosotros </speaker>
-<dialog>Buenas, quien habla?</dialog>",
+"text": "<speaker>Nosotros </speaker>
+<dialog>Bueno pero quién habla?</dialog>",
 "type": "line"
 },
 6: {
@@ -86,18 +87,19 @@ necesito que venga ya.</dialog>
 "type": "line"
 },
 7: {
-"graph_offset": Vector2( 980, 60 ),
+"graph_offset": Vector2( 900, 60 ),
 "links": {
 0: 8
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
-"text": "<speaker> Desconocido </speaker>
-<dialog> Hubo una explosión, y hay muchos heridos </dialog>",
+"text": "<speaker>Desconocido </speaker>
+<dialog>Hubo una explosión
+Hay muchos heridos </dialog>",
 "type": "line"
 },
 8: {
-"graph_offset": Vector2( 1460, 400 ),
+"graph_offset": Vector2( 1700, 260 ),
 "links": {
 },
 "rect_size": Vector2( 324, 137 ),
@@ -106,38 +108,85 @@ necesito que venga ya.</dialog>
 "type": "line"
 },
 9: {
-"graph_offset": Vector2( -1340, 160 ),
+"graph_offset": Vector2( -1560, 160 ),
 "links": {
 0: 10
 },
-"rect_size": Vector2( 324, 137 ),
+"rect_size": Vector2( 373, 143 ),
 "slot_amount": 1,
 "text": "<speaker> yo el medico</speaker>
-<dialog>Que buenala tarde domingo, unas cuantas horas de descansando, que hacía tiempo no lograba.</dialog>",
+<dialog>Que buena siesta.
+Desde hace un buen tiempo no descansaba durante tantas horas...</dialog>",
 "type": "line"
 },
 10: {
-"graph_offset": Vector2( -880, 160 ),
+"graph_offset": Vector2( -1160, 160 ),
+"links": {
+0: 14
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>el medico</speaker>
+<dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada...
+Tendría que buscar un trabajo que implique menos sacrificio y estrés... 
+</dialog>
+",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( -800, 160 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Celular?</speaker>
+<dialog>Ring rings
+Suena el celular</dialog>",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( -420, 60 ),
+"links": {
+0: 13
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Desconocido</speaker>
+<dialog>Dr.  xxx?</dialog>",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( -420, 220 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Nosotros</speaker>
+<dialog>Sí, quién habla?</dialog>",
+"type": "line"
+},
+14: {
+"graph_offset": Vector2( -1160, 320 ),
 "links": {
 0: 11
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<speaker>el medico</speaker>
-<dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada.
-tendria que buscar un trabajo que implique menos sacrificio y estrés, ya no estoy seguro de estar conforme con una vida médico de Urgencias.</dialog>",
+<dialog>Ya no estoy seguro de estar conforme con este estilo de vida...</dialog>",
 "type": "line"
 },
-11: {
-"graph_offset": Vector2( -420, 160 ),
+15: {
+"graph_offset": Vector2( -1920, 200 ),
 "links": {
-0: 2
+0: 9
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
-"text": "<speaker>el medico yo</speaker>
-<dialog>Ring rings
-Suena el celular</dialog>",
+"text": "<speaker> yo el medico</speaker>
+<dialog>...</dialog>",
 "type": "line"
 }
 }

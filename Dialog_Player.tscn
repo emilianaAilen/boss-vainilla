@@ -1,14 +1,16 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://textures/menu_section_9patch.png" type="Texture" id=1]
 [ext_resource path="res://fonts/Cave-Story.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Dialog_Player.gd" type="Script" id=3]
 [ext_resource path="res://Simulated_Registry.gd" type="Script" id=4]
 [ext_resource path="res://scenes/Option.tscn" type="PackedScene" id=5]
+[ext_resource path="res://fonts/Merienda-Regular.ttf" type="DynamicFontData" id=6]
 
-[sub_resource type="DynamicFont" id=1]
-size = 38
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFont" id=7]
+size = 18
+extra_spacing_top = 5
+font_data = ExtResource( 6 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "TextDisplay"
@@ -117,12 +119,14 @@ margin_right = 688.0
 margin_bottom = 160.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 7 )
+custom_constants/line_spacing = 0
 text = "This is where the body of the dialog text goes.
 Press F6 to play! ^_^"
 autowrap = true
 
 [node name="Body_AnimationPlayer" type="AnimationPlayer" parent="Dialog_Box/Body_NinePatchRect/MarginContainer/Body_Label"]
+playback_speed = 0.7
 anims/TextDisplay = SubResource( 2 )
 
 [node name="Speaker_NinePatchRect" type="NinePatchRect" parent="Dialog_Box/Body_NinePatchRect"]

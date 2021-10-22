@@ -10,7 +10,7 @@ story = {
 "nodes": {
 1: {
 "links": {
-0: 9
+0: 15
 },
 "text": "<start>"
 },
@@ -21,31 +21,32 @@ story = {
 2: 4
 },
 "text": "<speaker>Desconocido</speaker>
-<dialog>dorctor xxx, es el hospital. paso un accidente.
-necesito que venga ya.</dialog>
-<choiceJSON>{ \"preguntar por el accidente\" : 0, \"preguntar quien habla\" : 1, \"ir inmediatamente\" : 2 } </choiceJSON>"
+<dialog>Estoy en el hospital. Hubo un accidente...
+Tenés que venir urgente.</dialog>
+<choiceJSON>{ \"Preguntar por lo ocurrido\" : 0, \"Preguntar quien habla\" : 1, \"Ir inmediatamente\" : 2 } </choiceJSON>"
 },
 3: {
 "links": {
-0: 8
+0: 4
 },
-"text": "bueno pero quien habla *¹
-<speaker> Jorge </speaker>
-<dialog> Soy Jorge , El director. Necesito que vengas ya </dialog> "
+"text": "<speaker> Jorge </speaker>
+<dialog> Soy Jorge , El director. 
+Necesito que vengas cuanto antes. 
+</dialog> "
 },
 4: {
 "links": {
 0: 8
 },
 "text": "<speaker> Nosotros </speaker>
-<dialog>Esta bien, voy en camino</dialog>"
+<dialog>Está bien, voy en camino</dialog>"
 },
 5: {
 "links": {
 0: 3
 },
-"text": "<speaker> Nosotros </speaker>
-<dialog>Buenas, quien habla?</dialog>"
+"text": "<speaker>Nosotros </speaker>
+<dialog>Bueno pero quién habla?</dialog>"
 },
 6: {
 "links": {
@@ -58,8 +59,9 @@ necesito que venga ya.</dialog>
 "links": {
 0: 8
 },
-"text": "<speaker> Desconocido </speaker>
-<dialog> Hubo una explosión, y hay muchos heridos </dialog>"
+"text": "<speaker>Desconocido </speaker>
+<dialog>Hubo una explosión
+Hay muchos heridos </dialog>"
 },
 8: {
 "links": {
@@ -71,23 +73,54 @@ necesito que venga ya.</dialog>
 0: 10
 },
 "text": "<speaker> yo el medico</speaker>
-<dialog>Que buenala tarde domingo, unas cuantas horas de descansando, que hacía tiempo no lograba.</dialog>"
+<dialog>Que buena siesta.
+Desde hace un buen tiempo no descansaba durante tantas horas...</dialog>"
 },
 10: {
+"links": {
+0: 14
+},
+"text": "<speaker>el medico</speaker>
+<dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada...
+Tendría que buscar un trabajo que implique menos sacrificio y estrés... 
+</dialog>
+"
+},
+11: {
+"links": {
+0: 12
+},
+"text": "<speaker>Celular?</speaker>
+<dialog>Ring rings
+Suena el celular</dialog>"
+},
+12: {
+"links": {
+0: 13
+},
+"text": "<speaker>Desconocido</speaker>
+<dialog>Dr.  xxx?</dialog>"
+},
+13: {
+"links": {
+0: 2
+},
+"text": "<speaker>Nosotros</speaker>
+<dialog>Sí, quién habla?</dialog>"
+},
+14: {
 "links": {
 0: 11
 },
 "text": "<speaker>el medico</speaker>
-<dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada.
-tendria que buscar un trabajo que implique menos sacrificio y estrés, ya no estoy seguro de estar conforme con una vida médico de Urgencias.</dialog>"
+<dialog>Ya no estoy seguro de estar conforme con este estilo de vida...</dialog>"
 },
-11: {
+15: {
 "links": {
-0: 2
+0: 9
 },
-"text": "<speaker>el medico yo</speaker>
-<dialog>Ring rings
-Suena el celular</dialog>"
+"text": "<speaker> yo el medico</speaker>
+<dialog>...</dialog>"
 }
 }
 }

@@ -1,4 +1,5 @@
 extends Node
+class_name Dialog_Game
 
 onready var _Body_AnimationPlayer = find_node("Body_AnimationPlayer")
 onready var _Body_LBL = find_node("Body_Label")
@@ -20,7 +21,7 @@ var _texture_library : Dictionary = {}
 
 # Virtual Methods
 
-func _ready():
+func _ready(): #func start():
 	var Story_Reader_Class = load("res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd")
 	_Story_Reader = Story_Reader_Class.new()
 	
