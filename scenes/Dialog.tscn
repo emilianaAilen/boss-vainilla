@@ -98,17 +98,36 @@ valign = 1
 
 [node name="SpaceBarAnimation" type="AnimationPlayer" parent="DialogBox/Body/SpaceBar"]
 
-[node name="OptionList" type="VBoxContainer" parent="DialogBox/Body"]
-margin_left = 432.335
-margin_top = -143.339
-margin_right = 802.335
-margin_bottom = -12.3394
+[node name="OptionList" type="NinePatchRect" parent="DialogBox/Body"]
+margin_left = 432.0
+margin_top = -141.0
+margin_right = 802.0
+margin_bottom = 3.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Option" parent="DialogBox/Body/OptionList" instance=ExtResource( 2 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 370.0
-margin_bottom = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.182
+margin_right = 5.0
+margin_bottom = 23.522
+size_flags_horizontal = 3
+
+[node name="Option2" parent="DialogBox/Body/OptionList" instance=ExtResource( 2 )]
+anchor_right = 1.0
+anchor_bottom = 0.346
+margin_left = 0.943909
+margin_top = 46.2498
+margin_right = 5.94391
+margin_bottom = 48.6158
+size_flags_horizontal = 3
+
+[node name="Option3" parent="DialogBox/Body/OptionList" instance=ExtResource( 2 )]
+anchor_right = 1.0
+anchor_bottom = 0.346
+margin_left = 0.943787
+margin_top = 93.4435
+margin_right = 5.94379
+margin_bottom = 95.8095
+size_flags_horizontal = 3
