@@ -21,7 +21,7 @@ func _ready():
 	_play_phase()
 
 func _process(_delta):
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") && ! (phaseId == ""):
 		_play_phase()
 		
 func getDialog() -> Array:
@@ -43,13 +43,24 @@ func _play_phase():
 		phaseId = currentPhase.next
 		
 func _show_options(choices):
-	for choice in choices:
-		var slot = choice.branch_next
-		var new_option_button = _Option_Button_Scene.instance()
-		_Option_List.add_child(new_option_button)
-		new_option_button.slot = slot
-		new_option_button.set_text(choice.text)
-		new_option_button.connect("clicked", self, "_on_Option_clicked")
+	if !_options_already_loaded(choices):
+		for choice in choices:
+			var slot = choice.branch_next
+			var new_option_button = _Option_Button_Scene.instance()
+			_Option_List.add_child(new_option_button)
+			new_option_button.slot = slot
+			new_option_button.set_text(choice.text)
+			new_option_button.connect("clicked", self, "_on_Option_clicked")
+		
+func _options_already_loaded(choices):
+	var visibleChoices = 0
+	var children = _Option_List.get_children()
+	for child in children:
+		if child.visible:
+			visibleChoices = visibleChoices + 1
+			
+	return visibleChoices == choices.size()
+
 		
 func _on_Option_clicked(slot):
 	_Action_Description.text = "Press space bar"
