@@ -4,11 +4,20 @@
 [ext_resource path="res://assets/textures/backgroundBox.png" type="Texture" id=2]
 
 [node name="Option" type="NinePatchRect"]
-anchor_right = 0.361
-anchor_bottom = 0.048
-margin_right = 0.335968
-margin_bottom = 0.199999
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = -37.0
+margin_right = 2.0
+grow_vertical = 0
+rect_min_size = Vector2( 0, 37 )
+size_flags_horizontal = 3
 texture = ExtResource( 2 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

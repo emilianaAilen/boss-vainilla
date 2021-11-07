@@ -1,5 +1,5 @@
 extends Node
-export var dialogPath = "res://data/gameData.json"
+export var gameDataPath = "res://data/gameData.json"
 export(float) var textSpeed = 0.05
 
 var game_data
@@ -10,14 +10,14 @@ var finished = false
 onready var _Text_Body = find_node("TextLabel")
 onready var _Dialog_Box = find_node("Dialog_Box")
 onready var _Option_List = find_node("OptionList")
-onready var _Action_Description = find_node("SpaceBarLabel")
+onready var _Action_Description = find_node("ActionLabel")
 onready var _Speaker_Text = find_node("SpeakerLabel")
 
 onready var _Option_Button_Scene = load("res://scenes/Option.tscn")
 
 func _ready():
 	game_data = getDialog()
-	assert(game_data, "Dialog not found")
+	assert(game_data, "data not found")
 	_play_phase()
 
 func _process(_delta):
@@ -26,8 +26,8 @@ func _process(_delta):
 		
 func getDialog() -> Array:
 	var f = File.new()
-	assert(f.file_exists(dialogPath), "File path does not exist")
-	f.open(dialogPath, File.READ)
+	assert(f.file_exists(gameDataPath), "File path does not exist")
+	f.open(gameDataPath, File.READ)
 	var json = f.get_as_text()
 	var output = parse_json(json)
 	return output

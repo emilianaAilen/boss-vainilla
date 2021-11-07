@@ -5,3 +5,4 @@
 [node name="Main" type="Node2D"]
 
 [node name="Dialog" parent="." instance=ExtResource( 1 )]
+position = Vector2( 505.752, 604.577 )
