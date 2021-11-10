@@ -3,7 +3,7 @@ export var gameDataPath = "res://data/gameData.json"
 export(float) var textSpeed = 0.05
 
 var game_data
-
+var sounds
 var phaseId = "001"
 var finished = false
 
@@ -12,28 +12,42 @@ onready var _Dialog_Box = find_node("Dialog_Box")
 onready var _Option_List = find_node("OptionList")
 onready var _Action_Description = find_node("ActionLabel")
 onready var _Speaker_Text = find_node("SpeakerLabel")
+onready var _dialog_sfx = $DialogSfx
 
 onready var _Option_Button_Scene = load("res://scenes/Option.tscn")
 
+##sounds
+export (AudioStream) var phone
+
+
 func _ready():
-	game_data = getDialog()
+	game_data = _getDialog()
 	assert(game_data, "data not found")
+	sounds = _get_sounds()
 	_play_phase()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept") && ! (phaseId == ""):
 		_play_phase()
 		
-func getDialog() -> Array:
+func _getDialog() -> Array:
 	var f = File.new()
 	assert(f.file_exists(gameDataPath), "File path does not exist")
 	f.open(gameDataPath, File.READ)
 	var json = f.get_as_text()
 	var output = parse_json(json)
 	return output
+
+func _get_sounds():
+	return {
+		"phone": phone
+	}
 	
 func _play_phase():
+	_stop_sound_if_playing()
 	var currentPhase = game_data[phaseId]
+	if currentPhase.has("sound"):
+		_play_sfx(currentPhase.sound)
 	if currentPhase.has("choices"):
 		_Action_Description.text = "Select choice"
 		_show_options(currentPhase.choices)
@@ -41,6 +55,10 @@ func _play_phase():
 	_Text_Body.text = currentPhase.text
 	if currentPhase.has("next"):
 		phaseId = currentPhase.next
+
+func _stop_sound_if_playing():
+	if _dialog_sfx.playing:
+		_dialog_sfx.stop()
 		
 func _show_options(choices):
 	if !_options_already_loaded(choices):
@@ -74,3 +92,8 @@ func _clear_options():
 	for child in children:
 		_Option_List.remove_child(child)
 		child.queue_free()
+		
+func _play_sfx(sound_name):
+	if sounds.has(sound_name):
+		_dialog_sfx.stream = sounds[sound_name]
+		_dialog_sfx.play()
