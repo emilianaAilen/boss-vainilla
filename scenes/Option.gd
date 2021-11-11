@@ -15,5 +15,3 @@ func _on_Button_pressed():
 
 func set_text(new_text : String):
 	_Button.text = new_text
-
-

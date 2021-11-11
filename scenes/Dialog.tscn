@@ -1,0 +1,153 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/textures/backgroundBox.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Option.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Dialog.gd" type="Script" id=3]
+[ext_resource path="res://assets/audio/telephone-ring-04.wav.sample" type="AudioStream" id=4]
+
+[node name="Dialog" type="Node2D"]
+position = Vector2( 514.048, 602.242 )
+script = ExtResource( 3 )
+phone = ExtResource( 4 )
+
+[node name="DialogBox" type="Control" parent="."]
+margin_left = -509.0
+margin_top = -600.0
+margin_right = 506.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="NinePatchRect" parent="DialogBox"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.861
+margin_top = 47.2184
+margin_right = 405.139
+margin_bottom = 272.218
+texture = ExtResource( 1 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextContainer" type="MarginContainer" parent="DialogBox/Body"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -369.0
+margin_top = -71.5
+margin_right = 369.0
+margin_bottom = 71.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextLabel" type="Label" parent="DialogBox/Body/TextContainer"]
+margin_top = 56.0
+margin_right = 738.0
+margin_bottom = 87.0
+text = "This is where the body of the dialog text goes.
+Press F6 to play! ^_^"
+autowrap = true
+
+[node name="Speaker" type="NinePatchRect" parent="DialogBox/Body"]
+margin_left = -20.1587
+margin_top = -32.3984
+margin_right = 159.841
+margin_bottom = 15.6016
+rect_min_size = Vector2( 180, 48 )
+texture = ExtResource( 1 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeakerLabel" type="Label" parent="DialogBox/Body/Speaker"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -2.0
+margin_bottom = -3.0
+text = "Speaker"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionBox" type="NinePatchRect" parent="DialogBox/Body"]
+margin_left = 667.0
+margin_top = 191.0
+margin_right = 859.0
+margin_bottom = 242.0
+texture = ExtResource( 1 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ActionLabel" type="Label" parent="DialogBox/Body/ActionBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Press Spacebar"
+align = 1
+valign = 1
+
+[node name="SpaceBarAnimation" type="AnimationPlayer" parent="DialogBox/Body/ActionBox"]
+
+[node name="OptionList" type="VBoxContainer" parent="DialogBox/Body"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -347.0
+margin_top = -134.0
+margin_right = -1.0
+margin_bottom = -15.0
+grow_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option" parent="DialogBox/Body/OptionList" instance=ExtResource( 2 )]
+visible = false
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 346.0
+margin_bottom = 37.0
+
+[node name="Option2" parent="DialogBox/Body/OptionList" instance=ExtResource( 2 )]
+visible = false
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 346.0
+margin_bottom = 37.0
+
+[node name="Option3" parent="DialogBox/Body/OptionList" instance=ExtResource( 2 )]
+visible = false
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 346.0
+margin_bottom = 37.0
+
+[node name="DialogSfx" type="AudioStreamPlayer2D" parent="."]
