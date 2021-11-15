@@ -18,6 +18,7 @@ onready var _Option_Button_Scene = load("res://scenes/Option.tscn")
 
 ##sounds
 export (AudioStream) var phone
+export (AudioStream) var pressnext
 
 
 func _ready():
@@ -29,7 +30,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept") && ! (phaseId == ""):
 		_play_phase()
-		
+
 func _getDialog() -> Array:
 	var f = File.new()
 	assert(f.file_exists(gameDataPath), "File path does not exist")
@@ -40,11 +41,14 @@ func _getDialog() -> Array:
 
 func _get_sounds():
 	return {
-		"phone": phone
+		"phone": phone,
+		"next": pressnext
 	}
 	
 func _play_phase():
-	_stop_sound_if_playing()
+	if phaseId!= "001":
+		_stop_sound_if_playing()
+		_play_sfx("next")
 	var currentPhase = game_data[phaseId]
 	if currentPhase.has("sound"):
 		_play_sfx(currentPhase.sound)
@@ -97,3 +101,8 @@ func _play_sfx(sound_name):
 	if sounds.has(sound_name):
 		_dialog_sfx.stream = sounds[sound_name]
 		_dialog_sfx.play()
+
+
+func _on_ActionNext_pressed():
+	if ( !(phaseId == "") ):
+		_play_phase()
