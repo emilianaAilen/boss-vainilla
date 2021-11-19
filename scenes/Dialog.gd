@@ -38,18 +38,18 @@ func initialize():
 	assert(game_data, "data not found")
 	sounds = _get_sounds()
 	_play_phase()
-
-func on_spanish():
+	
+func _load_Json_and_exec(json):
 	_Dialog_Box.show()
 	background.show()
-	gameDataPath = "res://data/gameData.json"
+	gameDataPath = json
 	initialize()
 
-func on_english():
-	_Dialog_Box.visible = true
-#	gameDataPath = "res://data/gameData.json"
-#	initialize()
+func on_spanish():
+	_load_Json_and_exec("res://data/game_data_spanish.json")
 
+func on_english():
+	_load_Json_and_exec("res://data/game_data_english.json")
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept") && ! (phaseId == ""):
