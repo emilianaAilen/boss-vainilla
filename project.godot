@@ -8,33 +8,15 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node",
-"class": "Dialog_Game",
-"language": "GDScript",
-"path": "res://Dialog_Player.gd"
-} ]
-_global_script_class_icons={
-"Dialog_Game": ""
-}
-
 [application]
 
 config/name="Boss-vainilla"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
-<<<<<<< HEAD
 [display]
 
 window/stretch/aspect="keep_width"
-
-[physics]
-=======
-[editor_plugins]
->>>>>>> 1bcec11475c638a3401f9335f7604a33d4441392
-
-enabled=PoolStringArray( "res://addons/EXP-System-Dialog/plugin.cfg" )
 
 [physics]
 
