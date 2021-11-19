@@ -5,13 +5,14 @@
         "sound": "",
         "image": "player_dr.png",
         "type_game": "",
-        "next": "002"
+        "next": "002",
+        "type_sound_back": "news"
     },
     "002": {
         "text": "Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada... Tendría que buscar un trabajo que implique menos sacrificio y estrés...",
         "name": "Dr. x",
         "sound": "",
-        "image": "",
+        "image": "player_dr.png",
         "type_game": "",
         "next": "003"
     },
@@ -19,7 +20,7 @@
         "text": "Ya no estoy seguro de estar conforme con este estilo de vida...",
         "name": "Dr. x",
         "sound": "",
-        "image": "",
+        "image": "player_dr.png",
         "type_game": "",
         "next": "004"
     },
@@ -43,13 +44,13 @@
         "text": "Sí, quién habla?",
         "name": "Dr. x",
         "sound": "",
-        "image": "",
+        "image": "player_dr.png",
         "type_game": "",
         "next": "007"
     },
     "007": {
         "text": "Estoy en el hospital. Hubo un accidente...Tenés que venir urgente.",
-        "name": "Dr. x",
+        "name": "Desconocido",
         "sound": "",
         "image": "",
         "type_game": "",
@@ -72,7 +73,7 @@
         "text": "¿Un accidente? ¿Qué pasó?",
         "name": "Dr. x",
         "sound": "",
-        "image": "",
+        "image": "player_dr.png",
         "type_game": "",
         "next": "011"
     },
@@ -80,7 +81,7 @@
         "text": "Bueno, pero quién habla?",
         "name": "Dr. x",
         "sound": "",
-        "image": "",
+        "image": "player_dr.png",
         "type_game": "",
         "next": "012"
     },
@@ -88,7 +89,7 @@
         "text": "Está bien, voy en camino.",
         "name": "Dr. x",
         "sound": "",
-        "image": "",
+        "image": "player_dr.png",
         "type_game": "",
         "next": "013"
     },
