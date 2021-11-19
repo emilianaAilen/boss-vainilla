@@ -59,7 +59,6 @@ func _play_phase_if_not_tween():
 	if !tween.is_active():
 		 _play_phase()
 		
-
 func _getDialog() -> Array:
 	var f = File.new()
 	assert(f.file_exists(gameDataPath), "File path does not exist")
@@ -76,22 +75,13 @@ func _get_sounds():
 	}
 	
 func _play_phase():
-	_stop_sound_if_playing()	
-	if phaseId!= "001":
-		_play_sfx("next")
 	var currentPhase = game_data[phaseId]
-	if currentPhase.has("image") && currentPhase.image != '':
-		var img_url = "res://assets/textures/"+currentPhase.image
-		loadSpeakerTexture(img_url)
-	else:
-		 speaker_container.hide()
-	if currentPhase.has("sound"):
-		_play_sfx(currentPhase.sound)
-	if currentPhase.has("type_sound_back"):
-		_play_back(currentPhase.type_sound_back)
-	if currentPhase.has("choices"):
-		_Action_Description.text = "Select choice"
-		_show_options(currentPhase.choices)
+	_stop_sound_if_playing()	
+	_play_next_sound_if_not_first()
+	_add_speaker_texture_if_it_exists(currentPhase)
+	_play_sfx_if_it_exists(currentPhase)
+	_play_back_sound_if_it_exists(currentPhase)
+	_show_options_if_it_has(currentPhase)
 	_Speaker_Text.text = currentPhase.name
 	_Text_Body.text = currentPhase.text
 	_action_button.hide()
@@ -132,26 +122,59 @@ func _on_Option_clicked(slot):
 	_clear_options()
 	_play_phase()
 		
+		
 func _clear_options():
 	var children = _Option_List.get_children()
 	for child in children:
 		_Option_List.remove_child(child)
 		child.queue_free()
 		
+		
 func _play_sfx(sound_name):
 	if sounds.has(sound_name):
 		_dialog_sfx.stream = sounds[sound_name]
 		_dialog_sfx.play()
 		
+		
 func _play_back(sound_name):
 	background_sound.stream = sounds[sound_name]
 	if !background_sound.playing:
 		background_sound.play()
+		
+		
+func _add_speaker_texture_if_it_exists(currentPhase):
+	if currentPhase.has("image") && currentPhase.image != '':
+		var img_url = "res://assets/textures/"+currentPhase.image
+		loadSpeakerTexture(img_url)
+	else:
+		 speaker_container.hide()
+		
+		
+func _play_sfx_if_it_exists(currentPhase):
+	if currentPhase.has("sound"):
+		_play_sfx(currentPhase.sound)
+		
+		
+func _play_back_sound_if_it_exists(currentPhase):
+	if currentPhase.has("type_sound_back"):
+		_play_back(currentPhase.type_sound_back)
+		
+		
+func _show_options_if_it_has(currentPhase):
+	if currentPhase.has("choices"):
+		_Action_Description.text = "Select choice"
+		_show_options(currentPhase.choices)
+
+
+func _play_next_sound_if_not_first():
+	if phaseId!= "001":
+		_play_sfx("next")
 
 
 func _on_ActionNext_pressed():
 	if ( !(phaseId == "") ):
 		_play_phase()
+
 
 func loadSpeakerTexture(texture_url: String):
 	speaker_texture.texture = load(texture_url)
