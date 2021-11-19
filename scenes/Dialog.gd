@@ -1,31 +1,44 @@
 extends Node
-export var gameDataPath = "res://data/gameData.json"
 export(float) var textSpeed = 0.05
 
+var gameDataPath:String
 var game_data
 var sounds
 var phaseId = "001"
 var finished = false
 
-onready var _Text_Body = find_node("TextLabel")
-onready var _Dialog_Box = find_node("Dialog_Box")
-onready var _Option_List = find_node("OptionList")
-onready var _Action_Description = find_node("ActionLabel")
-onready var _Speaker_Text = find_node("SpeakerLabel")
+onready var _Text_Body = $DialogBox/Body/TextContainer/TextLabel
+onready var _Dialog_Box = $DialogBox
+onready var _Option_List = $DialogBox/Body/OptionList
+onready var _Action_Description = $DialogBox/Body/ActionBox/ActionLabel
+onready var _Speaker_Text = $DialogBox/Body/Speaker/SpeakerLabel
 onready var _dialog_sfx = $DialogSfx
 
 onready var _Option_Button_Scene = load("res://scenes/Option.tscn")
+onready var speaker_texture = $DialogBox/Body/Speaker/SpeakerTexture
+onready var speaker_light = $DialogBox/Body/Speaker/SpeakerLight
 
 ##sounds
 export (AudioStream) var phone
 export (AudioStream) var pressnext
 
 
-func _ready():
+func initialize():
 	game_data = _getDialog()
 	assert(game_data, "data not found")
 	sounds = _get_sounds()
 	_play_phase()
+
+func on_spanish():
+	_Dialog_Box.visible = true
+	gameDataPath = "res://data/gameData.json"
+	initialize()
+
+func on_english():
+	_Dialog_Box.visible = true
+#	gameDataPath = "res://data/gameData.json"
+#	initialize()
+
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept") && ! (phaseId == ""):
@@ -50,6 +63,12 @@ func _play_phase():
 		_stop_sound_if_playing()
 		_play_sfx("next")
 	var currentPhase = game_data[phaseId]
+	if currentPhase.has("image") && currentPhase.image != '':
+		var img_url = "res://assets/textures/"+currentPhase.image
+		cargarTextureSpeaker(img_url)
+	else:
+		speaker_texture.hide()
+		speaker_light.hide()
 	if currentPhase.has("sound"):
 		_play_sfx(currentPhase.sound)
 	if currentPhase.has("choices"):
@@ -106,3 +125,6 @@ func _play_sfx(sound_name):
 func _on_ActionNext_pressed():
 	if ( !(phaseId == "") ):
 		_play_phase()
+
+func cargarTextureSpeaker(texture_url: String):
+	speaker_texture.texture = load(texture_url)

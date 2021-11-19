@@ -3,7 +3,7 @@
         "text": "Que buena siesta. Desde hace un buen tiempo no descansaba durante tantas horas...",
         "name": "Dr. x",
         "sound": "",
-        "image": "",
+        "image": "player_dr.png",
         "type_game": "",
         "next": "002"
     },
