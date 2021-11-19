@@ -1,0 +1,130 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_BakedStory/EXP_BakedStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Baked_Story"
+story = {
+2: {
+"nodes": {
+1: {
+"links": {
+0: 15
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 6,
+1: 5,
+2: 4
+},
+"text": "<speaker>Desconocido</speaker>
+<dialog>Estoy en el hospital. Hubo un accidente...
+Tenés que venir urgente.</dialog>
+<choiceJSON>{ \"Preguntar por lo ocurrido\" : 0, \"Preguntar quien habla\" : 1, \"Ir inmediatamente\" : 2 } </choiceJSON>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<speaker> Jorge </speaker>
+<dialog> Soy Jorge , El director. 
+Necesito que vengas cuanto antes. 
+</dialog> "
+},
+4: {
+"links": {
+0: 8
+},
+"text": "<speaker>Dr. x</speaker>
+<dialog>Está bien, voy en camino</dialog>"
+},
+5: {
+"links": {
+0: 3
+},
+"text": "<speaker>Dr. x</speaker>
+<dialog>Bueno, pero quién habla?</dialog>"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "<speaker>Dr. x</speaker>
+<dialog>¿Un accidente? ¿Qué pasó?</dialog>"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "<speaker>Desconocido</speaker>
+<dialog>Hubo una explosión
+Hay muchos heridos </dialog>"
+},
+8: {
+"links": {
+},
+"text": "<end>"
+},
+9: {
+"links": {
+0: 10
+},
+"text": "<speaker>Dr. x</speaker>
+<dialog>Que buena siesta.
+Desde hace un buen tiempo no descansaba durante tantas horas...</dialog>"
+},
+10: {
+"links": {
+0: 14
+},
+"text": "<speaker>Dr. x</speaker>
+<dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada...
+Tendría que buscar un trabajo que implique menos sacrificio y estrés... 
+</dialog>
+"
+},
+11: {
+"links": {
+0: 12
+},
+"text": "<speaker>Celular?</speaker>
+<dialog>Ring rings
+Suena el celular</dialog>"
+},
+12: {
+"links": {
+0: 13
+},
+"text": "<speaker>Desconocido</speaker>
+<dialog>Dr.  x?</dialog>"
+},
+13: {
+"links": {
+0: 2
+},
+"text": "<speaker>Dr. x</speaker>
+<dialog>Sí, quién habla?</dialog>"
+},
+14: {
+"links": {
+0: 11
+},
+"text": "<speaker>Dr. x</speaker>
+<dialog>Ya no estoy seguro de estar conforme con este estilo de vida...</dialog>"
+},
+15: {
+"links": {
+0: 9
+},
+"text": "<speaker>Dr. x</speaker>
+<dialog>...</dialog>"
+}
+}
+}
+}
+names = {
+"initial_dialog": 2
+}

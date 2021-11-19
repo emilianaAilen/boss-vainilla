@@ -1,24 +1,45 @@
+<<<<<<< HEAD
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/Option.gd" type="Script" id=1]
 [ext_resource path="res://assets/textures/backgroundBox.png" type="Texture" id=2]
+=======
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/Cave-Story.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://textures/menu_section_9patch.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Option.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 38
+font_data = ExtResource( 1 )
+>>>>>>> 1bcec11475c638a3401f9335f7604a33d4441392
 
 [node name="Option" type="NinePatchRect"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+<<<<<<< HEAD
 margin_left = 1.0
 margin_top = -37.0
 margin_right = 2.0
 grow_vertical = 0
 rect_min_size = Vector2( 0, 37 )
+=======
+grow_vertical = 0
+rect_min_size = Vector2( 0, 48 )
+>>>>>>> 1bcec11475c638a3401f9335f7604a33d4441392
 size_flags_horizontal = 3
 texture = ExtResource( 2 )
 patch_margin_left = 3
 patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
+<<<<<<< HEAD
 script = ExtResource( 1 )
+=======
+script = ExtResource( 3 )
+>>>>>>> 1bcec11475c638a3401f9335f7604a33d4441392
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -26,6 +47,10 @@ __meta__ = {
 [node name="Button" type="Button" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+<<<<<<< HEAD
+=======
+custom_fonts/font = SubResource( 1 )
+>>>>>>> 1bcec11475c638a3401f9335f7604a33d4441392
 text = "This is a test option."
 flat = true
 __meta__ = {

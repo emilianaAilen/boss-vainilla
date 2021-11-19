@@ -1,0 +1,196 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_EditorStory/EXP_EditorStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Story_editor"
+names = {
+"initial_dialog": 2
+}
+story = {
+2: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "no sabia como ponerlos",
+"name": "initial_dialog",
+"nodes": {
+1: {
+"graph_offset": Vector2( -2320, 200 ),
+"links": {
+0: 15
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 20, 160 ),
+"links": {
+0: 6,
+1: 5,
+2: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 3,
+"text": "<speaker>Desconocido</speaker>
+<dialog>Estoy en el hospital. Hubo un accidente...
+Tenés que venir urgente.</dialog>
+<choiceJSON>{ \"Preguntar por lo ocurrido\" : 0, \"Preguntar quien habla\" : 1, \"Ir inmediatamente\" : 2 } </choiceJSON>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 900, 220 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker> Jorge </speaker>
+<dialog> Soy Jorge , El director. 
+Necesito que vengas cuanto antes. 
+</dialog> ",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 520, 460 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Dr. x</speaker>
+<dialog>Está bien, voy en camino</dialog>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 520, 220 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Dr. x</speaker>
+<dialog>Bueno, pero quién habla?</dialog>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 520, 60 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Dr. x</speaker>
+<dialog>¿Un accidente? ¿Qué pasó?</dialog>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 900, 60 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Desconocido</speaker>
+<dialog>Hubo una explosión
+Hay muchos heridos </dialog>",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 1700, 260 ),
+"links": {
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( -1560, 160 ),
+"links": {
+0: 10
+},
+"rect_size": Vector2( 373, 143 ),
+"slot_amount": 1,
+"text": "<speaker>Dr. x</speaker>
+<dialog>Que buena siesta.
+Desde hace un buen tiempo no descansaba durante tantas horas...</dialog>",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( -1160, 160 ),
+"links": {
+0: 14
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Dr. x</speaker>
+<dialog>Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada...
+Tendría que buscar un trabajo que implique menos sacrificio y estrés... 
+</dialog>
+",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( -800, 160 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Celular?</speaker>
+<dialog>Ring rings
+Suena el celular</dialog>",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( -420, 60 ),
+"links": {
+0: 13
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Desconocido</speaker>
+<dialog>Dr.  x?</dialog>",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( -420, 220 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Dr. x</speaker>
+<dialog>Sí, quién habla?</dialog>",
+"type": "line"
+},
+14: {
+"graph_offset": Vector2( -1160, 320 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Dr. x</speaker>
+<dialog>Ya no estoy seguro de estar conforme con este estilo de vida...</dialog>",
+"type": "line"
+},
+15: {
+"graph_offset": Vector2( -1920, 200 ),
+"links": {
+0: 9
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<speaker>Dr. x</speaker>
+<dialog>...</dialog>",
+"type": "line"
+}
+}
+}
+}
+available_dids = [ 1 ]
+groups = [  ]
