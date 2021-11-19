@@ -1,11 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://fonts/Cave-Story.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fonts/Blockletter.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/textures/backgroundBox.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Option.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 38
 font_data = ExtResource( 1 )
 
 [node name="Option" type="NinePatchRect"]
