@@ -99,5 +99,8 @@ __meta__ = {
 stream = ExtResource( 4 )
 autoplay = true
 
+[node name="Tween" type="Tween" parent="."]
+
 [connection signal="pressed" from="MenuBackground/Button" to="." method="_on_Spanish_pressed"]
 [connection signal="pressed" from="MenuBackground/Button2" to="." method="_on_English_pressed"]
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_completed"]
