@@ -14,6 +14,10 @@ config/name="dialog-logic"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameState="*res://globals/game_state.gd"
+
 [display]
 
 window/stretch/aspect="keep_width"

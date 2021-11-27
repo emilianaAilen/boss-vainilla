@@ -1,15 +1,11 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/textures/backgroundBox.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Option.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Dialog.gd" type="Script" id=3]
-[ext_resource path="res://assets/audio/telephone-ring-04.wav.sample" type="AudioStream" id=4]
 [ext_resource path="res://assets/fonts/Blockletter.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/audio/click-snap-perc.wav" type="AudioStream" id=7]
 [ext_resource path="res://assets/textures/player_dr.png" type="Texture" id=8]
 [ext_resource path="res://assets/textures/backgroundwhite.png" type="Texture" id=9]
-[ext_resource path="res://assets/audio/news.ogg" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 18
@@ -39,15 +35,13 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ) ]
 }
 
-[node name="Dialog" type="Node" groups=[
-"Dialog",
-]]
+[node name="Dialog" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 3 )
-phone = ExtResource( 4 )
-pressnext = ExtResource( 7 )
-news = ExtResource( 10 )
-
-[node name="Background" parent="." instance=ExtResource( 6 )]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="DialogBox" type="Control" parent="."]
 anchor_right = 1.0
@@ -79,12 +73,12 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Sprite" type="Sprite" parent="DialogBox/Body/SpeakerImage"]
-position = Vector2( 69.2517, -119.084 )
+position = Vector2( -506.325, -23.9474 )
 scale = Vector2( 0.975056, 0.962585 )
 texture = ExtResource( 9 )
 
 [node name="SpeakerTexture" type="Sprite" parent="DialogBox/Body/SpeakerImage"]
-position = Vector2( 98.18, -71.8176 )
+position = Vector2( -398.909, -5.22192 )
 scale = Vector2( 1.08511, 0.855138 )
 texture = ExtResource( 8 )
 
@@ -184,8 +178,6 @@ visible = false
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
 margin_right = 379.0
 margin_bottom = 37.0
 
@@ -194,7 +186,6 @@ visible = false
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 0.0
 margin_top = 41.0
 margin_right = 379.0
 margin_bottom = 78.0
@@ -204,15 +195,9 @@ visible = false
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
+margin_top = -11.0
 margin_right = 487.0
 margin_bottom = 37.0
-
-[node name="DialogSfx" type="AudioStreamPlayer2D" parent="."]
-
-[node name="BackgroundSound" type="AudioStreamPlayer" parent="."]
-bus = "background"
 
 [connection signal="tween_completed" from="DialogBox/Body/TextContainer/Tween" to="." method="_on_Tween_tween_completed"]
 [connection signal="pressed" from="DialogBox/Body/ActionBox" to="." method="_on_ActionNext_pressed"]

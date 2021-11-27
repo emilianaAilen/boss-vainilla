@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Dialog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/FirstScene.gd" type="Script" id=3]
+[ext_resource path="res://assets/audio/news.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/click-snap-perc.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/audio/telephone-ring-04.wav.sample" type="AudioStream" id=6]
+[ext_resource path="res://assets/textures/old-phone.jpg" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "phone"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("oldPhone:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 229, 228 ), Vector2( 237.009, 228 ), Vector2( 224.995, 228 ) ]
+}
+
+[node name="FirstScene" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+phone = ExtResource( 6 )
+pressnext = ExtResource( 5 )
+news = ExtResource( 4 )
+
+[node name="Background" parent="." instance=ExtResource( 1 )]
+anchor_right = 25.825
+anchor_bottom = 14.9
+
+[node name="Dialog" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 25.55
+anchor_bottom = 14.825
+margin_left = -15.0
+margin_top = -20.0
+margin_right = 10.9999
+
+[node name="DialogSfx" type="AudioStreamPlayer2D" parent="."]
+
+[node name="BackgroundSound" type="AudioStreamPlayer" parent="."]
+bus = "background"
+
+[node name="oldPhone" type="TextureButton" parent="."]
+anchor_left = 6.687
+anchor_top = 6.25
+anchor_right = 6.687
+anchor_bottom = 6.25
+margin_left = -31.8885
+margin_top = -22.0
+margin_right = 45.1116
+margin_bottom = 22.0
+disabled = true
+texture_normal = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/phone = SubResource( 1 )
+
+[connection signal="pressed" from="oldPhone" to="." method="_on_oldPhone_pressed"]

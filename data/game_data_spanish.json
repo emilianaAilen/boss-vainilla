@@ -30,7 +30,8 @@
         "sound": "phone",
         "image": "",
         "type_game": "",
-        "next": "005"
+        "next": "005",
+        "type_animation": "phone"
     },
     "005": {
         "text": "Dr.  x?",
