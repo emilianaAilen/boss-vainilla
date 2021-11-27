@@ -17,7 +17,7 @@ export (AudioStream) var news
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	sounds = _get_sounds()
-	dialog._load_Json_and_exec()
+	dialog._set_idiom_and_init()
 
 func _get_sounds():
 	return {

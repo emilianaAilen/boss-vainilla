@@ -24,30 +24,21 @@ onready var _Option_Button_Scene = load("res://scenes/Option.tscn")
 var select_choice: String
 var press_button: String
 
-var actions_by_language = {
-	"english": {
-		"select": "Select choice",
-		"press": "Press spacebar"
-	},
-	"spanish": {
-		"select": "Elegí una opción",
-		"press": "Presiona espacio"
-	}
-}
+func _set_idiom_and_init():
+	set_idiom()
+	initialize()
 
-func set_actions_labels(language: String):
+func set_idiom():
+	var language = GameState.language
+	var actions_by_language = GameState.actions_by_language
 	select_choice = actions_by_language[language].select
 	press_button = actions_by_language[language].press
-	
+	gameDataPath = "res://data/game_data_" + language + ".json"
+
 func initialize():
 	game_data = _getDialog()
 	assert(game_data, "data not found")
 	_play_phase()
-	
-func _load_Json_and_exec():
-	gameDataPath = GameState.language
-	set_actions_labels("spanish")
-	initialize()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept") && ! (phaseId == ""):
