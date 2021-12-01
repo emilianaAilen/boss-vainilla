@@ -38,11 +38,13 @@ func set_idiom():
 func initialize():
 	game_data = _getDialog()
 	assert(game_data, "data not found")
+	GameState.space_enable = true
 	_play_phase()
 
 func _process(_delta):
-	if Input.is_action_just_pressed("ui_accept") && ! (phaseId == ""):
-		_play_phase_if_not_tween()
+	if Input.is_action_just_pressed("ui_accept") && ! (phaseId == "") && GameState.space_enable:
+		_play_phase()
+#		_play_phase_if_not_tween()
 
 func _play_phase_if_not_tween():
 	if !tween.is_active():
@@ -58,8 +60,7 @@ func _getDialog() -> Array:
 	
 func _play_phase():
 	var currentPhase = game_data[phaseId]
-	get_parent()._stop_sound_if_playing()	
-	get_parent()._stop_current_animation()	
+	get_parent()._stop_control_animati_sound()
 	_play_next_sound_if_not_first()
 	_add_speaker_texture_if_it_exists(currentPhase)
 	_play_sfx_if_it_exists(currentPhase)
@@ -74,7 +75,9 @@ func _play_phase():
 	tween.start()
 	if currentPhase.has("next"):
 		phaseId = currentPhase.next
-		
+	else:
+		get_parent()._run_next_scene()
+
 func _show_options(choices):
 	if !_options_already_loaded(choices):
 		for choice in choices:

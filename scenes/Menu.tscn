@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/fonts/Blockletter.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/audio/Tremolo-electric-guitar-music-loop-110-bpm.ogg" type="AudioStream" id=4]
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="Shader" id=4]
 code = "shader_type canvas_item;
 
 uniform int pixel_size : hint_range(1, 100) = 1;
@@ -24,7 +24,7 @@ void fragment(){
 }"
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+shader = SubResource( 4 )
 shader_param/pixel_size = 1
 
 [sub_resource type="DynamicFont" id=3]

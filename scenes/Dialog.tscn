@@ -69,6 +69,7 @@ __meta__ = {
 }
 
 [node name="SpeakerImage" type="NinePatchRect" parent="DialogBox/Body"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
