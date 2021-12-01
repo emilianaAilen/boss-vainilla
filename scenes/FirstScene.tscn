@@ -6,24 +6,12 @@
 [ext_resource path="res://assets/audio/news.ogg" type="AudioStream" id=4]
 [ext_resource path="res://assets/audio/click-snap-perc.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/audio/telephone-ring-04.wav.sample" type="AudioStream" id=6]
-[ext_resource path="res://assets/textures/old-phone.jpg" type="Texture" id=7]
+[ext_resource path="res://assets/textures/genericItem_color_064.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "phone"
 length = 0.3
 loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("oldPhone:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 229, 228 ), Vector2( 237.009, 228 ), Vector2( 224.995, 228 ) ]
-}
 
 [node name="FirstScene" type="Control"]
 margin_right = 40.0
@@ -39,15 +27,20 @@ news = ExtResource( 4 )
 [node name="Background" parent="." instance=ExtResource( 1 )]
 anchor_right = 25.825
 anchor_bottom = 14.9
+margin_left = -1.6001
+margin_top = -1.68179
+margin_right = -1.6001
+margin_bottom = -1.68176
 
 [node name="Dialog" parent="." instance=ExtResource( 2 )]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 25.55
 anchor_bottom = 14.825
-margin_left = -15.0
-margin_top = -20.0
-margin_right = 10.9999
+margin_left = 3.68774
+margin_top = -12.7847
+margin_right = 29.6876
+margin_bottom = 7.21527
 
 [node name="DialogSfx" type="AudioStreamPlayer2D" parent="."]
 
@@ -55,16 +48,16 @@ margin_right = 10.9999
 bus = "background"
 
 [node name="oldPhone" type="TextureButton" parent="."]
-anchor_left = 6.687
-anchor_top = 6.25
-anchor_right = 6.687
-anchor_bottom = 6.25
-margin_left = -31.8885
-margin_top = -22.0
-margin_right = 45.1116
-margin_bottom = 22.0
+anchor_left = 3.474
+anchor_top = 5.965
+anchor_right = 4.424
+anchor_bottom = 7.49
+margin_left = -0.0175629
+margin_top = 0.011673
+margin_right = -0.0175629
+margin_bottom = 0.0116577
 disabled = true
-texture_normal = ExtResource( 7 )
+texture_normal = ExtResource( 8 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false

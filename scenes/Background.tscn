@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/textures/living-room.png" type="Texture" id=1]
+[ext_resource path="res://assets/textures/room.png" type="Texture" id=1]
 [ext_resource path="res://assets/textures/light.png" type="Texture" id=2]
 [ext_resource path="res://assets/textures/tv.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Background.gd" type="Script" id=5]
@@ -8,6 +8,10 @@
 [node name="Background" type="TextureRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -204.647
+margin_top = -394.484
+margin_right = 238.353
+margin_bottom = 366.516
 texture = ExtResource( 1 )
 expand = true
 script = ExtResource( 5 )
@@ -19,18 +23,20 @@ __meta__ = {
 color = Color( 0.745098, 0.729412, 0.729412, 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -252.0
-margin_top = -422.0
+anchor_left = 1.153
+anchor_top = 0.5
+anchor_right = 1.153
+anchor_bottom = 0.5
+margin_left = -440.672
+margin_top = -202.0
+margin_right = -188.672
+margin_bottom = 220.0
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Light2D" type="Light2D" parent="TextureRect"]
-position = Vector2( 87.968, 169.23 )
+position = Vector2( 119.968, 179.23 )
 scale = Vector2( 0.390728, 0.377807 )
 texture = ExtResource( 2 )

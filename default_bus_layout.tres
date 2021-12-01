@@ -1,16 +1,16 @@
 [gd_resource type="AudioBusLayout" format=2]
 
 [resource]
-bus/0/volume_db = -19.2131
+bus/0/volume_db = -9.06927
 bus/1/name = "sfx"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -15.0025
+bus/1/volume_db = -1.45259
 bus/1/send = "Master"
 bus/2/name = "background"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = -18.3091
+bus/2/volume_db = -4.25003
 bus/2/send = "Master"
