@@ -121,6 +121,7 @@
     }
   },
   "scene_end": {
-    "title": ""
+    "title": "Final",
+    "result_field": "you saved: "
   }
 }
