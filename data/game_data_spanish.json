@@ -1,126 +1,126 @@
 {
+  "scene_1": {
     "001": {
-        "text": "Que buena siesta. Desde hace un buen tiempo no descansaba durante tantas horas...",
-        "name": "Dr. x",
-        "sound": "",
-        "image": "player_dr.png",
-        "type_game": "",
-        "next": "002",
-        "type_sound_back": "news"
+      "text": "Que buena siesta. Desde hace un buen tiempo no descansaba durante tantas horas...",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "player_dr.png",
+      "type_game": "",
+      "next": "002",
+      "type_sound_back": "news"
     },
     "002": {
-        "text": "Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada... Tendría que buscar un trabajo que implique menos sacrificio y estrés...",
-        "name": "Dr. x",
-        "sound": "",
-        "image": "player_dr.png",
-        "type_game": "",
-        "next": "003"
+      "text": "Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada... Tendría que buscar un trabajo que implique menos sacrificio y estrés...",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "player_dr.png",
+      "type_game": "",
+      "next": "003"
     },
     "003": {
-        "text": "Ya no estoy seguro de estar conforme con este estilo de vida...",
-        "name": "Dr. x",
-        "sound": "",
-        "image": "player_dr.png",
-        "type_game": "",
-        "next": "004"
+      "text": "Ya no estoy seguro de estar conforme con este estilo de vida...",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "player_dr.png",
+      "type_game": "",
+      "next": "004"
     },
     "004": {
-        "text": "Suena el celular.",
-        "name": "",
-        "sound": "phone",
-        "image": "",
-        "type_game": "",
-        "next": "005",
-        "type_animation": "phone"
+      "text": "Suena el celular.",
+      "name": "",
+      "sound": "phone",
+      "image": "",
+      "type_game": "",
+      "next": "005",
+      "type_animation": "phone"
     },
     "005": {
-        "text": "Dr.  x?",
-        "name": "Desconocido",
-        "sound": "",
-        "image": "",
-        "type_game": "",
-        "next": "006"
+      "text": "Dr.  x?",
+      "name": "Desconocido",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "006"
     },
     "006": {
-        "text": "Sí, quién habla?",
-        "name": "Dr. x",
-        "sound": "",
-        "image": "player_dr.png",
-        "type_game": "",
-        "next": "007"
+      "text": "Sí, quién habla?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "player_dr.png",
+      "type_game": "",
+      "next": "007"
     },
     "007": {
-        "text": "Estoy en el hospital. Hubo un accidente...Tenés que venir urgente.",
-        "name": "Desconocido",
-        "sound": "",
-        "image": "",
-        "type_game": "",
-        "choices": [
-            {
-                "text": "Preguntar por lo ocurrido", 
-                "branch_next": "008"
-            },
-            {
-                "text": "Preguntar quien habla", 
-                "branch_next": "009"
-            },
-            {
-                "text": "Ir inmediatamente", 
-                "branch_next": "010"
-            }
-        ]
+      "text": "Estoy en el hospital. Hubo un accidente...Tenés que venir urgente.",
+      "name": "Desconocido",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "choices": [
+        {
+          "text": "Preguntar por lo ocurrido",
+          "branch_next": "008"
+        },
+        {
+          "text": "Preguntar quien habla",
+          "branch_next": "009"
+        },
+        {
+          "text": "Ir inmediatamente",
+          "branch_next": "010"
+        }
+      ]
     },
     "008": {
-        "text": "¿Un accidente? ¿Qué pasó?",
-        "name": "Dr. x",
-        "sound": "",
-        "image": "player_dr.png",
-        "type_game": "",
-        "next": "011"
+      "text": "¿Un accidente? ¿Qué pasó?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "player_dr.png",
+      "type_game": "",
+      "next": "011"
     },
     "009": {
-        "text": "Bueno, pero quién habla?",
-        "name": "Dr. x",
-        "sound": "",
-        "image": "player_dr.png",
-        "type_game": "",
-        "next": "012"
+      "text": "Bueno, pero quién habla?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "player_dr.png",
+      "type_game": "",
+      "next": "012"
     },
     "010": {
-        "text": "Está bien, voy en camino.",
-        "name": "Dr. x",
-        "sound": "",
-        "image": "player_dr.png",
-        "type_game": "",
-        "next": "013"
+      "text": "Está bien, voy en camino.",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "player_dr.png",
+      "type_game": "",
+      "next": "013"
     },
     "011": {
-        "text": "Hubo una explosión, hay muchos heridos.",
-        "name": "Desconocido",
-        "sound": "",
-        "image": "",
-        "type_game": "",
-        "next": "013"
+      "text": "Hubo una explosión, hay muchos heridos.",
+      "name": "Desconocido",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "013"
     },
     "012": {
-        "text": "Soy Jorge , El director. Necesito que vengas cuanto antes.",
-        "name": "Jorge",
-        "sound": "",
-        "image": "",
-        "type_game": "",
-        "next": "010"
+      "text": "Soy Jorge , El director. Necesito que vengas cuanto antes.",
+      "name": "Jorge",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "010"
     },
     "013": {
-        "text": "",
-        "name": "",
-        "sound": "",
-        "image": "",
-        "type_game": "",
-        "next": ""
+      "text": "",
+      "name": "",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": ""
     }
+  },
+  "scene_end": {
+    "title": ""
+  }
 }
-
-
-
-
- 

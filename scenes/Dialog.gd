@@ -1,7 +1,8 @@
 extends Node
 export(float) var textSpeed = 0.05
+export(String) var scene_name 
 
-var gameDataPath:String
+var gameDataPath:String = GameState.gameDataPath
 var game_data
 var sounds
 var phaseId = "001"
@@ -25,30 +26,34 @@ var select_choice: String
 var press_button: String
 
 func _set_idiom_and_init():
-	set_idiom()
 	initialize()
+	set_idiom()
 
 func set_idiom():
 	var language = GameState.language
 	var actions_by_language = GameState.actions_by_language
 	select_choice = actions_by_language[language].select
 	press_button = actions_by_language[language].press
-	gameDataPath = "res://data/game_data_" + language + ".json"
+	_Action_Description.text = actions_by_language[language].press
 
 func initialize():
-	game_data = _getDialog()
+	game_data = _getDialog()["scene_" + scene_name]
 	assert(game_data, "data not found")
 	GameState.space_enable = true
 	_play_phase()
-
-func _process(_delta):
-	if Input.is_action_just_pressed("ui_accept") && ! (phaseId == "") && GameState.space_enable:
-		_play_phase()
-#		_play_phase_if_not_tween()
+	
+func _input(event):
+	if event.is_action_pressed("ui_accept") && ! (phaseId == "") && GameState.space_enable:
+		_play_phase_if_not_tween()
 
 func _play_phase_if_not_tween():
 	if !tween.is_active():
 		 _play_phase()
+	else:
+		tween.stop_all()
+		_Text_Body.percent_visible = 1
+		_action_button.show()
+		
 		
 func _getDialog() -> Array:
 	var f = File.new()
@@ -59,8 +64,9 @@ func _getDialog() -> Array:
 	return output
 	
 func _play_phase():
+	print(phaseId + "play phase")
 	var currentPhase = game_data[phaseId]
-	get_parent()._stop_control_animati_sound()
+	get_parent()._stop_control_animation_sound()
 	_play_next_sound_if_not_first()
 	_add_speaker_texture_if_it_exists(currentPhase)
 	_play_sfx_if_it_exists(currentPhase)
@@ -75,8 +81,9 @@ func _play_phase():
 	tween.start()
 	if currentPhase.has("next"):
 		phaseId = currentPhase.next
-	else:
-		get_parent()._run_next_scene()
+	elif (!currentPhase.has("choices")):
+		get_parent()._run_next_scene()		
+		
 
 func _show_options(choices):
 	if !_options_already_loaded(choices):
@@ -147,11 +154,7 @@ func _play_next_sound_if_not_first():
 		get_parent()._play_sfx("next")
 
 func _on_ActionNext_pressed():
-	_play_next()
-		
-func _play_next():
-	if ( !(phaseId == "") ):
-		_play_phase()
+	_play_phase()
 
 
 func loadSpeakerTexture(texture_url: String):
@@ -160,3 +163,5 @@ func loadSpeakerTexture(texture_url: String):
 
 func _on_Tween_tween_completed(object, key):
 	_action_button.show()
+	var currentPhase = game_data[phaseId]
+	_show_options_if_it_has(currentPhase)

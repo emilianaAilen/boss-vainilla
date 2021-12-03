@@ -4,7 +4,7 @@ onready var background_sound = $BackgroundSound
 onready var _dialog_sfx = $DialogSfx
 onready var dialog = $Dialog
 onready var animation = $Animation
-onready var old_phone = $oldPhone
+onready var old_phone = $Background/Phone
 onready var timer = $Timer
 onready var black = $Background2
 onready var transition_sound = $Background2/TransitionSound
@@ -47,7 +47,7 @@ func _add_phone_interaction(sound_name):
 		timer.start()
 		
 
-func _stop_control_animati_sound():
+func _stop_control_animation_sound():
 	#stops animation & sounds
 	_stop_sound_if_playing()
 	_stop_current_animation()
@@ -74,8 +74,8 @@ func enable_old_phone_button():
 func _on_oldPhone_pressed():
 	timer.stop()
 	GameState.space_enable = true
-	dialog._play_next()
-	dialog.show()
+	dialog.show()	
+	dialog._play_phase()
 
 func _run_next_scene():
 	black.visible = true

@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/EndGame.gd" type="Script" id=1]
+[ext_resource path="res://assets/textures/black_square.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/Blockletter.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 3 )
 
 [node name="EndGame" type="Control"]
 anchor_right = 1.0
@@ -11,13 +17,40 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 5.0
-margin_top = 118.0
-margin_right = 1013.0
-margin_bottom = 319.0
-text = "dsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgsdsfgsdfffffgdsfgsdfffffgdsfgsdfffffgdsfgs"
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.492
+anchor_top = 0.256
+anchor_right = 0.492
+anchor_bottom = 0.256
+margin_left = -35.1031
+margin_top = -21.9361
+margin_right = 35.8969
+margin_bottom = 22.0639
+size_flags_horizontal = 5
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 1 )
+text = "Final"
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Message" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="Result" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

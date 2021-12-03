@@ -16,3 +16,5 @@ var actions_by_language = {
 		"press": "Presiona espacio"
 	}
 }
+
+var gameDataPath: String
