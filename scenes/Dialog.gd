@@ -64,7 +64,6 @@ func _getDialog() -> Array:
 	return output
 	
 func _play_phase():
-	print(phaseId + "play phase")
 	var currentPhase = game_data[phaseId]
 	get_parent()._stop_control_animation_sound()
 	_play_next_sound_if_not_first()
@@ -81,8 +80,10 @@ func _play_phase():
 	tween.start()
 	if currentPhase.has("next"):
 		phaseId = currentPhase.next
-	elif (!currentPhase.has("choices")):
-		get_parent()._run_next_scene()		
+	else:
+		phaseId = ""
+	##elif (!currentPhase.has("choices")):
+		##get_parent()._run_next_scene()		
 		
 
 func _show_options(choices):
@@ -106,6 +107,7 @@ func _options_already_loaded(choices):
 
 		
 func _on_Option_clicked(slot):
+	print(slot)
 	_Action_Description.text = press_button
 	_Option_List.visible = false
 	phaseId = slot
@@ -154,7 +156,11 @@ func _play_next_sound_if_not_first():
 		get_parent()._play_sfx("next")
 
 func _on_ActionNext_pressed():
-	_play_phase()
+	if (phaseId != ""):
+		var currentPhase = game_data[phaseId]
+		_play_phase()
+	else:
+		get_parent()._run_next_scene()
 
 
 func loadSpeakerTexture(texture_url: String):
@@ -163,5 +169,7 @@ func loadSpeakerTexture(texture_url: String):
 
 func _on_Tween_tween_completed(object, key):
 	_action_button.show()
-	var currentPhase = game_data[phaseId]
-	_show_options_if_it_has(currentPhase)
+	if (phaseId != ""):
+		var currentPhase = game_data[phaseId]
+		_show_options_if_it_has(currentPhase)
+	

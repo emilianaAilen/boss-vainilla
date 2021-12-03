@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/EndGame.gd" type="Script" id=1]
 [ext_resource path="res://assets/textures/black_square.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/Blockletter.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/audio/Tremolo-electric-guitar-music-loop-110-bpm.ogg" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
 font_data = ExtResource( 3 )
 
 [node name="EndGame" type="Control"]
@@ -27,30 +36,53 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="."]
-anchor_left = 0.492
-anchor_top = 0.256
-anchor_right = 0.492
-anchor_bottom = 0.256
-margin_left = -35.1031
-margin_top = -21.9361
-margin_right = 35.8969
-margin_bottom = 22.0639
+anchor_left = 0.5
+anchor_top = 0.293
+anchor_right = 0.5
+anchor_bottom = 0.293
+margin_left = -32.0
+margin_top = -23.8
+margin_right = 38.9999
+margin_bottom = 20.2
 size_flags_horizontal = 5
 size_flags_vertical = 5
 custom_fonts/font = SubResource( 1 )
-text = "Final"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Message" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-
-[node name="Result" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+visible = false
+anchor_left = 0.5
+anchor_top = 0.507
+anchor_right = 0.5
+anchor_bottom = 0.507
+margin_left = -32.0
+margin_top = -16.2
+margin_right = 37.0
+margin_bottom = 13.8
+custom_fonts/font = SubResource( 3 )
+text = "Mensaje"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Result" type="Label" parent="."]
+anchor_left = 0.122
+anchor_top = 0.718
+anchor_right = 0.122
+anchor_bottom = 0.718
+margin_left = -20.928
+margin_top = -22.8
+margin_right = 106.072
+margin_bottom = 23.2
+custom_fonts/font = SubResource( 2 )
+text = "Salvaste:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true

@@ -18,3 +18,7 @@ var actions_by_language = {
 }
 
 var gameDataPath: String
+
+var result: int = 0
+
+var final_message: String

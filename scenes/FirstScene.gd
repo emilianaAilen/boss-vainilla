@@ -8,6 +8,7 @@ onready var old_phone = $Background/Phone
 onready var timer = $Timer
 onready var black = $Background2
 onready var transition_sound = $Background2/TransitionSound
+onready var principalBackground = $Background
 
 var sounds
 
@@ -78,10 +79,13 @@ func _on_oldPhone_pressed():
 	dialog._play_phase()
 
 func _run_next_scene():
+	print("entra")
 	black.visible = true
 	GameState.space_enable = false
 	_stop_sound_background_if_playing()
 	transition_sound.play()
+	dialog.hide()
+	principalBackground.hide()
 	
 
 func _on_timeout():

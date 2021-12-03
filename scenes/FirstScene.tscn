@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/textures/oldtv_px.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Dialog.tscn" type="PackedScene" id=2]
@@ -9,9 +9,9 @@
 [ext_resource path="res://assets/textures/living_1200x740.png" type="Texture" id=7]
 [ext_resource path="res://assets/textures/genericItem_color_064.png" type="Texture" id=8]
 [ext_resource path="res://assets/textures/light.png" type="Texture" id=9]
-[ext_resource path="res://assets/textures/backgroundBox.png" type="Texture" id=10]
+[ext_resource path="res://assets/textures/black_square.png" type="Texture" id=10]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -38,28 +38,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
-
-[sub_resource type="Shader" id=3]
-code = "shader_type canvas_item;
-
-uniform int pixel_size : hint_range(1, 100) = 1;
-
-void fragment(){
-	vec2 pos = UV / TEXTURE_PIXEL_SIZE;
-	vec2 square = vec2(float(pixel_size), float(pixel_size));
-	vec2 top_left = floor(pos / square) * square;
-	vec4 total = vec4(0., 0., 0., 0.);
-	for (int x = int(top_left.x); x < int(top_left.x) + pixel_size; x++){
-		for (int y = int(top_left.y); y < int(top_left.y) + pixel_size; y++){
-			total += texture(TEXTURE, vec2(float(x), float(y)) * TEXTURE_PIXEL_SIZE);
-		}
-	}
-	COLOR = total / float(pixel_size * pixel_size);
-}"
-
-[sub_resource type="ShaderMaterial" id=4]
-shader = SubResource( 3 )
-shader_param/pixel_size = 1
 
 [node name="FirstScene" type="Control"]
 anchor_right = 1.0
@@ -107,14 +85,14 @@ texture = ExtResource( 9 )
 color = Color( 0.117647, 0.984314, 0.0196078, 1 )
 energy = 0.0115932
 
-[node name="Tv" type="TextureButton" parent="."]
+[node name="Tv" type="TextureButton" parent="Background"]
 anchor_left = 0.902
 anchor_top = 0.547
 anchor_right = 0.902
 anchor_bottom = 0.547
-margin_left = -269.048
+margin_left = -268.656
 margin_top = -309.333
-margin_right = 278.954
+margin_right = 279.346
 margin_bottom = 286.667
 texture_normal = ExtResource( 1 )
 expand = true
@@ -123,7 +101,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Light2D" type="Light2D" parent="Tv"]
+[node name="Light2D" type="Light2D" parent="Background/Tv"]
 position = Vector2( 146.222, 257.448 )
 scale = Vector2( 0.234478, 0.221557 )
 texture = ExtResource( 9 )
@@ -142,18 +120,15 @@ scene_name = "1"
 bus = "background"
 
 [node name="Animation" type="AnimationPlayer" parent="."]
-anims/phone = SubResource( 2 )
+anims/phone = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 
 [node name="Background2" type="TextureRect" parent="."]
 visible = false
-material = SubResource( 4 )
-anchor_left = 0.168
-anchor_top = -0.176
-anchor_right = 25.793
-anchor_bottom = 14.924
+anchor_right = 1.0
+anchor_bottom = 1.0
 texture = ExtResource( 10 )
 expand = true
 __meta__ = {
@@ -164,6 +139,6 @@ __meta__ = {
 stream = ExtResource( 6 )
 
 [connection signal="pressed" from="Background/Phone" to="." method="_on_oldPhone_pressed"]
-[connection signal="pressed" from="Tv" to="." method="_on_Tv_pressed"]
+[connection signal="pressed" from="Background/Tv" to="." method="_on_Tv_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timeout"]
 [connection signal="finished" from="Background2/TransitionSound" to="." method="_on_TransitionSound_finished"]

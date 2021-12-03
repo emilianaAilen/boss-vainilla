@@ -92,16 +92,14 @@
       "name": "Dr. x",
       "sound": "",
       "image": "player_dr.png",
-      "type_game": "",
-      "next": "013"
+      "type_game": ""
     },
     "011": {
       "text": "Hubo una explosión, hay muchos heridos.",
       "name": "Desconocido",
       "sound": "",
       "image": "",
-      "type_game": "",
-      "next": "013"
+      "type_game": ""
     },
     "012": {
       "text": "Soy Jorge , El director. Necesito que vengas cuanto antes.",
@@ -110,17 +108,10 @@
       "image": "",
       "type_game": "",
       "next": "010"
-    },
-    "013": {
-      "text": "",
-      "name": "",
-      "sound": "",
-      "image": "",
-      "type_game": "",
-      "next": ""
     }
   },
   "scene_end": {
-    "title": ""
+    "title": "Final",
+    "result_field": "Salvaste: "
   }
 }
