@@ -114,14 +114,14 @@
   "scene_2": {
     "001": {
       "text": "Doc, que bueno que llega",
-      "name": "Pedro",
+      "name": "x",
       "sound": "",
       "image": "",
       "type_game": "",
       "next": "002"
     },
     "002": {
-      "text": "Decime en donde ayudo",
+      "text": "Que pasó?",
       "name": "Dr. x",
       "sound": "",
       "image": "",
@@ -129,30 +129,284 @@
       "next": "003"
     },
     "003": {
-      "text": "Ahora mismo necesito mucha sangre, podrás recolectarla?",
-      "name": "Pedro",
+      "text": "Ingresaron varios pacientes despues de un choque multiple en la autopista...",
+      "name": "x",
       "sound": "",
       "image": "",
       "type_game": "",
+      "next": "004"
+    },
+    "004": {
+      "text": "podrias atender a estos 4 pacientes?",
+      "name": "x",
+      "sound": "",
+      "image": "",
       "choices": [
         {
-          "text": "No, busquemos enfermeros, tengo que estar en el quirófano",
-          "branch_next": "008"
+          "text": "Preguntar por situación de los pacientes",
+          "branch_next": "005"
         },
         {
-          "text": "sí, seguro!",
-          "branch_next": "004"
+          "text": "Elegir habitación",
+          "branch_next": "006"
         }
       ]
     },
-    "004": {
+    "005": {
+      "text": "Si, contame la situación de cada paciente",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "next": "007"
+    },
+    "006": {
       "text": "",
       "name": "",
       "sound": "",
       "image": "",
-      "type_game": "blood"
+      "type_game": "door_choice"
+    },
+    "007": {
+      "text": "En la primer habitacion hay un paciente que le sangra la cabeza.",
+      "name": "x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "008"
+    },
+    "008": {
+      "text": "En la segunda hay un paciente con los huesos rotos",
+      "name": "x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "009"
+    },
+    "009": {
+      "text": "En la tercera hay una paciente que no puede mover el cuello.",
+      "name": "x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "010"
+    },
+    "010": {
+      "text": "Y en la última hay un paciente inconciente",
+      "name": "x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "011"
+    },
+    "011": {
+      "text": "Perfecto, gracias.",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "006"
     }
   },
+  "scene_room_1": {
+    "001": {
+      "text": "Buenos dias, como te sentis?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "002"
+    },
+    "002": {
+      "text": "Me duele mucho la cabeza",
+      "name": "paciente 1",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "003"
+    },
+    "003": {
+      "text": "Bueno ya lo revisamos",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "003",
+      "choices": [
+        {
+          "text": "Preguntar como se llama",
+          "branch_next": "004"
+        },
+        {
+          "text": "irse despues de revisar",
+          "branch_next": "008"
+        },
+        {
+          "text": "Indagar sobre el accidente",
+          "branch_next": "005"
+        }
+      ]
+    },
+    "004": {
+      "text": "Como te llamas?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "005"
+    },
+    "005": {
+      "text": "Me llamo Pedro",
+      "name": "Pedro",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "006"
+    },
+    "006": {
+      "text": "Un gusto Pedro, a que te dedicas?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "007"
+    },
+    "007": {
+      "text": "Soy profesor universitario",
+      "name": "Pedro",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "008"
+    },
+    "008": {
+      "text": "Bien, aguarda un momento que ahora te van a coser, mucha suerte, nos vemos!.",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "type_game": ""
+    },
+    "009": {
+      "text": "recordas algo del accidente? como fue?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "010"
+    },
+    "010": {
+      "text": "Si, algo. Me acuerdo que el auto de adelante choco contra un camion cisterna con combustible, hubo una explosion y no recuerdo mas nada",
+      "name": "paciente 1",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "011"
+    },
+    "011": {
+      "text": "Entiendo, debe ser producto del impacto, no te preocupes.",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "008"
+    }
+  },
+  "scene_room_3": {
+    "001": {
+      "text": "Buenos dias, me dijeron que no podes mover el cuello, tenes alguna otra molestia?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "002"
+    },
+    "002": {
+      "text": "No, solo siento mucha presion en el cuello",
+      "name": "paciente 3",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "003"
+    },
+    "003": {
+      "text": "Bueno, seguramente sea por el mal movimiento al chocar, no es nada grave",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "003",
+      "choices": [
+        {
+          "text": "Preguntar como se llama",
+          "branch_next": "004"
+        },
+        {
+          "text": "irse despues de revisar",
+          "branch_next": "008"
+        },
+        {
+          "text": "Indagar sobre el accidente",
+          "branch_next": "005"
+        }
+      ]
+    },
+    "004": {
+      "text": "Como te llamas?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "005"
+    },
+    "005": {
+      "text": "Me llamo Laura",
+      "name": "Laura",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "006"
+    },
+    "006": {
+      "text": "Un gusto Laura, a que te dedicas?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "007"
+    },
+    "007": {
+      "text": "Soy dentista",
+      "name": "Laura",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "008"
+    },
+    "008": {
+      "text": "Bien tranquila, aguarda un momento que van a relizarte una placa, mucha suerte, nos vemos!.",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "type_game": ""
+    },
+    "009": {
+      "text": "Como te sentis emocionalmente despues del accidente? recordas algo?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "010"
+    },
+    "010": {
+      "text": "Tuve mucho miedo cuando ocurrio la explosion del tanque de nafta del camion, todavia me siento nerviosa",
+      "name": "paciente 1",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "008"
+    }
+  },
+  "secene_room_3_A":{},
+  "secene_room_3_B":{},
   "scene_end": {
     "title": "Final",
     "result_field": "Salvaste: "
