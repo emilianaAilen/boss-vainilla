@@ -92,8 +92,7 @@
       "name": "Dr. x",
       "sound": "",
       "image": "player_dr.png",
-      "type_game": "",
-      "next": "013"
+      "type_game": ""
     },
     "011": {
       "text": "There was an explosion, there are many injured.",
@@ -101,7 +100,7 @@
       "sound": "",
       "image": "",
       "type_game": "",
-      "next": "013"
+      "next": "010"
     },
     "012": {
       "text": "I'm Jorge, the director. I need you to come as soon as possible.",
@@ -110,14 +109,48 @@
       "image": "",
       "type_game": "",
       "next": "010"
+    }
+  },
+  "scene_2": {
+    "001": {
+      "text": "Doc, que bueno que llega",
+      "name": "Pedro",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "002"
     },
-    "013": {
+    "002": {
+      "text": "Decime en donde ayudo",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "003"
+    },
+    "003": {
+      "text": "Right now i need a lot of blood, could you collect it?",
+      "name": "Pedro",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "choices": [
+        {
+          "text": "No, let's look for nurses, i have to be in the operating room",
+          "branch_next": "008"
+        },
+        {
+          "text": "yeah, sure!",
+          "branch_next": "004"
+        }
+      ]
+    },
+    "004": {
       "text": "",
       "name": "",
       "sound": "",
       "image": "",
-      "type_game": "",
-      "next": ""
+      "type_game": "blood"
     }
   },
   "scene_end": {

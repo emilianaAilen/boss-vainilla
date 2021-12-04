@@ -76,10 +76,9 @@ func _on_oldPhone_pressed():
 	timer.stop()
 	GameState.space_enable = true
 	dialog.show()	
-	dialog._play_phase()
+	dialog._play_phase_if_not_tween()
 
 func _run_next_scene():
-	print("entra")
 	black.visible = true
 	GameState.space_enable = false
 	_stop_sound_background_if_playing()

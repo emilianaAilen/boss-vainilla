@@ -99,7 +99,8 @@
       "name": "Desconocido",
       "sound": "",
       "image": "",
-      "type_game": ""
+      "type_game": "",
+      "next": "010"
     },
     "012": {
       "text": "Soy Jorge , El director. Necesito que vengas cuanto antes.",
@@ -108,6 +109,48 @@
       "image": "",
       "type_game": "",
       "next": "010"
+    }
+  },
+  "scene_2": {
+    "001": {
+      "text": "Doc, que bueno que llega",
+      "name": "Pedro",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "002"
+    },
+    "002": {
+      "text": "Decime en donde ayudo",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "003"
+    },
+    "003": {
+      "text": "Ahora mismo necesito mucha sangre, podrás recolectarla?",
+      "name": "Pedro",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "choices": [
+        {
+          "text": "No, busquemos enfermeros, tengo que estar en el quirófano",
+          "branch_next": "008"
+        },
+        {
+          "text": "sí, seguro!",
+          "branch_next": "004"
+        }
+      ]
+    },
+    "004": {
+      "text": "",
+      "name": "",
+      "sound": "",
+      "image": "",
+      "type_game": "blood"
     }
   },
   "scene_end": {
