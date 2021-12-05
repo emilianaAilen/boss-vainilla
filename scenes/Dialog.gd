@@ -1,6 +1,8 @@
 extends Node
 export(float) var textSpeed = 0.05
 export(String) var scene_name 
+export (NodePath) var level_path
+
 
 var gameDataPath:String = GameState.gameDataPath
 var game_data
@@ -15,6 +17,7 @@ onready var _action_button = $DialogBox/Body/ActionBox
 onready var _speaker_texture = $DialogBox/Body/SpeakerImage/SpeakerTexture
 onready var _speaker_container = $DialogBox/Body/SpeakerImage
 onready var tween = $DialogBox/Body/TextContainer/Tween
+onready var level = get_node(level_path)
 
 ##constants fields in json
 const IMAGE = "image"
@@ -31,6 +34,8 @@ var select_choice: String
 var press_button: String
 
 var currentPhase
+
+signal back_sound
 
 func _set_idiom_and_init():
 	initialize()
@@ -74,7 +79,7 @@ func _getDialog() -> Array:
 func _play_phase():
 	if(phaseId != ""):
 		currentPhase = game_data[phaseId] 
-		get_parent()._stop_control_animation_sound()
+		level._stop_control_animation_sound()
 		_play_next_sound_if_not_first()
 		_add_speaker_texture_if_it_exists()
 		_play_sfx_if_it_exists()
@@ -89,7 +94,7 @@ func _play_phase():
 		_next_id()
 		
 	elif (!currentPhase.has(CHOICES)):
-		get_parent()._run_next_scene()		
+		level._run_next_scene()
 		
 func _next_id():
 	if currentPhase.has(NEXT):
@@ -142,19 +147,18 @@ func _add_speaker_texture_if_it_exists():
 		
 func _play_sfx_if_it_exists():
 	if currentPhase.has(SOUND):
-		get_parent()._play_sfx(currentPhase.sound)
+		AudioManager.play_sfx(currentPhase[SOUND])
 		
 		
 func _play_back_sound_if_it_exists():
 	if currentPhase.has(SOUND_BACK):
-		get_parent()._play_back(currentPhase.type_sound_back)
+		AudioManager.play_back(currentPhase[SOUND_BACK])
 
-		
 func _play_animation_if_it_exists():
 	if currentPhase.has(ANIMATION):
-		get_parent().play_animation(currentPhase.type_animation)
-		
-		
+		level.play_animation(currentPhase.type_animation)
+
+
 func _show_options_if_it_has():
 	if currentPhase.has(CHOICES):
 		_Action_Description.text = select_choice
@@ -163,7 +167,7 @@ func _show_options_if_it_has():
 
 func _play_next_sound_if_not_first():
 	if phaseId!= "001":
-		get_parent()._play_sfx(NEXT)
+		AudioManager.play_sfx(NEXT)
 
 
 func _on_ActionNext_pressed():

@@ -69,7 +69,6 @@ __meta__ = {
 }
 
 [node name="SpeakerImage" type="NinePatchRect" parent="DialogBox/Body"]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -79,8 +78,8 @@ scale = Vector2( 0.975056, 0.962585 )
 texture = ExtResource( 9 )
 
 [node name="SpeakerTexture" type="Sprite" parent="DialogBox/Body/SpeakerImage"]
-position = Vector2( -398.909, -5.22192 )
-scale = Vector2( 1.08511, 0.855138 )
+position = Vector2( -474.909, 24.7781 )
+scale = Vector2( 0.975173, 0.779028 )
 texture = ExtResource( 8 )
 
 [node name="Speaker" type="NinePatchRect" parent="DialogBox/Body"]
@@ -180,16 +179,16 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 379.0
-margin_bottom = 37.0
+margin_bottom = 48.0
 
 [node name="Option2" parent="DialogBox/Body/OptionList" instance=ExtResource( 2 )]
 visible = false
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 41.0
+margin_top = 52.0
 margin_right = 379.0
-margin_bottom = 78.0
+margin_bottom = 100.0
 
 [node name="Option3" parent="DialogBox/Body/OptionList" instance=ExtResource( 2 )]
 visible = false

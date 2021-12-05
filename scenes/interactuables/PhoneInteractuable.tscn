@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/InteractuableBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/textures/genericItem_color_064.png" type="Texture" id=2]
+[ext_resource path="res://scenes/interactuables/PhoneInteractuable.gd" type="Script" id=3]
+[ext_resource path="res://assets/textures/backgroundwhite.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 32.3244, 27.3975 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.000805815, 0.159557 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 34, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.160357 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Light2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( -0.01, 0.160357 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 34.4433, 26.3381 ), Vector2( 70.635, 26.338 ) ]
+}
+
+[node name="PhoneInteractuable" instance=ExtResource( 1 )]
+margin_right = -1024.0
+margin_bottom = -600.0
+script = ExtResource( 3 )
+
+[node name="TextureRect" parent="." index="0"]
+margin_left = 0.703433
+margin_right = 51.7034
+margin_bottom = 65.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Area" parent="." index="1"]
+margin_left = 5.0
+margin_top = 14.0
+margin_right = 88.0
+margin_bottom = 110.0
+
+[node name="Animation" type="AnimationPlayer" parent="." index="2"]
+anims/RESET = SubResource( 4 )
+anims/phone = SubResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="." index="3"]
+position = Vector2( 32.3244, 27.3975 )
+scale = Vector2( 0.0797327, 0.0499845 )
+texture = ExtResource( 4 )
+color = Color( 0.396078, 0.980392, 0.419608, 1 )
+energy = 0.0255071

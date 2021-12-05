@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://SoundsManager.gd" type="Script" id=1]
+[ext_resource path="res://assets/audio/telephone-ring-04.wav.sample" type="AudioStream" id=2]
+[ext_resource path="res://assets/audio/click-snap-perc.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/news.ogg" type="AudioStream" id=5]
+
+[node name="AudioManager" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+phone = ExtResource( 2 )
+pressnext = ExtResource( 3 )
+news = ExtResource( 5 )
+
+[node name="SfxPlayer" type="AudioStreamPlayer2D" parent="."]
+
+[node name="BackgroundPlayer" type="AudioStreamPlayer2D" parent="."]

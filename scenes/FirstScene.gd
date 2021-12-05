@@ -1,10 +1,11 @@
 extends Control
 
+signal phone_rings
+
 onready var background_sound = $BackgroundSound
 onready var _dialog_sfx = $DialogSfx
 onready var dialog = $Dialog
-onready var animation = $Animation
-onready var old_phone = $Background/Phone
+onready var old_phone = $Interact/PhoneInteractuable
 onready var timer = $Timer
 onready var black = $Background2
 onready var transition_sound = $Background2/TransitionSound
@@ -46,7 +47,7 @@ func _add_phone_interaction(sound_name):
 		enable_old_phone_button()
 		GameState.space_enable = false
 		timer.start()
-		
+
 
 func _stop_control_animation_sound():
 	#stops animation & sounds
@@ -62,11 +63,12 @@ func _stop_sound_background_if_playing():
 		background_sound.stop()
 
 func _stop_current_animation():
-	if animation.is_playing():
-		animation.stop()
+	pass
+#	if animation.is_playing():
+#		animation.stop()
 		
 func play_animation(type):
-	animation.play(type)
+	old_phone.init_animation()
 	
 func enable_old_phone_button():
 	old_phone.disabled = false
@@ -75,7 +77,7 @@ func enable_old_phone_button():
 func _on_oldPhone_pressed():
 	timer.stop()
 	GameState.space_enable = true
-	dialog.show()	
+	dialog.show()
 	dialog._play_phase_if_not_tween()
 
 func _run_next_scene():
@@ -102,5 +104,3 @@ func _on_TransitionSound_finished():
 	_remove()
 
 
-func _on_Tv_pressed():
-	print('tv pressed')
