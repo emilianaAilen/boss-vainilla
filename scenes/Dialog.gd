@@ -6,7 +6,6 @@ export (NodePath) var level_path
 
 var gameDataPath:String = GameState.gameDataPath
 var game_data
-var sounds
 var phaseId = "001"
 
 onready var _Text_Body = $DialogBox/Body/TextContainer/TextLabel
@@ -112,6 +111,7 @@ func _show_options(choices):
 			new_option_button.slot = slot
 			new_option_button.set_text(choice.text)
 			new_option_button.connect("clicked", self, "_on_Option_clicked")
+			new_option_button.set_mouse_filter(Control.MOUSE_FILTER_PASS)
 		
 func _options_already_loaded(choices):
 	var visibleChoices = 0
@@ -128,23 +128,23 @@ func _on_Option_clicked(slot):
 	phaseId = slot
 	_clear_options()
 	_play_phase()
-		
-		
+
+
 func _clear_options():
 	var children = _Option_List.get_children()
 	for child in children:
 		_Option_List.remove_child(child)
 		child.queue_free()
-		
-		
+
+
 func _add_speaker_texture_if_it_exists():
 	if currentPhase.has(IMAGE) && currentPhase.image != '':
 		var img_url = "res://assets/textures/"+currentPhase.image
 		loadSpeakerTexture(img_url)
 	else:
 		 _speaker_container.hide()
-		
-		
+
+
 func _play_sfx_if_it_exists():
 	if currentPhase.has(SOUND):
 		AudioManager.play_sfx(currentPhase[SOUND])

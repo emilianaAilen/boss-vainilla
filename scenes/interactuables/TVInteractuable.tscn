@@ -6,6 +6,8 @@
 [ext_resource path="res://assets/textures/light.png" type="Texture" id=4]
 
 [node name="TVInteractuable" instance=ExtResource( 1 )]
+margin_right = -1024.0
+margin_bottom = -600.0
 script = ExtResource( 3 )
 
 [node name="TextureRect" parent="." index="0"]
@@ -15,10 +17,10 @@ texture = ExtResource( 2 )
 expand = true
 
 [node name="Area" parent="." index="1"]
-margin_left = 60.8195
-margin_top = 82.2996
-margin_right = 128.819
-margin_bottom = 150.3
+margin_left = 51.0
+margin_top = 79.0
+margin_right = 129.0
+margin_bottom = 150.0
 
 [node name="Light2D" type="Light2D" parent="." index="2"]
 position = Vector2( 46.6164, 108.747 )

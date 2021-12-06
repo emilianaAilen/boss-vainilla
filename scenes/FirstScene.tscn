@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/interactuables/PhoneInteractuable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Dialog.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/FirstScene.gd" type="Script" id=3]
 [ext_resource path="res://assets/audio/news.ogg" type="AudioStream" id=4]
-[ext_resource path="res://assets/audio/click-snap-perc.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/audio/telephone-ring-04.wav.sample" type="AudioStream" id=6]
 [ext_resource path="res://assets/textures/living_1200x740.png" type="Texture" id=7]
 [ext_resource path="res://assets/textures/black_square.png" type="Texture" id=10]
@@ -20,9 +19,6 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-phone = ExtResource( 6 )
-pressnext = ExtResource( 5 )
-news = ExtResource( 4 )
 
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -34,33 +30,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dialog" parent="." instance=ExtResource( 2 )]
-anchor_left = 0.004
-margin_left = -0.0173647
-margin_top = 7.2153
-margin_right = -0.0175781
-margin_bottom = 0.0151978
-scene_name = "1"
-level_path = NodePath("..")
-
 [node name="Interact" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TVInteractuable" parent="Interact" instance=ExtResource( 11 )]
-margin_left = 812.806
-margin_top = 65.9989
-margin_right = 812.806
-margin_bottom = 65.9989
-
 [node name="PhoneInteractuable" parent="Interact" instance=ExtResource( 1 )]
-margin_left = 100.051
-margin_top = 243.52
-margin_right = -923.949
-margin_bottom = -356.28
+margin_left = 82.1174
+margin_top = 245.408
+margin_right = -941.883
+margin_bottom = -354.392
+mouse_filter = 2
+
+[node name="TVInteractuable" parent="Interact" instance=ExtResource( 11 )]
+margin_left = 827.979
+margin_top = 83.0459
+margin_right = -196.084
+margin_bottom = -516.754
+rect_scale = Vector2( 1.82569, 1.54068 )
+
+[node name="Dialog" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.004
+margin_left = -2.53723
+margin_top = 4.69546
+margin_right = -2.53748
+margin_bottom = -2.50464
+scene_name = "1"
+level_path = NodePath("..")
 
 [node name="DialogSfx" type="AudioStreamPlayer2D" parent="."]
 
@@ -87,5 +86,6 @@ stream = ExtResource( 6 )
 [node name="InteractuableHandler" type="Node" parent="."]
 script = ExtResource( 12 )
 
+[connection signal="clicked" from="Interact/PhoneInteractuable" to="." method="_on_oldPhone_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timeout"]
 [connection signal="finished" from="Background2/TransitionSound" to="." method="_on_TransitionSound_finished"]
