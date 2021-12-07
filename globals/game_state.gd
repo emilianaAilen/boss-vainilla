@@ -17,6 +17,8 @@ var actions_by_language = {
 	}
 }
 
+var next_scene: String
+
 var gameDataPath: String
 
 var result: int = 0

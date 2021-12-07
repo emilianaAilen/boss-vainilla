@@ -78,7 +78,6 @@ func _getDialog() -> Array:
 func _play_phase():
 	if(phaseId != ""):
 		currentPhase = game_data[phaseId] 
-		level._stop_control_animation_sound()
 		_play_next_sound_if_not_first()
 		_add_speaker_texture_if_it_exists()
 		_play_sfx_if_it_exists()

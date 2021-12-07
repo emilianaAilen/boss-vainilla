@@ -22,4 +22,8 @@ car_starting = ExtResource( 4 )
 
 [node name="BackgroundPlayer" type="AudioStreamPlayer2D" parent="."]
 
+[node name="Transition" type="AudioStreamPlayer2D" parent="."]
+
 [node name="SoundFadeTween" type="Tween" parent="."]
+
+[connection signal="finished" from="Transition" to="." method="_on_AudioStreamPlayer2D_finished"]

@@ -9,6 +9,7 @@ export (AudioStream) var car_starting
 onready var background_player = $BackgroundPlayer
 onready var sfx_player = $SfxPlayer
 onready var tween_fade: Tween = $SoundFadeTween
+onready var transition = $Transition
 
 onready var sounds = _get_sounds()
 
@@ -69,3 +70,12 @@ func _on_Tween_completed(object, key):
 	# stop the music -- otherwise it continues to run at silent volume
 	object.stop()
 	object.volume_db = 0 # reset volume
+
+func _play_transition(stream):
+	transition.stream = sounds[stream]
+	var stream_transition = transition.stream as AudioStreamOGGVorbis
+	stream_transition.set_loop(false)
+	transition.play()
+
+func _on_AudioStreamPlayer2D_finished():
+	ScenesManager.add_scene(GameState.next_scene)

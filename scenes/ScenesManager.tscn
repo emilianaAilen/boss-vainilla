@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/ScenesManager.gd" type="Script" id=1]
+[ext_resource path="res://scenes/FirstScene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/EndGame.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/SecondScene.tscn" type="PackedScene" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+first_scene = ExtResource( 2 )
+end_scene = ExtResource( 3 )
+second_scene = ExtResource( 4 )

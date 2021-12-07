@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/interactuables/PhoneInteractuable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Dialog.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/FirstScene.gd" type="Script" id=3]
-[ext_resource path="res://assets/audio/news.ogg" type="AudioStream" id=4]
-[ext_resource path="res://assets/audio/telephone-ring-04.wav.sample" type="AudioStream" id=6]
+[ext_resource path="res://scenes/Fade.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/textures/living_1200x740.png" type="Texture" id=7]
 [ext_resource path="res://assets/textures/black_square.png" type="Texture" id=10]
 [ext_resource path="res://scenes/interactuables/TVInteractuable.tscn" type="PackedScene" id=11]
@@ -61,12 +60,6 @@ margin_bottom = -2.50464
 scene_name = "1"
 level_path = NodePath("..")
 
-[node name="DialogSfx" type="AudioStreamPlayer2D" parent="."]
-
-[node name="BackgroundSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
-bus = "background"
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 
@@ -80,12 +73,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TransitionSound" type="AudioStreamPlayer" parent="Background2"]
-stream = ExtResource( 6 )
+[node name="Fade" parent="." instance=ExtResource( 4 )]
 
 [node name="InteractuableHandler" type="Node" parent="."]
 script = ExtResource( 12 )
 
 [connection signal="clicked" from="Interact/PhoneInteractuable" to="." method="_on_oldPhone_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timeout"]
-[connection signal="finished" from="Background2/TransitionSound" to="." method="_on_TransitionSound_finished"]

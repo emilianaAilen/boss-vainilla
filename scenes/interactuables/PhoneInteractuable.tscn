@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/interactuables/PhoneInteractuable.gd" type="Script" id=3]
 [ext_resource path="res://assets/textures/backgroundwhite.png" type="Texture" id=4]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 length = 0.3
 loop = true
 tracks/0/type = "value"
@@ -58,13 +58,14 @@ texture = ExtResource( 2 )
 expand = true
 
 [node name="Area" parent="." index="1"]
+visible = false
 margin_left = 12.0
 margin_top = 9.0
 margin_right = 79.0
 margin_bottom = 64.0
 
 [node name="Animation" type="AnimationPlayer" parent="." index="2"]
-anims/phone = SubResource( 3 )
+anims/phone = SubResource( 1 )
 
 [node name="Light2D" type="Light2D" parent="." index="3"]
 position = Vector2( 34.4946, 26.3398 )

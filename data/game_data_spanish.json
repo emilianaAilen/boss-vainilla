@@ -117,7 +117,6 @@
       "name": "x",
       "sound": "",
       "image": "",
-      "type_game": "",
       "next": "002"
     },
     "002": {
@@ -125,7 +124,6 @@
       "name": "Dr. x",
       "sound": "",
       "image": "",
-      "type_game": "",
       "next": "003"
     },
     "003": {
@@ -133,7 +131,6 @@
       "name": "x",
       "sound": "",
       "image": "",
-      "type_game": "",
       "next": "004"
     },
     "004": {
@@ -405,8 +402,361 @@
       "next": "008"
     }
   },
-  "secene_room_3_A":{},
-  "secene_room_3_B":{},
+  "scene_room_2_A":{
+    "001": {
+      "text": "...",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "next": "002"
+    },
+    "002": {
+      "text": "ESTA MUERTO! Que esta pasando?",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "next": "003"
+    },
+    "003": {
+      "text": "SEGURIDAD VENGAN RAPIDO",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "type_game": ""
+    }
+  },
+  "scene_room_2_B":{
+    "001": {
+      "text": "Buenos dias, bueno veo que te rompiste varios huesos",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "002"
+    },
+    "002": {
+      "text": "podrias atender a estos 4 pacientes?",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "next": "003"
+    },
+    "003": {
+      "text": "Podrias decime donde sentis mas dolor?",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "004"
+    },
+    "004": {
+      "text": "En la pierna con el hueso afuera",
+      "name": "paciente 2",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "005"
+    },
+    "005": {
+      "text": "Bueno si, esa hay que operarla. Voy a revisar las otras fracturas",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "006"
+    },
+    "006": {
+      "text": "La otra pierna se puede recuperar con yeso",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "007"
+    },
+    "007": {
+      "text": "Y tu hombro lo voy a acomodar ahora mismo, aguanta",
+      "name": "Dr.x",
+      "sound": "bone",
+      "image": "",
+      "type_game": "",
+      "next": "007"
+    },
+    "008": {
+      "text": "Y tu hombro lo voy a acomodar ahora mismo, aguanta",
+      "name": "Dr.x",
+      "sound": "bone",
+      "image": "",
+      "type_game": "",
+      "choices": [
+        {
+          "text": "Salir de la habitacion",
+          "branch_next": "009"
+        },
+        {
+          "text": "Preguntar sobre el accidente",
+          "branch_next": "010"
+        },
+        {
+          "text": "Preguntar como se llama",
+          "branch_next": "015"
+        }
+      ]
+    },
+    "009": {
+      "text": "Bueno, espero que te mejores, hasta luego.",
+      "name": "Dr.x",
+      "image": ""
+    },
+    "010": {
+      "text": "recordas algo del accidente? como fue?",
+      "name": "Dr.x",
+      "image": "",
+      "next": "011"
+    },
+    "011": {
+      "text": "Hubo una explosion, perdi el control..",
+      "name": "Paciente 2",
+      "image": "",
+      "next": "012"
+    },
+    "012": {
+      "text": "Y lo ultiomo que recuerdo es al conductor del camion de combustible acercandose para auxiliarme.",
+      "name": "Paciente 2",
+      "image": "",
+      "next": "013"
+    },
+    "013": {
+      "text": "Pero fue atropellado por otro auto que perdio el control.",
+      "name": "Paciente 2",
+      "image": "",
+      "next": "014"
+    },
+    "014": {
+      "text": "Afortunadamente usted se encuentra bien, unicamente unos huesos rotos por recuperar",
+      "name": "Dr.x",
+      "image": "",
+      "next": "009"
+    },
+    "015": {
+      "text": "Como te llamas?",
+      "name": "Dr.x",
+      "image": "",
+      "next": "016"
+    },
+    "016": {
+      "text": "Mi nombre es Martin",
+      "name": "Martin",
+      "image": "",
+      "next": "017"
+    },
+    "017": {
+      "text": "Un gusto Martin, a que te dedicas?",
+      "name": "Dr.x",
+      "image": "",
+      "next": "017"
+    },
+    "018": {
+      "text": "Soy diputado",
+      "name": "Martin",
+      "image": "",
+      "next": "017"
+    },
+    "019": {
+      "text": "Debe ser un cargo importante, imagino que quiere saber sobre la actualidad, quiere que encienda la tele?",
+      "name": "Dr.x",
+      "image": "",
+      "next": "017"
+    },
+    "020": {
+      "text": "Debe ser un cargo importante, imagino que quiere saber sobre la actualidad, quiere que encienda la tele?",
+      "name": "Dr.x",
+      "image": "",
+      "next": "021"
+    },
+    "021": {
+      "text": "Si, por favor",
+      "name": "Dr.x",
+      "image": "",
+      "sound": "",
+      "type_game": "tv_clickeable",
+      "next": "022"
+    },
+    "022": {
+      "text": "Vamos a ver que hay de nuevo",
+      "name": "Dr.x",
+      "image": "",
+      "sound": "",
+      "type_game": "tv_clickeable",
+      "next": "023"
+    },
+    "023": {
+      "text": "Es colega suya?",
+      "name": "Dr.x",
+      "image": "",
+      "sound": "",
+      "next": "024"
+    },
+    "024": {
+      "text": "Si, la conozco, no tenemos mucha relacion pero tenemos la misma ideologia.",
+      "name": "Martin",
+      "image": "",
+      "sound": "",
+      "next": "025"
+    },
+    "025": {
+      "text": "Cual es su postura ante esta ley a tratar?",
+      "name": "Dr.x",
+      "image": "",
+      "sound": "",
+      "next": "026"
+    },
+    "026": {
+      "text": "Estoy a favor, pero lamentablemente hay muchos grupos en contra",
+      "name": "Martin",
+      "image": "",
+      "sound": "",
+      "next": "027"
+    },
+    "027": {
+      "text": "Entiendo..Ojala pueda aprobarse",
+      "name": "Dr.x",
+      "image": "",
+      "sound": "",
+      "next": "009"
+    }
+  },
+  "scene_room_2_C":{
+    "001": {
+      "text": "Buenos dias, bueno veo que te rompiste varios huesos",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "002"
+    },
+    "002": {
+      "text": "podrias atender a estos 4 pacientes?",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "next": "003"
+    },
+    "003": {
+      "text": "Podrias decime donde sentis mas dolor?",
+      "name": "Dr.x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "004"
+    },
+    "004": {
+      "text": "",
+      "name": "",
+      "sound": "phone",
+      "image": "",
+      "type_animation": "phone",
+      "next": "005"
+    },
+    "005": {
+      "text": "Desaparecio el paciente de la habitacion 4",
+      "name": "Guardia",
+      "image": "",
+      "next": "006"
+    },
+    "006": {
+      "text": "Estate atento, da aviso si lo ves",
+      "name": "Guardia",
+      "image": "",
+      "next": "007"
+    },
+    "007": {
+      "text": "Si no hay problema!",
+      "name": "Dr.x",
+      "image": "",
+      "next": "008"
+    },
+    "008": {
+      "text": "Paso algo?",
+      "name": "Paciente 2",
+      "image": "",
+      "next": "009"
+    },
+    "009": {
+      "text": "Nada grave.",
+      "name": "Dr.x",
+      "image": "",
+      "sound":"door",
+      "next": "010"
+    },
+    "010": {
+      "text": "Hay alguien en la puerta",
+      "name": "Paciente 2",
+      "image": "",
+      "type_animation": "unknown_person",
+      "next": "011"
+    },
+    "011": {
+      "text": "Que se le ofrece?",
+      "name": "Dr.x",
+      "image": "",
+      "next": "012"
+    },
+    "012": {
+      "text": "Me dijeron que atienda a este paciente",
+      "name": "Desconocido",
+      "image": "",
+      "next": "013"
+    },
+    "013": {
+      "text": "Me dijeron que atienda a este paciente",
+      "name": "Desconocido",
+      "image": "",
+      "choices": [
+        {
+          "text": "Salir de la habitacion",
+          "branch_next": "014"
+        },
+        {
+          "text": "Preguntar quien lo envio",
+          "branch_next": "015"
+        }
+      ]
+    },
+    "014": {
+      "text": "Esta bien, sigo con los demas pacientes.",
+      "name": "Dr.x",
+      "image": ""
+    },
+    "015": {
+      "text": "Quien te envio? nunca te habia visto",
+      "name": "Dr.x",
+      "image": "",
+      "next": "016"
+    },
+    "016": {
+      "text": "Es que vengo de otro hospital, uno de los enfermeros me dijo que venga a ver este paciente",
+      "name": "Desconocido",
+      "image": "",
+      "next": "017",
+      "choices": [
+        {
+          "text": "Salir de la habitacion",
+          "branch_next": "014"
+        },
+        {
+          "text": "Preguntar a seguridad",
+          "branch_next": "017"
+        }
+      ]
+    },
+    "017": {
+      "text": "Perdon necesito chequear con seguridad.",
+      "name": "Dr.x",
+      "image": "",
+      "sound": "",
+      "final_message": ""
+    }
+  },
   "scene_end": {
     "title": "Final",
     "result_field": "Salvaste: "

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/SceneBase.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Fade.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Dialog.tscn" type="PackedScene" id=3]
 
 [node name="BaseScene" type="Control"]
 anchor_right = 1.0
@@ -30,3 +31,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -435.112, 182.949 )
 color = Color( 0.0784314, 0.0705882, 0.0705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialog" parent="." instance=ExtResource( 3 )]
