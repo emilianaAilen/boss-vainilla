@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/InteractuableBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/interactuables/InteractuableBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/textures/oldtv_px.png" type="Texture" id=2]
 [ext_resource path="res://scenes/interactuables/TVInteractuable.gd" type="Script" id=3]
 [ext_resource path="res://assets/textures/light.png" type="Texture" id=4]
+
 
 [node name="TVInteractuable" instance=ExtResource( 1 )]
 margin_right = -1024.0

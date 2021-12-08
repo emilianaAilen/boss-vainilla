@@ -17,12 +17,12 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "InteractuableAbstract",
 "language": "GDScript",
-"path": "res://scenes/InteractuableBase.gd"
+"path": "res://scenes/interactuables/InteractuableBase.gd"
 }, {
 "base": "BaseScene",
 "class": "SceneRoomBase",
 "language": "GDScript",
-"path": "res://scenes/SceneRoomBase.gd"
+"path": "res://scenes/room/SceneRoomBase.gd"
 } ]
 _global_script_class_icons={
 "BaseScene": "",
@@ -39,8 +39,8 @@ config/icon="res://icon.png"
 [autoload]
 
 GameState="*res://globals/game_state.gd"
-AudioManager="*res://scenes/AudioManager.tscn"
-ScenesManager="*res://scenes/ScenesManager.tscn"
+AudioManager="*res://scenes/shared/AudioManager.tscn"
+ScenesManager="*res://scenes/shared/ScenesManager.tscn"
 
 [display]
 

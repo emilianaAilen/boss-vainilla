@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://scenes/ScenesManager.gd" type="Script" id=1]
+[ext_resource path="res://scenes/shared/ScenesManager.gd" type="Script" id=1]
 [ext_resource path="res://scenes/FirstScene.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/EndGame.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/SecondScene.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/SceneRoomTwo.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/SceneRoomOne.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/SceneRoomThree.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/SceneRoomFour.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/room/SceneRoomTwo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/room/SceneRoomOne.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/room/SceneRoomThree.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/room/SceneRoomFour.tscn" type="PackedScene" id=8]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0

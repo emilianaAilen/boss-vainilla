@@ -24,7 +24,7 @@ const CHOICES = "choices"
 const ANIMATION = "type_animation"
 const SOUND_BACK = "type_sound_back"
 
-onready var _Option_Button_Scene = load("res://scenes/Option.tscn")
+onready var _Option_Button_Scene = load("res://scenes/dialog/Option.tscn")
 
 #messages for action button
 var select_choice: String
