@@ -80,8 +80,8 @@ func _on_Tween_completed(object, key):
 
 func _play_transition(stream):
 	transition.stream = sounds[stream]
-#	var stream_transition = transition.stream as AudioStreamOGGVorbis
-#	stream_transition.set_loop(false)
+	var stream_transition = transition.stream as AudioStreamOGGVorbis
+	stream_transition.set_loop(false)
 	transition.play()
 
 func _on_AudioStreamPlayer2D_finished():
