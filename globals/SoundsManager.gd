@@ -5,6 +5,7 @@ export (AudioStream) var phone
 export (AudioStream) var pressnext
 export (AudioStream) var news
 export (AudioStream) var car_starting
+export (AudioStream) var door_in
 
 onready var background_player = $BackgroundPlayer
 onready var sfx_player = $SfxPlayer
@@ -18,7 +19,8 @@ func _get_sounds():
 		"phone": phone,
 		"next": pressnext,
 		"news": news,
-		"car_starting": car_starting
+		"car_starting": car_starting,
+		"door_in": door_in
 	}
 
 ## sounds managment

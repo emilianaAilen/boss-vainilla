@@ -12,6 +12,7 @@ onready var _Text_Body = $DialogBox/Body/TextContainer/TextLabel
 onready var _Option_List = $DialogBox/Body/OptionList
 onready var _Action_Description = $DialogBox/Body/ActionBox/ActionLabel
 onready var _Speaker_Text = $DialogBox/Body/Speaker/SpeakerLabel
+onready var _Speaker_Image = $DialogBox/Body/SpeakerImage
 onready var _action_button = $DialogBox/Body/ActionBox
 onready var tween = $DialogBox/Body/TextContainer/Tween
 onready var level = get_node(level_path)
@@ -23,6 +24,7 @@ const NEXT = "next"
 const CHOICES = "choices"
 const ANIMATION = "type_animation"
 const SOUND_BACK = "type_sound_back"
+const FINAL_MESSAGE = "final_message"
 
 onready var _Option_Button_Scene = load("res://scenes/dialog/Option.tscn")
 
@@ -80,6 +82,7 @@ func _play_phase():
 		_add_speaker_texture_if_it_exists()
 		_play_sfx_if_it_exists()
 		_play_back_sound_if_it_exists()
+		_set_final_message_if_it_exists()
 		_play_animation_if_it_exists()
 		_Speaker_Text.text = currentPhase.name
 		_Text_Body.text = currentPhase.text
@@ -137,7 +140,7 @@ func _clear_options():
 
 func _add_speaker_texture_if_it_exists():
 	if currentPhase.has(IMAGE) && currentPhase.image != '':
-		var img_url = "res://assets/textures/"+currentPhase.image
+		var img_url = "res://assets/textures/characters/"+currentPhase.image+".png"
 		loadSpeakerTexture(img_url)
 	#else:
 		 #_speaker_container.hide()
@@ -156,6 +159,10 @@ func _play_animation_if_it_exists():
 	if currentPhase.has(ANIMATION):
 		level.play_animation(currentPhase.type_animation)
 
+func _set_final_message_if_it_exists():
+	if currentPhase.has(FINAL_MESSAGE):
+		print('set final message')
+		GameState.final_message = currentPhase.final_message
 
 func _show_options_if_it_has():
 	if currentPhase.has(CHOICES):
@@ -173,8 +180,7 @@ func _on_ActionNext_pressed():
 
 
 func loadSpeakerTexture(texture_url: String):
-	#_speaker_texture.texture = load(texture_url)
-	pass
+	_Speaker_Image.texture = load(texture_url)
 
 
 func _on_Tween_tween_completed(object, key):

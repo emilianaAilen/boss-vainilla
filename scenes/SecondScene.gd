@@ -15,7 +15,9 @@ func _on_ready():
 
 
 func set_scene_data_name():
-	if(GameState.visited_rooms.size()>2 && GameState.visited_rooms[-1]=="4"):
+	if(GameState.visited_rooms.size()==4 && GameState.visited_rooms[-1]=="4"):
+		dialog.scene_name = "2_D"
+	elif(GameState.visited_rooms.size()>2 && GameState.visited_rooms[-1]=="4"):
 		dialog.scene_name = "2_B"
 	elif GameState.visited_rooms.size()>0:
 		dialog.scene_name = "2_C"
@@ -23,12 +25,17 @@ func set_scene_data_name():
 		dialog.scene_name = "2_A"
 
 func play_animation(type):
-	dialog.hide()
-	show_available_rooms()
+	if type == "end":
+		GameState.space_enable = false
+		GameState.next_scene = type
+		AudioManager._play_transition("door_in")
+	else:
+		dialog.hide()
+		show_available_rooms()
 	
 func _play_transition():
-	begin_transition_in()
-	AudioManager._play_transition("car_starting")
+	.begin_transition_out()
+	AudioManager._play_transition("door_in")
 
 func remove_room_from_available(room):
 	GameState.available_rooms.erase(room)

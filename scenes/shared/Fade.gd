@@ -1,4 +1,5 @@
 extends Node
+class_name Fade_Color
 
 signal fade_out_completed
 

@@ -9,3 +9,8 @@ func set_scene_data_name():
 		dialog.scene_name = "room_4_A"
 	else:
 		dialog.scene_name = "room_4_B"
+
+
+func play_animation(type_animation):
+	if (type_animation == "security"):
+		GameState.vigilance = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://globals/SoundsManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/telephone-ring-04.wav.sample" type="AudioStream" id=2]
 [ext_resource path="res://assets/audio/click-snap-perc.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/car_starting_sound.ogg" type="AudioStream" id=4]
 [ext_resource path="res://assets/audio/news.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/audio/knock-door-step.ogg" type="AudioStream" id=6]
 
 [node name="AudioManager" type="Control"]
 anchor_right = 1.0
@@ -17,6 +18,7 @@ phone = ExtResource( 2 )
 pressnext = ExtResource( 3 )
 news = ExtResource( 5 )
 car_starting = ExtResource( 4 )
+door_in = ExtResource( 6 )
 
 [node name="SfxPlayer" type="AudioStreamPlayer2D" parent="."]
 

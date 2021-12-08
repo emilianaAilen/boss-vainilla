@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/shared/ScenesManager.gd" type="Script" id=1]
 [ext_resource path="res://scenes/FirstScene.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/room/SceneRoomOne.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/room/SceneRoomThree.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/room/SceneRoomFour.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/EndScene1.tscn" type="PackedScene" id=9]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -23,3 +24,4 @@ room_1 = ExtResource( 6 )
 room_2 = ExtResource( 5 )
 room_3 = ExtResource( 7 )
 room_4 = ExtResource( 8 )
+end_scene1 = ExtResource( 9 )

@@ -74,13 +74,15 @@ anchor_left = -0.02
 anchor_top = -0.831
 anchor_right = 0.185
 anchor_bottom = -0.169
-margin_left = 0.120001
-margin_top = -0.0252991
-margin_right = -0.110001
-margin_bottom = 0.0249405
+margin_left = 3.29481
+margin_top = 5.53058
+margin_right = 3.0648
+margin_bottom = 5.58081
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="DialogBox/Body/SpeakerImage"]
 
 [node name="Speaker" type="NinePatchRect" parent="DialogBox/Body"]
 margin_left = -20.1587

@@ -9,5 +9,5 @@ func _run_next_scene():
 	_play_transition()
 
 func _play_transition():
-	begin_transition_in()
+	begin_transition_out()
 	AudioManager._play_transition("car_starting")
