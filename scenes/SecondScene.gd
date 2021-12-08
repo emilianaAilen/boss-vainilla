@@ -15,7 +15,6 @@ func _ready():
 		"3": room_3,
 		"4": room_4
 	}
-	dialog.scene_name = "2_A"
 
 func play_animation(type):
 	dialog.hide()
@@ -51,6 +50,7 @@ func _on_room_2_pressed():
 	manage_room_info("2")
 	_play_transition()
 	GameState.next_scene = "scene_room_2"
+	GameState.scene_name_data = "room_2_A"
 
 
 func _on_room_4_pressed():

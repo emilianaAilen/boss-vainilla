@@ -1,6 +1,6 @@
 extends Node
 export(float) var textSpeed = 0.05
-var scene_name = ""
+export(String) var scene_name
 export (NodePath) var level_path
 
 
@@ -54,8 +54,8 @@ func get_scene_name():
 		return GameState.scene_name_data
 
 func initialize():
-	#var name = get_scene_name()
-	game_data = _getDialog()["scene_" + scene_name]
+	var name = get_scene_name()
+	game_data = _getDialog()["scene_" + name]
 	assert(game_data, "data not found")
 	GameState.space_enable = true
 	_play_phase()

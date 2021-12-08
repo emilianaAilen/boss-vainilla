@@ -126,6 +126,7 @@ visible = false
 color = Color( 0, 0, 0, 1 )
 
 [node name="Dialog" parent="." index="5"]
+scene_name = "2_A"
 level_path = NodePath("..")
 
 [connection signal="pressed" from="ChoiceRoom/room_1" to="." method="_on_room_1_pressed"]
