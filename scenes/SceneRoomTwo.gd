@@ -1,13 +1,18 @@
 extends SceneRoomBase
 
-func _ready():
-	pass
-	#set_scene_data_name()
+
+func _on_ready():
+	set_scene_data_name()
+	._on_ready()
 
 func set_scene_data_name():
-	if (GameState.visited_rooms.size() < 2):
-		GameState.scene_name_data = "room_2_A"
-	## en tercer lugar y no dejo en vigilancia al conductor = room_2_C
-	## en primer y segunda = room_2_B
-	## en cuarto = room_2_A
+	print(GameState.visited_rooms)
+	if (GameState.visited_rooms.size() == 4 && ! GameState.vigilance):
+		dialog.scene_name = "room_2_C"
+	elif (GameState.visited_rooms.size() == 3 && ! GameState.vigilance ):
+		dialog.scene_name = "room_2_B"
+	else:
+		dialog.scene_name = "room_2_A"
+
+
 

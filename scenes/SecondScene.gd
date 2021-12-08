@@ -7,14 +7,20 @@ onready var room_4 = $ChoiceRoom/room_4
 
 var rooms_obj
 
-func _ready():
+
+func _on_ready():
 	GameState.current_scene = self
-	rooms_obj = {
-		"1": room_1,
-		"2": room_2,
-		"3": room_3,
-		"4": room_4
-	}
+	set_scene_data_name()
+	._on_ready()
+
+
+func set_scene_data_name():
+	if(GameState.visited_rooms.size()>2 && GameState.visited_rooms[-1]=="4"):
+		dialog.scene_name = "2_B"
+	elif GameState.visited_rooms.size()>0:
+		dialog.scene_name = "2_C"
+	else:
+		dialog.scene_name = "2_A"
 
 func play_animation(type):
 	dialog.hide()
@@ -28,34 +34,38 @@ func remove_room_from_available(room):
 	GameState.available_rooms.erase(room)
 	
 func add_room_to_visited(room): 
-	GameState.visited_rooms.append(room)
+	if !(GameState.visited_rooms.has(room)):
+		GameState.visited_rooms.append(room)
 
 func show_available_rooms():
+	rooms_obj = {
+		"1": $ChoiceRoom/room_1,
+		"2": $ChoiceRoom/room_2,
+		"3": $ChoiceRoom/room_3,
+		"4": $ChoiceRoom/room_4
+	}
 	var rooms = GameState.available_rooms
 	for room in rooms:
 		rooms_obj[room].show()
 		
-func manage_room_info(room):
-	remove_room_from_available(room)
-	add_room_to_visited(room)
-	
-	
-func _on_room_1_pressed():
-	manage_room_info("1")
-	_play_transition()
-	GameState.next_scene = "scene_room_1"
 
+
+func _on_room_1_pressed():
+	_play_room("1")
 
 func _on_room_2_pressed():
-	manage_room_info("2")
-	_play_transition()
-	GameState.next_scene = "scene_room_2"
-	GameState.scene_name_data = "room_2_A"
-
+	_play_room("2")
 
 func _on_room_4_pressed():
-	pass # Replace with function body.
-
+	_play_room("4")
 
 func _on_room_3_pressed():
-	pass # Replace with function body.
+	_play_room("3")
+
+
+func _play_room(room):
+	rooms_obj[room].disabled = true
+	remove_room_from_available(room)
+	add_room_to_visited(room)
+	_play_transition()
+	GameState.next_scene = "scene_room_"+room

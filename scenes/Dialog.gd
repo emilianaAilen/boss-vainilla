@@ -44,18 +44,9 @@ func set_idiom():
 	select_choice = actions_by_language[language].select
 	press_button = actions_by_language[language].press
 	_Action_Description.text = actions_by_language[language].press
-	
-func get_scene_name():
-	print(scene_name)
-	if scene_name != "":
-		return scene_name
-	else:
-		print("Entra")
-		return GameState.scene_name_data
 
 func initialize():
-	var name = get_scene_name()
-	game_data = _getDialog()["scene_" + name]
+	game_data = _getDialog()["scene_" + scene_name]
 	assert(game_data, "data not found")
 	GameState.space_enable = true
 	_play_phase()
@@ -99,6 +90,7 @@ func _play_phase():
 		_next_id()
 		
 	elif (!currentPhase.has(CHOICES)):
+		GameState.space_enable = false
 		level._run_next_scene()
 		
 func _next_id():

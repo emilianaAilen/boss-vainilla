@@ -8,12 +8,15 @@ onready var fade_background: ColorRect =  $FadeBackground
 onready var dialog = $Dialog
 
 func _ready():
-	fade.set_base_node_with_modulate(fade_background)
-	dialog._set_idiom_and_init()
+	_on_ready()
 
 func init_with_animation(duration:float):
 	fade.set_fade_duration(duration)
 	fade.fade_out()
+
+func _on_ready():
+	fade.set_base_node_with_modulate(fade_background)
+	dialog._set_idiom_and_init()
 
 func play_animation(type_animation):
 	pass

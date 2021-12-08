@@ -31,4 +31,5 @@ var available_rooms = ["1","2","3","4"]
 
 var visited_rooms = []
 
-var scene_name_data ##for json in dialog
+var vigilance = false
+var pacient_diappears = false

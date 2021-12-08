@@ -226,7 +226,16 @@
       "name": "Dr. x",
       "sound": "",
       "image": "",
-      "type_game": "door_choice"
+      "type_animation": "door_choice"
+    }
+  },
+  "scene_2_C": {
+    "001": {
+      "text": "",
+      "name": "",
+      "sound": "",
+      "image": "",
+      "type_animation": "door_choice"
     }
   },
   "scene_room_1": {
@@ -427,7 +436,7 @@
       "next": "008"
     }
   },
-  "scene_room_2_A":{
+  "scene_room_2_C":{
     "001": {
       "text": "...",
       "name": "Dr.x",
@@ -450,7 +459,7 @@
       "type_game": ""
     }
   },
-  "scene_room_2_B":{
+  "scene_room_2_A":{
     "001": {
       "text": "Buenos dias, bueno veo que te rompiste varios huesos",
       "name": "Dr.x",
@@ -650,7 +659,7 @@
       "next": "009"
     }
   },
-  "scene_room_2_C":{
+  "scene_room_2_B":{
     "001": {
       "text": "Buenos dias, bueno veo que te rompiste varios huesos",
       "name": "Dr.x",
