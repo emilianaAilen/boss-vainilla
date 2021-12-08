@@ -1,6 +1,6 @@
 extends Node
 export(float) var textSpeed = 0.05
-export(String) var scene_name 
+var scene_name = ""
 export (NodePath) var level_path
 
 
@@ -13,8 +13,6 @@ onready var _Option_List = $DialogBox/Body/OptionList
 onready var _Action_Description = $DialogBox/Body/ActionBox/ActionLabel
 onready var _Speaker_Text = $DialogBox/Body/Speaker/SpeakerLabel
 onready var _action_button = $DialogBox/Body/ActionBox
-onready var _speaker_texture = $DialogBox/Body/SpeakerImage/SpeakerTexture
-onready var _speaker_container = $DialogBox/Body/SpeakerImage
 onready var tween = $DialogBox/Body/TextContainer/Tween
 onready var level = get_node(level_path)
 
@@ -46,8 +44,17 @@ func set_idiom():
 	select_choice = actions_by_language[language].select
 	press_button = actions_by_language[language].press
 	_Action_Description.text = actions_by_language[language].press
+	
+func get_scene_name():
+	print(scene_name)
+	if scene_name != "":
+		return scene_name
+	else:
+		print("Entra")
+		return GameState.scene_name_data
 
 func initialize():
+	#var name = get_scene_name()
 	game_data = _getDialog()["scene_" + scene_name]
 	assert(game_data, "data not found")
 	GameState.space_enable = true
@@ -140,8 +147,8 @@ func _add_speaker_texture_if_it_exists():
 	if currentPhase.has(IMAGE) && currentPhase.image != '':
 		var img_url = "res://assets/textures/"+currentPhase.image
 		loadSpeakerTexture(img_url)
-	else:
-		 _speaker_container.hide()
+	#else:
+		 #_speaker_container.hide()
 
 
 func _play_sfx_if_it_exists():
@@ -174,7 +181,8 @@ func _on_ActionNext_pressed():
 
 
 func loadSpeakerTexture(texture_url: String):
-	_speaker_texture.texture = load(texture_url)
+	#_speaker_texture.texture = load(texture_url)
+	pass
 
 
 func _on_Tween_tween_completed(object, key):

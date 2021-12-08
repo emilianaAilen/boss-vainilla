@@ -78,4 +78,5 @@ func _play_transition(stream):
 	transition.play()
 
 func _on_AudioStreamPlayer2D_finished():
+	ScenesManager.remove_scene(GameState.current_scene)
 	ScenesManager.add_scene(GameState.next_scene)

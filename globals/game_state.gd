@@ -24,3 +24,11 @@ var gameDataPath: String
 var result: int = 0
 
 var final_message: String
+
+var current_scene
+
+var available_rooms = ["1","2","3","4"]
+
+var visited_rooms = []
+
+var scene_name_data ##for json in dialog

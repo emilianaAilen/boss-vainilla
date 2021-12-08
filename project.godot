@@ -19,7 +19,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scenes/InteractuableBase.gd"
 }, {
-"base": "Control",
+"base": "BaseScene",
 "class": "SceneRoomBase",
 "language": "GDScript",
 "path": "res://scenes/SceneRoomBase.gd"

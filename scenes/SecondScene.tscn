@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/SceneBase.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/textures/pasillo.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/pasillo.jpg" type="Texture" id=2]
 [ext_resource path="res://scenes/SecondScene.gd" type="Script" id=3]
+[ext_resource path="res://assets/fonts/Blockletter.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/textures/backgroundBox.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+extra_spacing_space = 3
+font_data = ExtResource( 4 )
 
 [node name="SecondScene" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
@@ -15,9 +22,113 @@ margin_bottom = 0.0
 texture = ExtResource( 2 )
 expand = true
 
-[node name="FadeBackground" parent="." index="3"]
-visible = false
+[node name="ChoiceRoom" type="NinePatchRect" parent="." index="3"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Dialog" parent="." index="4"]
-scene_name = "2"
+[node name="room_1" type="TextureButton" parent="ChoiceRoom" index="0"]
+visible = false
+margin_left = 228.048
+margin_top = 167.432
+margin_right = 457.048
+margin_bottom = 238.432
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionLabel" type="Label" parent="ChoiceRoom/room_1" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Habitacion 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="room_2" type="TextureButton" parent="ChoiceRoom" index="1"]
+visible = false
+margin_left = 232.805
+margin_top = 295.867
+margin_right = 461.805
+margin_bottom = 366.867
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionLabel" type="Label" parent="ChoiceRoom/room_2" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Habitacion 2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="room_3" type="TextureButton" parent="ChoiceRoom" index="2"]
+visible = false
+margin_left = 613.351
+margin_top = 168.622
+margin_right = 842.351
+margin_bottom = 239.622
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionLabel" type="Label" parent="ChoiceRoom/room_3" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Habitacion 3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="room_4" type="TextureButton" parent="ChoiceRoom" index="3"]
+visible = false
+margin_left = 612.162
+margin_top = 299.434
+margin_right = 841.162
+margin_bottom = 370.434
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionLabel" type="Label" parent="ChoiceRoom/room_4" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Habitacion 4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FadeBackground" parent="." index="4"]
+visible = false
+color = Color( 0, 0, 0, 1 )
+
+[node name="Dialog" parent="." index="5"]
 level_path = NodePath("..")
+
+[connection signal="pressed" from="ChoiceRoom/room_1" to="." method="_on_room_1_pressed"]
+[connection signal="pressed" from="ChoiceRoom/room_2" to="." method="_on_room_2_pressed"]
+[connection signal="pressed" from="ChoiceRoom/room_3" to="." method="_on_room_3_pressed"]
+[connection signal="pressed" from="ChoiceRoom/room_4" to="." method="_on_room_4_pressed"]

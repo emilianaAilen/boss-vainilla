@@ -16,6 +16,7 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( -435.112, 182.949 )
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -27,9 +28,11 @@ margin_bottom = 40.0
 [node name="Fade" parent="." instance=ExtResource( 2 )]
 
 [node name="FadeBackground" type="ColorRect" parent="."]
+modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -435.112, 182.949 )
+mouse_filter = 2
 color = Color( 0.0784314, 0.0705882, 0.0705882, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

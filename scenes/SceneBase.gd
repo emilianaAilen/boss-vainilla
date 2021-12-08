@@ -20,3 +20,16 @@ func play_animation(type_animation):
 	
 func _run_next_scene():
 	pass
+	
+func begin_transition_out():
+	fade_background.show()
+	fade_background.modulate.a = 0	
+	fade.set_base_node_with_modulate(fade_background)
+	fade.set_fade_duration(5)	
+	fade.initiate_fade_in()
+
+func begin_transition_in():
+	fade_background.show()
+	fade.set_base_node_with_modulate(fade_background)
+	fade.set_fade_duration(5)	
+	fade.initiate_fade_out()

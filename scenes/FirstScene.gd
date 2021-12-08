@@ -6,13 +6,13 @@ onready var dialog = $Dialog
 onready var old_phone: Control = $Interact/PhoneInteractuable
 onready var timer = $Timer
 onready var black = $Background2
-onready var transition_sound = $Background2/TransitionSound
 onready var principalBackground = $Background
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	dialog._set_idiom_and_init()
 	GameState.next_scene = "scene_2"
+	GameState.current_scene = self
 
 func _add_phone_interaction():
 	# cosas que suceden en la scene cuando suena el telefono
@@ -42,8 +42,6 @@ func _run_next_scene():
 	GameState.space_enable = false
 	AudioManager.stop_back()
 	AudioManager._play_transition("car_starting")
-	##AudioManager.play_sfx("car_starting")
-	##AudioManager.fade_out_sfx(3, 2) ## delay + duration de transicion = total 
 	dialog.hide()
 	principalBackground.hide()
 

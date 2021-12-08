@@ -111,7 +111,7 @@
       "next": "010"
     }
   },
-  "scene_2": {
+  "scene_2_A": {
     "001": {
       "text": "Doc, que bueno que llega",
       "name": "x",
@@ -161,7 +161,7 @@
       "name": "",
       "sound": "",
       "image": "",
-      "type_game": "door_choice"
+      "type_animation": "door_choice"
     },
     "007": {
       "text": "En la primer habitacion hay un paciente que le sangra la cabeza.",
@@ -202,6 +202,31 @@
       "image": "",
       "type_game": "",
       "next": "006"
+    }
+  },
+  "scene_2_B": {
+    "001": {
+      "text": "Disculpen, alguien sabe donde esta el paciente de la habitacion 4?",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "002"
+    },
+    "002": {
+      "text": "No, deberia estar ahi, no fue atendido aun",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "",
+      "next": "003"
+    },
+    "003": {
+      "text": "Bien sigo contra habitacion",
+      "name": "Dr. x",
+      "sound": "",
+      "image": "",
+      "type_game": "door_choice"
     }
   },
   "scene_room_1": {
@@ -755,6 +780,58 @@
       "image": "",
       "sound": "",
       "final_message": ""
+    }
+  },
+  "scene_room_4_A":{
+    "001": {
+      "text": "Bueno, le voy a tomar el pulso en primer lugar",
+      "name": "Dr.x",
+      "image": "",
+      "next": "002"
+    },
+    "002": {
+      "text": "Todos los signos estan normales pero hay que chequearlo y ver como esta su cabeza",
+      "name": "Dr.x",
+      "image": "",
+      "choices": [
+        {
+          "text": "Salir de la habitacion",
+          "branch_next": "005"
+        },
+        {
+          "text": "Dejarlo en observacion",
+          "branch_next": "003"
+        }
+      ]
+    },
+    "004": {
+      "text": "Voy a dar aviso a enfermeria para que esten alerta y seguir con otra habitacion",
+      "name": "Dr.x",
+      "image": ""
+    },
+    "005": {
+      "text": "Voy a seguir con otra habitacion",
+      "name": "Dr.x",
+      "image": ""
+    }
+  },
+  "scene_room_4_B":{
+    "001": {
+      "text": "Hola buenas..",
+      "name": "Dr.x",
+      "image": "",
+      "next": "002"
+    },
+    "002": {
+      "text": "hay alguien aca?...",
+      "name": "Dr.x",
+      "image": "",
+      "next": "003"
+    },
+    "003": {
+      "text": "Voy a consultar a recepcion",
+      "name": "Dr.x",
+      "image": ""
     }
   },
   "scene_end": {
