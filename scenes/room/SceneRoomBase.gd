@@ -1,6 +1,10 @@
 extends BaseScene
 class_name SceneRoomBase
 
+onready var light = $Light2D
+onready var is_on: bool = true
+
+
 func _ready():
 	GameState.current_scene = self
 	AudioManager.play_back("room_foley")
@@ -18,5 +22,19 @@ func _run_next_scene():
 
 func _play_transition():
 	begin_transition_out()
-	AudioManager._play_transition("car_starting")
+	AudioManager._play_transition("door_out")
 	dialog.hide()
+
+func turn_on():
+	light.visible = true
+
+func turn_off():
+	light.visible = false
+
+
+func _on_RemoteControl_pressed():
+	if(is_on):
+		turn_off()
+	else:
+		turn_on()
+	is_on = !is_on

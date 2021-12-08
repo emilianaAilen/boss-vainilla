@@ -8,6 +8,7 @@ export (AudioStream) var car_starting
 export (AudioStream) var door_in
 export (AudioStream) var room_foley
 export (AudioStream) var hallway_foley
+export (AudioStream) var door_out
 
 onready var background_player = $BackgroundPlayer
 onready var sfx_player = $SfxPlayer
@@ -23,6 +24,7 @@ func _get_sounds():
 		"news": news,
 		"car_starting": car_starting,
 		"door_in": door_in,
+		"door_out": door_out,
 		"room_foley": room_foley,
 		"hallway_foley": hallway_foley
 	}
