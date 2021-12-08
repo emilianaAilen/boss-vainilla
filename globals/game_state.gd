@@ -21,15 +21,19 @@ var next_scene: String
 
 var gameDataPath: String
 
-var result: int = 0
-
 var final_message: String
 
 var current_scene
 
 var available_rooms = ["1","2","3","4"]
-
 var visited_rooms = []
 
 var vigilance = false
 var pacient_diappears = false
+
+func reset():
+	available_rooms = ["1","2","3","4"]
+	visited_rooms = []
+	vigilance = false
+	pacient_diappears = false
+	space_enable = false

@@ -3,6 +3,7 @@ extends BaseScene
 onready var message = $Message
 
 func _on_ready():
+	AudioManager.stop_back()
 	GameState.current_scene = self
 	dialog.hide()
 	._on_ready()

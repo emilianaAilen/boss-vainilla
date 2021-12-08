@@ -6,6 +6,8 @@ export (AudioStream) var pressnext
 export (AudioStream) var news
 export (AudioStream) var car_starting
 export (AudioStream) var door_in
+export (AudioStream) var room_foley
+export (AudioStream) var hallway_foley
 
 onready var background_player = $BackgroundPlayer
 onready var sfx_player = $SfxPlayer
@@ -20,12 +22,15 @@ func _get_sounds():
 		"next": pressnext,
 		"news": news,
 		"car_starting": car_starting,
-		"door_in": door_in
+		"door_in": door_in,
+		"room_foley": room_foley,
+		"hallway_foley": hallway_foley
 	}
 
 ## sounds managment
 func play_back(sound_name: String):
 	if sounds.has(sound_name):
+		background_player.stop()
 		background_player.stream = sounds[sound_name]
 		background_player.play()
 
@@ -75,8 +80,8 @@ func _on_Tween_completed(object, key):
 
 func _play_transition(stream):
 	transition.stream = sounds[stream]
-	var stream_transition = transition.stream as AudioStreamOGGVorbis
-	stream_transition.set_loop(false)
+#	var stream_transition = transition.stream as AudioStreamOGGVorbis
+#	stream_transition.set_loop(false)
 	transition.play()
 
 func _on_AudioStreamPlayer2D_finished():

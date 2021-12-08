@@ -2,14 +2,13 @@ extends Control
 
 onready var title = $Title
 onready var message = $Message
-onready var result = $Result
 
 var data_scene
 
 func _ready():
 	initialize_end()
 	title.text = data_scene.title
-	result.text = data_scene.result_field + str(GameState.result)
+	message.text = GameState.final_message
 
 func initialize_end():
 	var data = _get_file()
@@ -23,3 +22,8 @@ func _get_file() -> Array:
 	var json = f.get_as_text()
 	var output = parse_json(json)
 	return output
+
+
+func _on_ResetButton_pressed():
+	ScenesManager.add_scene("menu")
+	GameState.reset()

@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/dialog/Dialog.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/FirstScene.gd" type="Script" id=3]
 [ext_resource path="res://scenes/shared/Fade.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/textures/living_1200x740.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/livingRoomD.jpg" type="Texture" id=5]
 [ext_resource path="res://assets/textures/black_square.png" type="Texture" id=10]
 [ext_resource path="res://scenes/interactuables/TVInteractuable.tscn" type="PackedScene" id=11]
 
@@ -22,7 +22,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -4.0
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -37,17 +37,24 @@ __meta__ = {
 }
 
 [node name="PhoneInteractuable" parent="Interact" instance=ExtResource( 1 )]
-margin_left = 82.1174
-margin_top = 245.408
-margin_right = -941.883
-margin_bottom = -354.392
+anchor_left = 0.437
+anchor_top = 0.5
+anchor_right = 0.437
+anchor_bottom = 0.5
+margin_left = -28.9293
+margin_top = -11.2804
+margin_right = -28.8657
+margin_bottom = -11.2804
 mouse_filter = 2
 
 [node name="TVInteractuable" parent="Interact" instance=ExtResource( 11 )]
-margin_left = 827.979
-margin_top = 83.0459
-margin_right = -196.084
-margin_bottom = -516.754
+anchor_left = 0.964
+anchor_top = 0.626
+anchor_bottom = 0.653
+margin_left = -220.457
+margin_top = -149.882
+margin_right = -257.323
+margin_bottom = -166.076
 rect_scale = Vector2( 1.82569, 1.54068 )
 
 [node name="Dialog" parent="." instance=ExtResource( 2 )]
@@ -60,7 +67,7 @@ scene_name = "1"
 level_path = NodePath("..")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 300.0
 
 [node name="Background2" type="TextureRect" parent="."]
 visible = false

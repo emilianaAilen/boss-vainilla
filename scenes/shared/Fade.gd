@@ -24,27 +24,35 @@ func set_fade_duration(new_duration):
 func initiate_fade_out():
 	fade_out()
 
+func initiate_fade_in():
+	fade_in()
+
 func fade_out():
+	node_with_modulate.modulate.a = 1
+	var init = node_with_modulate.modulate
+	node_with_modulate.modulate.a = 0
+	var final = node_with_modulate.modulate
 	tween_fade_out.interpolate_property(
 		node_with_modulate,
 		"modulate",
-		node_with_modulate.modulate,
-		base_modulate_faded_out,
+		init,
+		final,
 		fade_duration,
 		Tween.TRANS_LINEAR
 	)
 	tween_fade_out.start()
 
-func initiate_fade_in():
-	fade_in()
 
 func fade_in():
 	node_with_modulate.modulate.a = 0
+	var init = node_with_modulate.modulate
+	node_with_modulate.modulate.a = 1
+	var final = node_with_modulate.modulate
 	tween_fade_in.interpolate_property(
 		node_with_modulate,
 		"modulate",
-		node_with_modulate.modulate,
-		base_modulate,
+		init,
+		final,
 		fade_duration,
 		Tween.TRANS_LINEAR
 	)

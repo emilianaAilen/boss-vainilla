@@ -11,6 +11,7 @@ var rooms_obj
 func _on_ready():
 	GameState.current_scene = self
 	set_scene_data_name()
+	AudioManager.play_back("hallway_foley")
 	._on_ready()
 
 

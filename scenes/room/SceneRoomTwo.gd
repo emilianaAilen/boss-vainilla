@@ -14,6 +14,7 @@ func set_scene_data_name():
 		dialog.scene_name = "room_2_A"
 
 func play_animation(type_animation):
-	GameState.next_scene = "end"
-	AudioManager._play_transition("door_in")
+	if type_animation=="end":
+		GameState.next_scene = "end"
+		AudioManager._play_transition("door_in")
 

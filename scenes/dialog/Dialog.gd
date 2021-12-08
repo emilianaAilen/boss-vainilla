@@ -13,6 +13,7 @@ onready var _Option_List = $DialogBox/Body/OptionList
 onready var _Action_Description = $DialogBox/Body/ActionBox/ActionLabel
 onready var _Speaker_Text = $DialogBox/Body/Speaker/SpeakerLabel
 onready var _Speaker_Image = $DialogBox/Body/SpeakerImage
+onready var _Speaker_Image_Face = $DialogBox/Body/SpeakerImage/Sprite
 onready var _action_button = $DialogBox/Body/ActionBox
 onready var tween = $DialogBox/Body/TextContainer/Tween
 onready var level = get_node(level_path)
@@ -120,12 +121,11 @@ func _options_already_loaded(choices):
 	for child in children:
 		if child.visible:
 			visibleChoices = visibleChoices + 1
-	return visibleChoices == choices.size()
+	return visibleChoices >= choices.size()
 
 		
 func _on_Option_clicked(slot):
 	_Action_Description.text = press_button
-	_Option_List.visible = false
 	phaseId = slot
 	_clear_options()
 	_play_phase()
@@ -142,8 +142,6 @@ func _add_speaker_texture_if_it_exists():
 	if currentPhase.has(IMAGE) && currentPhase.image != '':
 		var img_url = "res://assets/textures/characters/"+currentPhase.image+".png"
 		loadSpeakerTexture(img_url)
-	#else:
-		 #_speaker_container.hide()
 
 
 func _play_sfx_if_it_exists():
@@ -161,8 +159,9 @@ func _play_animation_if_it_exists():
 
 func _set_final_message_if_it_exists():
 	if currentPhase.has(FINAL_MESSAGE):
-		print('set final message')
 		GameState.final_message = currentPhase.final_message
+#	else:
+#		GameState.final_message = ""
 
 func _show_options_if_it_has():
 	if currentPhase.has(CHOICES):

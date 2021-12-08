@@ -47,11 +47,11 @@ func _run_next_scene():
 
 
 func _on_timeout():
-	print('timeout')
+	GameState.final_message = "No atendiste el teléfono."
 	timer.stop()
-	_remove("scene_3")
+	_next("end")
 
-func _remove(scene):
+func _next(scene):
 	ScenesManager.add_scene(scene)
 	ScenesManager.remove_child(self)
 	AudioManager.stop_all()

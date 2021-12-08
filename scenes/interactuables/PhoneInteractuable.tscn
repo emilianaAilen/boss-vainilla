@@ -5,7 +5,6 @@
 [ext_resource path="res://scenes/interactuables/PhoneInteractuable.gd" type="Script" id=3]
 [ext_resource path="res://assets/textures/backgroundwhite.png" type="Texture" id=4]
 
-
 [sub_resource type="Animation" id=1]
 length = 0.3
 loop = true
