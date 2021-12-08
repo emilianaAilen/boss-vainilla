@@ -1,1 +1,0 @@
-Boss equipo vainilla

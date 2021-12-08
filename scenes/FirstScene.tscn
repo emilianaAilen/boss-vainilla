@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/interactuables/PhoneInteractuable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/dialog/Dialog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/FirstScene.gd" type="Script" id=3]
+[ext_resource path="res://scenes/shared/Fade.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/textures/livingRoomD.jpg" type="Texture" id=5]
+[ext_resource path="res://assets/textures/black_square.png" type="Texture" id=10]
+[ext_resource path="res://scenes/interactuables/TVInteractuable.tscn" type="PackedScene" id=11]
+
+[node name="FirstScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0639992
+margin_bottom = -0.200001
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Interact" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PhoneInteractuable" parent="Interact" instance=ExtResource( 1 )]
+anchor_left = 0.437
+anchor_top = 0.5
+anchor_right = 0.437
+anchor_bottom = 0.5
+margin_left = -28.9293
+margin_top = -11.2804
+margin_right = -28.8657
+margin_bottom = -11.2804
+mouse_filter = 2
+
+[node name="TVInteractuable" parent="Interact" instance=ExtResource( 11 )]
+anchor_left = 0.964
+anchor_top = 0.626
+anchor_bottom = 0.653
+margin_left = -220.457
+margin_top = -149.882
+margin_right = -257.323
+margin_bottom = -166.076
+rect_scale = Vector2( 1.82569, 1.54068 )
+
+[node name="Dialog" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.004
+margin_left = -2.53723
+margin_top = 4.69546
+margin_right = -2.53748
+margin_bottom = -2.50464
+scene_name = "1"
+level_path = NodePath("..")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 300.0
+
+[node name="Background2" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fade" parent="." instance=ExtResource( 4 )]
+
+[connection signal="clicked" from="Interact/PhoneInteractuable" to="." method="_on_oldPhone_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timeout"]

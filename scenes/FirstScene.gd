@@ -1,0 +1,58 @@
+extends Control
+
+signal phone_rings
+
+onready var dialog = $Dialog
+onready var old_phone: Control = $Interact/PhoneInteractuable
+onready var timer = $Timer
+onready var black = $Background2
+onready var principalBackground = $Background
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	dialog._set_idiom_and_init()
+	GameState.next_scene = "scene_2"
+	GameState.current_scene = self
+
+func _add_phone_interaction():
+	# cosas que suceden en la scene cuando suena el telefono
+	enable_old_phone_button()
+	GameState.space_enable = false
+	timer.start()
+		
+func play_animation(type_animation):
+	if (type_animation == "phone"):
+		old_phone.init_animation()
+		_add_phone_interaction()
+	
+func enable_old_phone_button():
+#	old_phone.set_mouse_filter(Control.MOUSE_FILTER_PASS) # deberia habilitar clickeo, pero nunca se deshabilita
+	dialog.hide()
+
+func _on_oldPhone_pressed():
+	# when emited signal clicked
+	old_phone.stop_animation()
+	timer.stop()
+	GameState.space_enable = true
+	dialog.show()
+	dialog._play_phase_if_not_tween()
+
+func _run_next_scene():
+	black.visible = true
+	GameState.space_enable = false
+	AudioManager.stop_back()
+	AudioManager._play_transition("car_starting")
+	dialog.hide()
+	principalBackground.hide()
+
+
+func _on_timeout():
+	GameState.final_message = "No atendiste el teléfono."
+	timer.stop()
+	_next("end")
+
+func _next(scene):
+	ScenesManager.add_scene(scene)
+	ScenesManager.remove_child(self)
+	AudioManager.stop_all()
+	queue_free()
