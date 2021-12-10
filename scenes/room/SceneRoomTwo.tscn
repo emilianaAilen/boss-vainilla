@@ -13,6 +13,11 @@ disabled = true
 [node name="Dialog" parent="." index="5"]
 level_path = NodePath("..")
 
+[node name="Light2D" parent="." index="6"]
+position = Vector2( -14.4663, 218.688 )
+scale = Vector2( 0.266321, 0.461503 )
+energy = 1.5
+
 [node name="EnableTimer" type="Timer" parent="." index="7"]
 wait_time = 20.0
 

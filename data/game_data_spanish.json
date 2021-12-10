@@ -38,7 +38,7 @@
       "text": "Dr.  x?",
       "name": "Desconocido",
       "sound": "",
-      "image": "",
+      "image": "interrogation",
       "type_game": "",
       "next": "006"
     },
@@ -54,7 +54,7 @@
       "text": "Estoy en el hospital. Hubo un accidente...Tenés que venir urgente.",
       "name": "Desconocido",
       "sound": "",
-      "image": "",
+      "image": "interrogation",
       "type_game": "",
       "choices": [
         {
@@ -98,7 +98,7 @@
       "text": "Hubo una explosión, hay muchos heridos.",
       "name": "Desconocido",
       "sound": "",
-      "image": "",
+      "image": "interrogation",
       "type_game": "",
       "next": "010"
     },
@@ -106,7 +106,7 @@
       "text": "Soy Jorge , El director. Necesito que vengas cuanto antes.",
       "name": "Jorge",
       "sound": "",
-      "image": "",
+      "image": "director",
       "type_game": "",
       "next": "010"
     }
@@ -722,13 +722,13 @@
     "005": {
       "text": "Desaparecio el paciente de la habitacion 4",
       "name": "Guardia",
-      "image": "",
+      "image": "policeman2",
       "next": "006"
     },
     "006": {
       "text": "Estate atento, da aviso si lo ves",
       "name": "Guardia",
-      "image": "",
+      "image": "policeman2",
       "next": "007"
     },
     "007": {

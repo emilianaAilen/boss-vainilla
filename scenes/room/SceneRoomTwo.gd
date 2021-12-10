@@ -1,6 +1,7 @@
 extends SceneRoomBase
 
-onready var remoteControl: TextureButton = $RemoteControl
+onready var remote_control: TextureButton = $RemoteControl
+onready var tv_light: Light2D = $Light2D
 onready var timer: Timer = $EnableTimer
 
 func _on_ready():
@@ -20,18 +21,36 @@ func play_animation(type_animation):
 		GameState.next_scene = "end"
 		AudioManager._play_transition("door_out")
 	elif type_animation == "tv_clickeable":
-		remoteControl.disabled = false
+		remote_control.disabled = false
 		dialog.disable_next()
 
 func _on_RemoteControl_pressed():
-	dialog.hide()
-	remoteControl.disabled = true
-	AudioManager.play_back("news_room_SP")
-	timer.start()
+	if !listeded_news: # si no se ha ejecutado/stopeado el timer
+		listeded_news = true
+		dialog.hide()
+		AudioManager.play_back("news_room_SP") # solo se le pedira play una vez
+		turn_off_on_tv()
+		remote_control.disabled = true
+		tv_on = true
+		timer.start()
+	else:
+		turn_off_on_tv()
 
+var tv_on: bool = false 
+var listeded_news: bool = false
+
+func turn_off_on_tv():
+	if tv_on:
+		tv_light.hide()
+		AudioManager.mute_back()
+	else:
+		tv_light.show()
+		AudioManager.unmute_back()
+	tv_on = !tv_on
 
 func _on_EnableTimer_timeout():
 	# este metodo solo se ejecutara una vez, pasados 20seg de reproducido el audio room_news
+	remote_control.disabled = false
 	timer.stop()
 	dialog.enable_next()
 	dialog._play_phase()

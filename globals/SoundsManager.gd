@@ -49,7 +49,6 @@ func mute_back():
 func unmute_back():
 	background_player.set_volume_db(0)
 
-
 func stop_all():
 	stop_sfx()
 	stop_back()

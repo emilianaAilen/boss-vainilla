@@ -28,11 +28,11 @@ hallway_foley = ExtResource( 7 )
 door_out = ExtResource( 9 )
 news_room_SP = ExtResource( 10 )
 
-[node name="SfxPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="SfxPlayer" type="AudioStreamPlayer" parent="."]
 
-[node name="BackgroundPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="BackgroundPlayer" type="AudioStreamPlayer" parent="."]
 
-[node name="Transition" type="AudioStreamPlayer2D" parent="."]
+[node name="Transition" type="AudioStreamPlayer" parent="."]
 
 [node name="SoundFadeTween" type="Tween" parent="."]
 
