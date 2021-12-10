@@ -67,10 +67,14 @@ __meta__ = {
 }
 
 [node name="ResetButton" type="TextureButton" parent="."]
-margin_left = 477.541
-margin_top = 500.194
-margin_right = 521.541
-margin_bottom = 548.194
+anchor_left = 0.488
+anchor_top = 0.874
+anchor_right = 0.488
+anchor_bottom = 0.874
+margin_left = -22.1711
+margin_top = -24.206
+margin_right = 21.829
+margin_bottom = 23.7939
 texture_normal = ExtResource( 4 )
 expand = true
 __meta__ = {
