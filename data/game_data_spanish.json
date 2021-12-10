@@ -2,7 +2,7 @@
   "scene_1": {
     "001": {
       "text": "Qué buena siesta. Desde hace un buen tiempo no descansaba durante tantas horas...",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -11,7 +11,7 @@
     },
     "002": {
       "text": "Haciendo varias guardias seguidas, es difícil mantener una rutina de sueño y alimentación apropiada... Tendría que buscar un trabajo que implique menos sacrificio y estrés...",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -19,7 +19,7 @@
     },
     "003": {
       "text": "Ya no estoy seguro de estar conforme con este estilo de vida...",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -35,7 +35,7 @@
       "type_animation": "phone"
     },
     "005": {
-      "text": "Dr.  x?",
+      "text": "Dr. Winslow?",
       "name": "Desconocido",
       "sound": "",
       "image": "interrogation",
@@ -44,7 +44,7 @@
     },
     "006": {
       "text": "Sí, quién habla?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_alert",
       "type_game": "",
@@ -73,7 +73,7 @@
     },
     "008": {
       "text": "¿Un accidente? ¿Qué pasó?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_alert",
       "type_game": "",
@@ -81,7 +81,7 @@
     },
     "009": {
       "text": "Bueno, pero quién habla?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -89,7 +89,7 @@
     },
     "010": {
       "text": "Está bien, voy en camino.",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": ""
@@ -121,7 +121,7 @@
     },
     "002": {
       "text": "Que pasó?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_watching",
       "next": "003"
@@ -151,7 +151,7 @@
     },
     "005": {
       "text": "Si, contame la situación de cada paciente",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_watching",
       "next": "007"
@@ -197,7 +197,7 @@
     },
     "011": {
       "text": "Perfecto, gracias",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -207,7 +207,7 @@
   "scene_2_B": {
     "001": {
       "text": "Disculpen, alguien sabe donde esta el paciente de la habitacion 4?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_alert",
       "type_game": "",
@@ -223,7 +223,7 @@
     },
     "003": {
       "text": "Bien, sigo contra habitación",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_animation": "door_choice"
@@ -241,7 +241,7 @@
   "scene_2_D":{
     "001": {
       "text": "Disculpen, alguien sabe dónde esta el paciente de la habitación 4?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_alert",
       "type_game": "",
@@ -257,7 +257,7 @@
     },
     "003": {
       "text": "Bueno, creo que esos eran todos los pacientes de este sector",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_tired",
       "type_animation": "end",
@@ -267,7 +267,7 @@
   "scene_room_1": {
     "001": {
       "text": "Buenos días, cómo te sentís?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -283,7 +283,7 @@
     },
     "003": {
       "text": "Bueno, ya lo revisamos",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_watching",
       "type_game": "",
@@ -305,7 +305,7 @@
     },
     "004": {
       "text": "Cómo te llamas?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -321,7 +321,7 @@
     },
     "006": {
       "text": "Un gusto Pablo, a qué te dedicas?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -337,14 +337,14 @@
     },
     "008": {
       "text": "Bien, aguarda un momento que ahora vendrán a coserte la herida. Mucha suerte!",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_watching",
       "type_game": ""
     },
     "009": {
       "text": "Recordás algo del accidente? Cómo fue?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -360,7 +360,7 @@
     },
     "011": {
       "text": "Entiendo, debe ser producto del impacto, no te preocupes",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -370,7 +370,7 @@
   "scene_room_3": {
     "001": {
       "text": "Buenos días, me dijeron que no podes mover el cuello, tenés alguna otra molestia?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -386,7 +386,7 @@
     },
     "003": {
       "text": "Bueno, seguramente sea por el movimiento generado al chocar, no es nada grave",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -408,7 +408,7 @@
     },
     "004": {
       "text": "Cómo te llamas?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -424,7 +424,7 @@
     },
     "006": {
       "text": "Un gusto Laura, a qué te dedicas?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -440,14 +440,14 @@
     },
     "008": {
       "text": "Bien tranquila, aguarda un momento que van a relizarte una placa. Mucha suerte!",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": ""
     },
     "009": {
       "text": "Cómo te sentís emocionalmente después del accidente? recordás algo?",
-      "name": "Dr. x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_watching",
       "type_game": "",
@@ -465,21 +465,21 @@
   "scene_room_2_C":{
     "001": {
       "text": "...",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_alert",
       "next": "002"
     },
     "002": {
       "text": "ESTÁ MUERTO! Qué está pasando?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "",
       "next": "003"
     },
     "003": {
       "text": "SEGURIDAD! VENGAN RÁPIDO",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "",
       "type_animation": "end",
@@ -490,7 +490,7 @@
   "scene_room_2_A":{
     "001": {
       "text": "Buenos días, bueno veo que te rompiste varios huesos",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -505,7 +505,7 @@
     },
     "003": {
       "text": "Podrías decirme dónde sentís más dolor?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -521,7 +521,7 @@
     },
     "005": {
       "text": "Bueno sí, esa hay que operarla. Voy a revisar las otras fracturas",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -529,7 +529,7 @@
     },
     "006": {
       "text": "La otra pierna se puede recuperar con yeso",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -537,7 +537,7 @@
     },
     "007": {
       "text": "Y tu hombro lo voy a acomodar ahora mismo, aguanta x2",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "bone",
       "image": "",
       "type_game": "",
@@ -545,7 +545,7 @@
     },
     "008": {
       "text": "Y tu hombro lo voy a acomodar ahora mismo, aguanta",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "bone",
       "image": "dr_watching",
       "type_game": "",
@@ -566,12 +566,12 @@
     },
     "009": {
       "text": "Bueno, espero que te mejores. Hasta luego",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro"
     },
     "010": {
       "text": "Recordás algo del accidente? cómo fue?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro",
       "next": "011"
     },
@@ -595,13 +595,13 @@
     },
     "014": {
       "text": "Afortunadamente usted se encuentra bien, únicamente unos huesos rotos por recuperar",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro",
       "next": "009"
     },
     "015": {
       "text": "Cómo se llama?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro",
       "next": "016"
     },
@@ -613,7 +613,7 @@
     },
     "017": {
       "text": "Un gusto Martín, a qué se dedica?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro",
       "next": "018"
     },
@@ -625,13 +625,13 @@
     },
     "019": {
       "text": "Debe ser un cargo importante, imagino que quiere saber sobre la actualidad, quiere que encienda la televisión?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_watching",
       "next": "021"
     },
     "020": {
       "text": "Debe ser un cargo importante, imagino que quiere saber sobre la actualidad, quiere que encienda la tele?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "",
       "next": "021"
     },
@@ -645,7 +645,7 @@
     },
     "022": {
       "text": "Vamos a ver qué hay de nuevo",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro",
       "sound": "",
       "type_animation": "tv_clickeable",
@@ -653,7 +653,7 @@
     },
     "023": {
       "text": "Era colega suya?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_watching",
       "sound": "",
       "next": "024"
@@ -667,7 +667,7 @@
     },
     "025": {
       "text": "Cuál es su postura ante esta ley a tratar?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_alert",
       "sound": "",
       "next": "026"
@@ -681,7 +681,7 @@
     },
     "027": {
       "text": "Entiendo.. Ojalá pueda aprobarse",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_watching",
       "sound": "",
       "next": "009"
@@ -690,7 +690,7 @@
   "scene_room_2_B":{
     "001": {
       "text": "Buenos días, bueno veo que te rompiste varios huesos",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -698,14 +698,14 @@
     },
     "002": {
       "text": "podrias atender a estos 4 pacientes?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "",
       "next": "003"
     },
     "003": {
       "text": "Podrías decirme dónde sentís más dolor?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "sound": "",
       "image": "dr_neutro",
       "type_game": "",
@@ -733,7 +733,7 @@
     },
     "007": {
       "text": "Sí, no hay problema",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_watching",
       "next": "008"
     },
@@ -745,7 +745,7 @@
     },
     "009": {
       "text": "Nada grave",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro",
       "sound":"door",
       "next": "010"
@@ -759,7 +759,7 @@
     },
     "011": {
       "text": "Qué se le ofrece?",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_alert",
       "next": "013"
     },
@@ -786,14 +786,14 @@
     },
     "014": {
       "text": "Está bien, sigo con los demás pacientes",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "type_animation": "end",
       "final_message": "Que bueno que tenemos ayuda. Me voy a descansar",
       "image": "dr_tired"
     },
     "015": {
       "text": "Quién te envió? nunca te había visto",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_alert",
       "next": "016"
     },
@@ -814,7 +814,7 @@
     },
     "017": {
       "text": "Perdón, necesito chequear con seguridad",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_watching",
       "sound": "",
       "type_animation": "end",
@@ -824,13 +824,13 @@
   "scene_room_4_A":{
     "001": {
       "text": "Bueno, ya que el paciente se encuentra inconsciente le voy a tomar el pulso en primer lugar",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro",
       "next": "002"
     },
     "002": {
       "text": "Todos los signos estan normales pero hay que chequearlo y ver como está su cabeza",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro",
       "choices": [
         {
@@ -845,32 +845,32 @@
     },
     "003": {
       "text": "Voy a dar aviso a enfermería para que esten alerta y seguir con otro paciente",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "type_animation": "security",
       "image": "dr_alert"
     },
     "004": {
       "text": "Voy a seguir con otro paciente",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_tired"
     }
   },
   "scene_room_4_B":{
     "001": {
       "text": "Hola, buenas..",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_neutro",
       "next": "002"
     },
     "002": {
       "text": "Hay alguien acá?...",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_watching",
       "next": "003"
     },
     "003": {
       "text": "Voy a consultar a recepción",
-      "name": "Dr.x",
+      "name": "Dr. Tad Winslow",
       "image": "dr_alert"
     }
   },
