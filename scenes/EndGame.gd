@@ -6,7 +6,9 @@ onready var message = $Message
 var data_scene
 
 func _ready():
+	AudioManager.stop_all()
 	initialize_end()
+	GameState.current_scene = self
 	title.text = data_scene.title
 	message.text = GameState.final_message
 

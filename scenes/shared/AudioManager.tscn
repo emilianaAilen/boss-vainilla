@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://globals/SoundsManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/telephone-ring-04.wav.sample" type="AudioStream" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/audio/pasillo.ogg" type="AudioStream" id=7]
 [ext_resource path="res://assets/audio/dentro_del_cuarto.ogg" type="AudioStream" id=8]
 [ext_resource path="res://assets/audio/door-open.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/audio/room_news_SP.ogg" type="AudioStream" id=10]
 
 [node name="AudioManager" type="Control"]
 anchor_right = 1.0
@@ -25,6 +26,7 @@ door_in = ExtResource( 6 )
 room_foley = ExtResource( 8 )
 hallway_foley = ExtResource( 7 )
 door_out = ExtResource( 9 )
+news_room_SP = ExtResource( 10 )
 
 [node name="SfxPlayer" type="AudioStreamPlayer2D" parent="."]
 

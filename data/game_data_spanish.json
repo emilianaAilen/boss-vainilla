@@ -114,7 +114,7 @@
   "scene_2_A": {
     "001": {
       "text": "Doc, que bueno que llega",
-      "name": "x",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_smile",
       "next": "002"
@@ -128,14 +128,14 @@
     },
     "003": {
       "text": "Ingresaron varios pacientes despues de un choque multiple en la autopista...",
-      "name": "x",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "next": "004"
     },
     "004": {
       "text": "podrias atender a estos 4 pacientes?",
-      "name": "x",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "choices": [
@@ -165,7 +165,7 @@
     },
     "007": {
       "text": "En la primer habitacion hay un paciente que le sangra la cabeza.",
-      "name": "x",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "type_game": "",
@@ -173,7 +173,7 @@
     },
     "008": {
       "text": "En la segunda hay un paciente con los huesos rotos",
-      "name": "x",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "type_game": "",
@@ -181,7 +181,7 @@
     },
     "009": {
       "text": "En la tercera hay una paciente que no puede mover el cuello.",
-      "name": "x",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "type_game": "",
@@ -189,7 +189,7 @@
     },
     "010": {
       "text": "Y en la última hay un paciente inconciente",
-      "name": "x",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "type_game": "",
@@ -261,7 +261,7 @@
       "sound": "",
       "image": "dr_tired",
       "type_animation": "end",
-      "final_message": "Por fin terminé el día"
+      "final_message": "Por fin terminaste tu día... Demasiado calmo, ¿no es así?"
     }
   },
   "scene_room_1": {
@@ -648,7 +648,7 @@
       "name": "Dr.x",
       "image": "dr_neutro",
       "sound": "",
-      "type_game": "tv_clickeable",
+      "type_animation": "tv_clickeable",
       "next": "023"
     },
     "023": {
@@ -661,7 +661,7 @@
     "024": {
       "text": "Si, la conozco, no tenemos mucha relacion pero tenemos la misma ideologia.",
       "name": "Martin",
-      "image": "",
+      "image": "deputy_neutro",
       "sound": "",
       "next": "025"
     },
@@ -680,7 +680,7 @@
       "next": "027"
     },
     "027": {
-      "text": "Entiendo..Ojala pueda aprobarse",
+      "text": "Entiendo.. Ojala pueda aprobarse",
       "name": "Dr.x",
       "image": "dr_watching",
       "sound": "",
@@ -831,7 +831,7 @@
     "002": {
       "text": "Todos los signos estan normales pero hay que chequearlo y ver como esta su cabeza",
       "name": "Dr.x",
-      "image": "",
+      "image": "dr_neutro",
       "choices": [
         {
           "text": "Salir de la habitacion",
