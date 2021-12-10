@@ -1,6 +1,6 @@
 extends SceneRoomBase
 
-onready var remote_control: TextureButton = $RemoteControl
+onready var remote_area = $AreaControl
 onready var tv_light: Light2D = $Light2D
 onready var timer: Timer = $EnableTimer
 
@@ -21,14 +21,14 @@ func play_animation(type_animation):
 		GameState.next_scene = "end"
 		AudioManager._play_transition("door_out")
 	elif type_animation == "tv_clickeable":
-		remote_control.disabled = false
+		remote_area.show()
 		dialog.disable_next()
 
 func _on_RemoteControl_pressed():
 	dialog.hide()
 	AudioManager.play_back("news_room_SP") # solo se le pedira play una vez
 	tv_light.show()
-	remote_control.disabled = true # quedara disabled ya que el spacebar lo toma como pressed
+	remote_area.hide()
 	timer.start()
 
 func _on_EnableTimer_timeout():
@@ -37,3 +37,8 @@ func _on_EnableTimer_timeout():
 	dialog.enable_next()
 	dialog._play_phase()
 	dialog.show()
+
+
+func _on_AreaControl_gui_input(event):
+	if event is InputEventMouse && event.is_pressed():
+		_on_RemoteControl_pressed()

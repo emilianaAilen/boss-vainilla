@@ -20,7 +20,7 @@ expand = true
 [node name="FadeBackground" parent="." index="3"]
 visible = false
 
-[node name="RemoteControl" type="TextureButton" parent="." index="4"]
+[node name="RemoteControl" type="TextureRect" parent="." index="4"]
 visible = false
 anchor_left = 0.962
 anchor_top = 0.92
@@ -30,16 +30,27 @@ margin_left = -31.8265
 margin_top = -44.1877
 margin_right = 32.1735
 margin_bottom = 43.8123
-texture_normal = ExtResource( 4 )
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Light2D" type="Light2D" parent="." index="6"]
+[node name="Light2D" type="Light2D" parent="." index="5"]
 visible = false
 position = Vector2( -14.4663, 280.914 )
 scale = Vector2( 0.266321, 0.339967 )
 texture = ExtResource( 5 )
 energy = 1.31
 
-[connection signal="pressed" from="RemoteControl" to="." method="_on_RemoteControl_pressed"]
+[node name="AreaControl" type="Control" parent="." index="6"]
+anchor_left = 0.965
+anchor_top = 0.916
+anchor_right = 0.965
+anchor_bottom = 0.916
+margin_left = -19.16
+margin_top = -39.6
+margin_right = 19.84
+margin_bottom = 39.4
+__meta__ = {
+"_edit_use_anchors_": false
+}

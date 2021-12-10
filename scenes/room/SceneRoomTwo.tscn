@@ -8,17 +8,20 @@ script = ExtResource( 2 )
 
 [node name="RemoteControl" parent="." index="4"]
 visible = true
-disabled = true
 
-[node name="Dialog" parent="." index="5"]
-level_path = NodePath("..")
-
-[node name="Light2D" parent="." index="6"]
+[node name="Light2D" parent="." index="5"]
 position = Vector2( -14.4663, 218.688 )
 scale = Vector2( 0.266321, 0.461503 )
 energy = 1.5
 
+[node name="AreaControl" parent="." index="6"]
+visible = false
+
 [node name="EnableTimer" type="Timer" parent="." index="7"]
 wait_time = 20.0
 
+[node name="Dialog" parent="." index="8"]
+level_path = NodePath("..")
+
+[connection signal="gui_input" from="AreaControl" to="." method="_on_AreaControl_gui_input"]
 [connection signal="timeout" from="EnableTimer" to="." method="_on_EnableTimer_timeout"]
