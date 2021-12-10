@@ -25,32 +25,14 @@ func play_animation(type_animation):
 		dialog.disable_next()
 
 func _on_RemoteControl_pressed():
-	if !listeded_news: # si no se ha ejecutado/stopeado el timer
-		listeded_news = true
-		dialog.hide()
-		AudioManager.play_back("news_room_SP") # solo se le pedira play una vez
-		turn_off_on_tv()
-		remote_control.disabled = true
-		tv_on = true
-		timer.start()
-	else:
-		turn_off_on_tv()
-
-var tv_on: bool = false 
-var listeded_news: bool = false
-
-func turn_off_on_tv():
-	if tv_on:
-		tv_light.hide()
-		AudioManager.mute_back()
-	else:
-		tv_light.show()
-		AudioManager.unmute_back()
-	tv_on = !tv_on
+	dialog.hide()
+	AudioManager.play_back("news_room_SP") # solo se le pedira play una vez
+	tv_light.show()
+	remote_control.disabled = true # quedara disabled ya que el spacebar lo toma como pressed
+	timer.start()
 
 func _on_EnableTimer_timeout():
 	# este metodo solo se ejecutara una vez, pasados 20seg de reproducido el audio room_news
-	remote_control.disabled = false
 	timer.stop()
 	dialog.enable_next()
 	dialog._play_phase()
