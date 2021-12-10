@@ -9,6 +9,7 @@ export (AudioStream) var door_in
 export (AudioStream) var room_foley
 export (AudioStream) var hallway_foley
 export (AudioStream) var door_out
+export (AudioStream) var news_room_SP
 
 onready var background_player = $BackgroundPlayer
 onready var sfx_player = $SfxPlayer
@@ -26,7 +27,8 @@ func _get_sounds():
 		"door_in": door_in,
 		"door_out": door_out,
 		"room_foley": room_foley,
-		"hallway_foley": hallway_foley
+		"hallway_foley": hallway_foley,
+		"news_room_SP": news_room_SP
 	}
 
 ## sounds managment
@@ -46,7 +48,6 @@ func mute_back():
 
 func unmute_back():
 	background_player.set_volume_db(0)
-
 
 func stop_all():
 	stop_sfx()

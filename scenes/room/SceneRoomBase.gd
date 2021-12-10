@@ -7,7 +7,11 @@ onready var is_on: bool = true
 
 func _ready():
 	GameState.current_scene = self
+	play_room_audio()
+
+func play_room_audio():
 	AudioManager.play_back("room_foley")
+
 
 func _run_next_scene():
 	if GameState.visited_rooms.size()==4 && (GameState.visited_rooms[-1]=="1" || GameState.visited_rooms[-1]=="3"):

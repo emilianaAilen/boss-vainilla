@@ -1,7 +1,7 @@
 {
   "scene_1": {
     "001": {
-      "text": "Que buena siesta. Desde hace un buen tiempo no descansaba durante tantas horas...",
+      "text": "Qué buena siesta. Desde hace un buen tiempo no descansaba durante tantas horas...",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -38,7 +38,7 @@
       "text": "Dr.  x?",
       "name": "Desconocido",
       "sound": "",
-      "image": "",
+      "image": "interrogation",
       "type_game": "",
       "next": "006"
     },
@@ -54,7 +54,7 @@
       "text": "Estoy en el hospital. Hubo un accidente...Tenés que venir urgente.",
       "name": "Desconocido",
       "sound": "",
-      "image": "",
+      "image": "interrogation",
       "type_game": "",
       "choices": [
         {
@@ -98,23 +98,23 @@
       "text": "Hubo una explosión, hay muchos heridos.",
       "name": "Desconocido",
       "sound": "",
-      "image": "",
+      "image": "interrogation",
       "type_game": "",
       "next": "010"
     },
     "012": {
-      "text": "Soy Jorge , El director. Necesito que vengas cuanto antes.",
+      "text": "Soy Jorge, El director. Necesito que vengas cuanto antes.",
       "name": "Jorge",
       "sound": "",
-      "image": "",
+      "image": "director",
       "type_game": "",
       "next": "010"
     }
   },
   "scene_2_A": {
     "001": {
-      "text": "Doc, que bueno que llega",
-      "name": "x",
+      "text": "Doc, qué bueno que llega",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_smile",
       "next": "002"
@@ -127,15 +127,15 @@
       "next": "003"
     },
     "003": {
-      "text": "Ingresaron varios pacientes despues de un choque multiple en la autopista...",
-      "name": "x",
+      "text": "Ingresaron varios pacientes después de un choque múltiple en la autopista...",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "next": "004"
     },
     "004": {
-      "text": "podrias atender a estos 4 pacientes?",
-      "name": "x",
+      "text": "Podrías atender a estos 4 pacientes?",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "choices": [
@@ -164,8 +164,8 @@
       "type_animation": "door_choice"
     },
     "007": {
-      "text": "En la primer habitacion hay un paciente que le sangra la cabeza.",
-      "name": "x",
+      "text": "En la primera habitación hay un paciente que le sangra la cabeza",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "type_game": "",
@@ -173,30 +173,30 @@
     },
     "008": {
       "text": "En la segunda hay un paciente con los huesos rotos",
-      "name": "x",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "type_game": "",
       "next": "009"
     },
     "009": {
-      "text": "En la tercera hay una paciente que no puede mover el cuello.",
-      "name": "x",
+      "text": "En la tercera hay una paciente que no puede mover el cuello",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "type_game": "",
       "next": "010"
     },
     "010": {
-      "text": "Y en la última hay un paciente inconciente",
-      "name": "x",
+      "text": "Y en la última hay un paciente inconsciente",
+      "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
       "type_game": "",
       "next": "011"
     },
     "011": {
-      "text": "Perfecto, gracias.",
+      "text": "Perfecto, gracias",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -214,7 +214,7 @@
       "next": "002"
     },
     "002": {
-      "text": "No, deberia estar ahi, no fue atendido aun",
+      "text": "No, debería estar ahí, no fue atendido aún",
       "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
@@ -222,7 +222,7 @@
       "next": "003"
     },
     "003": {
-      "text": "Bien, sigo contra habitacion",
+      "text": "Bien, sigo contra habitación",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -240,7 +240,7 @@
   },
   "scene_2_D":{
     "001": {
-      "text": "Disculpen, alguien sabe donde esta el paciente de la habitacion 4?",
+      "text": "Disculpen, alguien sabe dónde esta el paciente de la habitación 4?",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_alert",
@@ -248,7 +248,7 @@
       "next": "002"
     },
     "002": {
-      "text": "No, deberia estar ahi, no fue atendido aun",
+      "text": "No, debería estar ahí, no fue atendido aun",
       "name": "Enfermera",
       "sound": "",
       "image": "nurse_neutro",
@@ -261,12 +261,12 @@
       "sound": "",
       "image": "dr_tired",
       "type_animation": "end",
-      "final_message": "Por fin terminé el día"
+      "final_message": "Por fin terminaste tu día... Demasiado calmo, ¿no es así?"
     }
   },
   "scene_room_1": {
     "001": {
-      "text": "Buenos dias, como te sentis?",
+      "text": "Buenos días, cómo te sentís?",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -282,7 +282,7 @@
       "next": "003"
     },
     "003": {
-      "text": "Bueno ya lo revisamos",
+      "text": "Bueno, ya lo revisamos",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_watching",
@@ -294,7 +294,7 @@
           "branch_next": "004"
         },
         {
-          "text": "irse despues de revisar",
+          "text": "Irse después de revisar",
           "branch_next": "008"
         },
         {
@@ -304,7 +304,7 @@
       ]
     },
     "004": {
-      "text": "Como te llamas?",
+      "text": "Cómo te llamas?",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -312,15 +312,15 @@
       "next": "005"
     },
     "005": {
-      "text": "Me llamo Pedro",
-      "name": "Pedro",
+      "text": "Me llamo Pablo",
+      "name": "Pablo",
       "sound": "",
       "image": "professor_neutro",
       "type_game": "",
       "next": "006"
     },
     "006": {
-      "text": "Un gusto Pedro, a que te dedicas?",
+      "text": "Un gusto Pablo, a qué te dedicas?",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -329,21 +329,21 @@
     },
     "007": {
       "text": "Soy profesor universitario",
-      "name": "Pedro",
+      "name": "Pablo",
       "sound": "",
       "image": "professor_neutro",
       "type_game": "",
       "next": "008"
     },
     "008": {
-      "text": "Bien, aguarda un momento que ahora te van a coser, mucha suerte, nos vemos!.",
+      "text": "Bien, aguarda un momento que ahora vendrán a coserte la herida. Mucha suerte!",
       "name": "Dr.x",
       "sound": "",
       "image": "dr_watching",
       "type_game": ""
     },
     "009": {
-      "text": "recordas algo del accidente? como fue?",
+      "text": "Recordás algo del accidente? Cómo fue?",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -351,7 +351,7 @@
       "next": "010"
     },
     "010": {
-      "text": "Si, algo. Me acuerdo que el auto de adelante choco contra un camion cisterna con combustible, hubo una explosion y no recuerdo mas nada",
+      "text": "Sí, algo. Me acuerdo que el auto de adelante chocó contra un camión cisterna con combustible, hubo una explosión y no recuerdo más nada",
       "name": "paciente 1",
       "sound": "",
       "image": "professor_worry",
@@ -359,7 +359,7 @@
       "next": "011"
     },
     "011": {
-      "text": "Entiendo, debe ser producto del impacto, no te preocupes.",
+      "text": "Entiendo, debe ser producto del impacto, no te preocupes",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -369,7 +369,7 @@
   },
   "scene_room_3": {
     "001": {
-      "text": "Buenos dias, me dijeron que no podes mover el cuello, tenes alguna otra molestia?",
+      "text": "Buenos días, me dijeron que no podes mover el cuello, tenés alguna otra molestia?",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -377,7 +377,7 @@
       "next": "002"
     },
     "002": {
-      "text": "No, solo siento mucha presion en el cuello",
+      "text": "No, solo siento mucha presión en el cuello",
       "name": "paciente 3",
       "sound": "",
       "image": "dentist_neutro",
@@ -385,7 +385,7 @@
       "next": "003"
     },
     "003": {
-      "text": "Bueno, seguramente sea por el mal movimiento al chocar, no es nada grave",
+      "text": "Bueno, seguramente sea por el movimiento generado al chocar, no es nada grave",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -393,11 +393,11 @@
       "next": "003",
       "choices": [
         {
-          "text": "Preguntar como se llama",
+          "text": "Preguntar cómo se llama",
           "branch_next": "004"
         },
         {
-          "text": "irse despues de revisar",
+          "text": "irse después de revisar",
           "branch_next": "008"
         },
         {
@@ -407,7 +407,7 @@
       ]
     },
     "004": {
-      "text": "Como te llamas?",
+      "text": "Cómo te llamas?",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -423,7 +423,7 @@
       "next": "006"
     },
     "006": {
-      "text": "Un gusto Laura, a que te dedicas?",
+      "text": "Un gusto Laura, a qué te dedicas?",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_neutro",
@@ -439,14 +439,14 @@
       "next": "008"
     },
     "008": {
-      "text": "Bien tranquila, aguarda un momento que van a relizarte una placa, mucha suerte, nos vemos!.",
+      "text": "Bien tranquila, aguarda un momento que van a relizarte una placa. Mucha suerte!",
       "name": "Dr.x",
       "sound": "",
       "image": "dr_neutro",
       "type_game": ""
     },
     "009": {
-      "text": "Como te sentis emocionalmente despues del accidente? recordas algo?",
+      "text": "Cómo te sentís emocionalmente después del accidente? recordás algo?",
       "name": "Dr. x",
       "sound": "",
       "image": "dr_watching",
@@ -454,7 +454,7 @@
       "next": "010"
     },
     "010": {
-      "text": "Tuve mucho miedo cuando ocurrio la explosion del tanque de nafta del camion, todavia me siento nerviosa",
+      "text": "Tuve mucho miedo cuando ocurrió la explosión del tanque de nafta del camión, todavía me siento nerviosa",
       "name": "paciente 1",
       "sound": "",
       "image": "dentist_worry",
@@ -471,14 +471,14 @@
       "next": "002"
     },
     "002": {
-      "text": "ESTA MUERTO! Que esta pasando?",
+      "text": "ESTÁ MUERTO! Qué está pasando?",
       "name": "Dr.x",
       "sound": "",
       "image": "",
       "next": "003"
     },
     "003": {
-      "text": "SEGURIDAD! VENGAN RAPIDO",
+      "text": "SEGURIDAD! VENGAN RÁPIDO",
       "name": "Dr.x",
       "sound": "",
       "image": "",
@@ -489,7 +489,7 @@
   },
   "scene_room_2_A":{
     "001": {
-      "text": "Buenos dias, bueno veo que te rompiste varios huesos",
+      "text": "Buenos días, bueno veo que te rompiste varios huesos",
       "name": "Dr.x",
       "sound": "",
       "image": "dr_neutro",
@@ -504,7 +504,7 @@
       "next": "003"
     },
     "003": {
-      "text": "Podrias decime donde sentis mas dolor?",
+      "text": "Podrías decirme dónde sentís más dolor?",
       "name": "Dr.x",
       "sound": "",
       "image": "dr_neutro",
@@ -520,7 +520,7 @@
       "next": "005"
     },
     "005": {
-      "text": "Bueno si, esa hay que operarla. Voy a revisar las otras fracturas",
+      "text": "Bueno sí, esa hay que operarla. Voy a revisar las otras fracturas",
       "name": "Dr.x",
       "sound": "",
       "image": "dr_neutro",
@@ -551,7 +551,7 @@
       "type_game": "",
       "choices": [
         {
-          "text": "Salir de la habitacion",
+          "text": "Salir de la habitación",
           "branch_next": "009"
         },
         {
@@ -565,66 +565,66 @@
       ]
     },
     "009": {
-      "text": "Bueno, espero que te mejores, hasta luego.",
+      "text": "Bueno, espero que te mejores. Hasta luego",
       "name": "Dr.x",
       "image": "dr_neutro"
     },
     "010": {
-      "text": "recordas algo del accidente? como fue?",
+      "text": "Recordás algo del accidente? cómo fue?",
       "name": "Dr.x",
       "image": "dr_neutro",
       "next": "011"
     },
     "011": {
-      "text": "Hubo una explosion, perdi el control..",
+      "text": "Hubo una explosión, perdí el control..",
       "name": "Paciente 2",
       "image": "deputy_neutro",
       "next": "012"
     },
     "012": {
-      "text": "Y lo ultiomo que recuerdo es al conductor del camion de combustible acercandose para auxiliarme.",
+      "text": "Y lo último que recuerdo es al conductor del camión de combustible acercándose para auxiliarme",
       "name": "Paciente 2",
       "image": "deputy_remember",
       "next": "013"
     },
     "013": {
-      "text": "Pero fue atropellado por otro auto que perdio el control.",
+      "text": "Pero fue atropellado por otro auto que perdió el control",
       "name": "Paciente 2",
       "image": "deputy_neutro",
       "next": "014"
     },
     "014": {
-      "text": "Afortunadamente usted se encuentra bien, unicamente unos huesos rotos por recuperar",
+      "text": "Afortunadamente usted se encuentra bien, únicamente unos huesos rotos por recuperar",
       "name": "Dr.x",
       "image": "dr_neutro",
       "next": "009"
     },
     "015": {
-      "text": "Como te llamas?",
+      "text": "Cómo se llama?",
       "name": "Dr.x",
       "image": "dr_neutro",
       "next": "016"
     },
     "016": {
-      "text": "Mi nombre es Martin",
-      "name": "Martin",
+      "text": "Mi nombre es Martín",
+      "name": "Martín",
       "image": "deputy_neutro",
       "next": "017"
     },
     "017": {
-      "text": "Un gusto Martin, a que te dedicas?",
+      "text": "Un gusto Martín, a qué se dedica?",
       "name": "Dr.x",
       "image": "dr_neutro",
       "next": "018"
     },
     "018": {
       "text": "Soy diputado",
-      "name": "Martin",
+      "name": "Martín",
       "image": "deputy_neutro",
       "next": "019"
     },
     "019": {
-      "text": "Debe ser un cargo importante, imagino que quiere saber sobre la actualidad, quiere que encienda la tele?",
+      "text": "Debe ser un cargo importante, imagino que quiere saber sobre la actualidad, quiere que encienda la televisión?",
       "name": "Dr.x",
       "image": "dr_watching",
       "next": "021"
@@ -636,37 +636,37 @@
       "next": "021"
     },
     "021": {
-      "text": "Si, por favor",
-      "name": "Martin",
+      "text": "Sí, por favor",
+      "name": "Martín",
       "image": "deputy_neutro",
       "sound": "",
       "type_game": "",
       "next": "022"
     },
     "022": {
-      "text": "Vamos a ver que hay de nuevo",
+      "text": "Vamos a ver qué hay de nuevo",
       "name": "Dr.x",
       "image": "dr_neutro",
       "sound": "",
-      "type_game": "tv_clickeable",
+      "type_animation": "tv_clickeable",
       "next": "023"
     },
     "023": {
-      "text": "Es colega suya?",
+      "text": "Era colega suya?",
       "name": "Dr.x",
       "image": "dr_watching",
       "sound": "",
       "next": "024"
     },
     "024": {
-      "text": "Si, la conozco, no tenemos mucha relacion pero tenemos la misma ideologia.",
-      "name": "Martin",
-      "image": "",
+      "text": "Sí, la conozco, no tenemos mucha relación pero tenemos la misma ideología",
+      "name": "Martín",
+      "image": "deputy_neutro",
       "sound": "",
       "next": "025"
     },
     "025": {
-      "text": "Cual es su postura ante esta ley a tratar?",
+      "text": "Cuál es su postura ante esta ley a tratar?",
       "name": "Dr.x",
       "image": "dr_alert",
       "sound": "",
@@ -674,13 +674,13 @@
     },
     "026": {
       "text": "Estoy a favor, pero lamentablemente hay muchos grupos en contra",
-      "name": "Martin",
+      "name": "Martín",
       "image": "deputy_neutro",
       "sound": "",
       "next": "027"
     },
     "027": {
-      "text": "Entiendo..Ojala pueda aprobarse",
+      "text": "Entiendo.. Ojalá pueda aprobarse",
       "name": "Dr.x",
       "image": "dr_watching",
       "sound": "",
@@ -689,7 +689,7 @@
   },
   "scene_room_2_B":{
     "001": {
-      "text": "Buenos dias, bueno veo que te rompiste varios huesos",
+      "text": "Buenos días, bueno veo que te rompiste varios huesos",
       "name": "Dr.x",
       "sound": "",
       "image": "dr_neutro",
@@ -704,7 +704,7 @@
       "next": "003"
     },
     "003": {
-      "text": "Podrias decime donde sentis mas dolor?",
+      "text": "Podrías decirme dónde sentís más dolor?",
       "name": "Dr.x",
       "sound": "",
       "image": "dr_neutro",
@@ -720,31 +720,31 @@
       "next": "005"
     },
     "005": {
-      "text": "Desaparecio el paciente de la habitacion 4",
+      "text": "Doc, lo llamo porque desapareció el paciente de la habitacion 4",
       "name": "Guardia",
-      "image": "",
+      "image": "policeman2",
       "next": "006"
     },
     "006": {
       "text": "Estate atento, da aviso si lo ves",
       "name": "Guardia",
-      "image": "",
+      "image": "policeman2",
       "next": "007"
     },
     "007": {
-      "text": "Si no hay problema!",
+      "text": "Sí, no hay problema",
       "name": "Dr.x",
       "image": "dr_watching",
       "next": "008"
     },
     "008": {
-      "text": "Paso algo?",
+      "text": "Pasó algo?",
       "name": "Paciente 2",
       "image": "deputy_neutro",
       "next": "009"
     },
     "009": {
-      "text": "Nada grave.",
+      "text": "Nada grave",
       "name": "Dr.x",
       "image": "dr_neutro",
       "sound":"door",
@@ -758,7 +758,7 @@
       "next": "011"
     },
     "011": {
-      "text": "Que se le ofrece?",
+      "text": "Qué se le ofrece?",
       "name": "Dr.x",
       "image": "dr_alert",
       "next": "013"
@@ -775,24 +775,24 @@
       "image": "driver_neutro",
       "choices": [
         {
-          "text": "Salir de la habitacion",
+          "text": "Salir de la habitación",
           "branch_next": "014"
         },
         {
-          "text": "Preguntar quien lo envio",
+          "text": "Preguntar quien lo envió",
           "branch_next": "015"
         }
       ]
     },
     "014": {
-      "text": "Esta bien, sigo con los demas pacientes.",
+      "text": "Está bien, sigo con los demás pacientes",
       "name": "Dr.x",
       "type_animation": "end",
       "final_message": "Que bueno que tenemos ayuda. Me voy a descansar",
       "image": "dr_tired"
     },
     "015": {
-      "text": "Quien te envio? nunca te habia visto",
+      "text": "Quién te envió? nunca te había visto",
       "name": "Dr.x",
       "image": "dr_alert",
       "next": "016"
@@ -803,7 +803,7 @@
       "image": "driver_nervous",
       "choices": [
         {
-          "text": "Salir de la habitacion",
+          "text": "Salir de la habitación",
           "branch_next": "014"
         },
         {
@@ -813,7 +813,7 @@
       ]
     },
     "017": {
-      "text": "Perdon necesito chequear con seguridad.",
+      "text": "Perdón, necesito chequear con seguridad",
       "name": "Dr.x",
       "image": "dr_watching",
       "sound": "",
@@ -823,53 +823,53 @@
   },
   "scene_room_4_A":{
     "001": {
-      "text": "Bueno, le voy a tomar el pulso en primer lugar",
+      "text": "Bueno, ya que el paciente se encuentra inconsciente le voy a tomar el pulso en primer lugar",
       "name": "Dr.x",
       "image": "dr_neutro",
       "next": "002"
     },
     "002": {
-      "text": "Todos los signos estan normales pero hay que chequearlo y ver como esta su cabeza",
+      "text": "Todos los signos estan normales pero hay que chequearlo y ver como está su cabeza",
       "name": "Dr.x",
-      "image": "",
+      "image": "dr_neutro",
       "choices": [
         {
-          "text": "Salir de la habitacion",
+          "text": "Salir de la habitación",
           "branch_next": "004"
         },
         {
-          "text": "Dejarlo en observacion",
+          "text": "Dejarlo en observación",
           "branch_next": "003"
         }
       ]
     },
     "003": {
-      "text": "Voy a dar aviso a enfermeria para que esten alerta y seguir con otra habitacion",
+      "text": "Voy a dar aviso a enfermería para que esten alerta y seguir con otro paciente",
       "name": "Dr.x",
       "type_animation": "security",
       "image": "dr_alert"
     },
     "004": {
-      "text": "Voy a seguir con otra habitacion",
+      "text": "Voy a seguir con otro paciente",
       "name": "Dr.x",
       "image": "dr_tired"
     }
   },
   "scene_room_4_B":{
     "001": {
-      "text": "Hola buenas..",
+      "text": "Hola, buenas..",
       "name": "Dr.x",
       "image": "dr_neutro",
       "next": "002"
     },
     "002": {
-      "text": "hay alguien aca?...",
+      "text": "Hay alguien acá?...",
       "name": "Dr.x",
       "image": "dr_watching",
       "next": "003"
     },
     "003": {
-      "text": "Voy a consultar a recepcion",
+      "text": "Voy a consultar a recepción",
       "name": "Dr.x",
       "image": "dr_alert"
     }

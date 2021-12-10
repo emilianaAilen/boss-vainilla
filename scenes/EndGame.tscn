@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/EndGame.gd" type="Script" id=1]
 [ext_resource path="res://assets/textures/black_square.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/Blockletter.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/textures/light.png" type="Texture" id=4]
+[ext_resource path="res://scenes/shared/Fade.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -87,6 +88,20 @@ margin_right = 37.4126
 margin_bottom = 48.7229
 custom_fonts/font = SubResource( 4 )
 text = "Reiniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fade" parent="." instance=ExtResource( 5 )]
+
+[node name="FadeBackground" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -435.112, 182.949 )
+mouse_filter = 2
+color = Color( 0.0784314, 0.0705882, 0.0705882, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

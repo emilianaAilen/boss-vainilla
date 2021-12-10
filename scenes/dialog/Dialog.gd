@@ -123,12 +123,21 @@ func _options_already_loaded(choices):
 			visibleChoices = visibleChoices + 1
 	return visibleChoices >= choices.size()
 
-		
+
 func _on_Option_clicked(slot):
 	_Action_Description.text = press_button
 	phaseId = slot
 	_clear_options()
 	_play_phase()
+	enable_next()
+
+# disable/enable press next action
+func disable_next():
+	GameState.space_enable = false
+	_action_button.disabled = true
+func enable_next():
+	GameState.space_enable = true
+	_action_button.disabled = false
 
 
 func _clear_options():
@@ -142,6 +151,9 @@ func _add_speaker_texture_if_it_exists():
 	if currentPhase.has(IMAGE) && currentPhase.image != '':
 		var img_url = "res://assets/textures/characters/"+currentPhase.image+".png"
 		loadSpeakerTexture(img_url)
+	else:
+		_Speaker_Image.texture = null
+
 
 
 func _play_sfx_if_it_exists():
@@ -167,6 +179,7 @@ func _show_options_if_it_has():
 	if currentPhase.has(CHOICES):
 		_Action_Description.text = select_choice
 		_show_options(currentPhase.choices)
+		disable_next()
 
 
 func _play_next_sound_if_not_first():
